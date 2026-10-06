@@ -97,7 +97,10 @@ export function initForm() {
     data.delete('website');
     data.set('privacy', 'accettata');
     data.append('_elapsed_ms', String(elapsed));
-    data.append('_subject', `Nuova richiesta dal sito: ${data.get('servizio') || 'consulenza'}`);
+    const subject = `Nuova richiesta dal sito: ${data.get('servizio') || 'consulenza'}`;
+    data.append('_subject', subject); // Formspree
+    data.append('subject', subject); // Web3Forms
+    data.append('from_name', 'Sito Erica Renzoni'); // Web3Forms: mittente leggibile
     data.append('_page', location.href);
     if (ACCESS_KEY) data.append('access_key', ACCESS_KEY);
 

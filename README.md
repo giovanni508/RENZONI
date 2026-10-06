@@ -134,6 +134,17 @@ La cartella da pubblicare è sempre `dist/` (dopo `npm run build`).
 - **Cloudflare Pages**: build command `npm run build`, output `dist`.
 - **Hosting classico (FTP)**: esegui `npm run build` sul tuo computer e carica il **contenuto** di `dist/` nella cartella pubblica (es. `public_html`), più `contact.php` se usi il form PHP.
 
+**Variabili d'ambiente sulla piattaforma di deploy.** Sono tutte facoltative: il sito si compila anche senza. Se la piattaforma importa `.env.example` e non lascia confermare righe vuote, elimina quelle che non usi. Configurazione minima consigliata per ricevere le richieste via email con Web3Forms (gratuito):
+
+| Key | Value |
+|---|---|
+| `VITE_FORM_ENDPOINT` | `https://api.web3forms.com/submit` |
+| `VITE_FORM_ACCESS_KEY` | la chiave ricevuta via email da web3forms.com |
+
+Con Formspree basta `VITE_FORM_ENDPOINT` = `https://formspree.io/f/…`.
+
+Dopo ogni modifica alle variabili serve una nuova build (il valore entra nel codice al momento della build).
+
 Prima di pubblicare imposta `siteUrl` in `site.config.js`. Servono per il canonical, per `sitemap.xml` e `robots.txt` (generati in build) e per l'immagine social.
 
 ---
