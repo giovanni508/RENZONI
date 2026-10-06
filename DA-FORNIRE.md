@@ -8,7 +8,7 @@ confermare sono evidenziate in rosso.
 - [ ] Telefono e numero WhatsApp (con prefisso, es. 39333…)
 - [ ] Profilo Instagram (indirizzo e @nome)
 - [ ] Città e zona; indirizzo dello studio oppure "su appuntamento"; consulenze anche online o a domicilio?
-- [ ] Dominio del sito (es. https://www.ericarenzoni.it): serve per canonical, sitemap, anteprima social
+- [x] Dominio del sito: **https://ericarenzoni.com** (impostato in `site.config.js`)
 - [ ] Dati legali: nome o ragione sociale, **P.IVA**, sede legale, email per la privacy, data dell'informativa
 
 ## Contenuti

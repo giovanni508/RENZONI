@@ -10,7 +10,7 @@ export default {
   role: "Consulente d'immagine",
 
   // Sito pubblicato (serve per canonical, Open Graph, sitemap). Senza slash finale.
-  siteUrl: 'https://www.[DOMINIO-DA-INSERIRE].it',
+  siteUrl: 'https://ericarenzoni.com',
 
   // Zona in cui ricevi: compare in title/description, nei dati strutturati e nel footer.
   city: '[CITTÀ]',
@@ -18,7 +18,7 @@ export default {
   address: '[INDIRIZZO STUDIO o "Su appuntamento"]',
 
   // Contatti
-  email: '[EMAIL DA INSERIRE]', // es. ciao@ericarenzoni.it
+  email: '[EMAIL DA INSERIRE]', // es. ciao@ericarenzoni.com
   phoneDisplay: '[TELEFONO DA INSERIRE]', // come appare a schermo, es. 333 123 4567
   phoneHref: '+39[NUMERO]', // formato internazionale senza spazi, es. +393331234567
   whatsapp: '39[NUMERO]', // solo cifre con prefisso, es. 393331234567 (usato in https://wa.me/...)

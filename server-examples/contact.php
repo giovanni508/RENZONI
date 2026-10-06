@@ -15,7 +15,7 @@
 
 const CONFIG = [
     'to'              => '[EMAIL DESTINATARIO DA INSERIRE]',   // dove ricevi le richieste
-    'from'            => 'sito@[DOMINIO-DA-INSERIRE].it',      // mittente del TUO dominio (evita lo spam)
+    'from'            => 'sito@ericarenzoni.com',          // mittente del TUO dominio (evita lo spam)
     'turnstile_secret'=> '',                                   // chiave segreta Turnstile (vuota = disattivato)
     'min_elapsed_ms'  => 1500,                                 // invii piu' rapidi = bot
     'rate_limit'      => 5,                                    // richieste massime per IP ogni 10 minuti
