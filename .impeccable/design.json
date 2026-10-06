@@ -1,0 +1,644 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T09:52:42.552Z",
+  "title": "Design System: Erica Renzoni",
+  "extensions": {
+    "colorMeta": {
+      "c-lime": {
+        "role": "primary",
+        "displayName": "Giallo Fluo",
+        "canonical": "#D8E348",
+        "tonalRamp": [
+          "oklch(15.0% 0.172 113.4)",
+          "oklch(26.4% 0.172 113.4)",
+          "oklch(37.9% 0.172 113.4)",
+          "oklch(49.3% 0.172 113.4)",
+          "oklch(60.7% 0.172 113.4)",
+          "oklch(72.1% 0.172 113.4)",
+          "oklch(83.6% 0.172 113.4)",
+          "oklch(95.0% 0.172 113.4)"
+        ]
+      },
+      "c-teal": {
+        "role": "secondary",
+        "displayName": "Verde Petrolio",
+        "canonical": "#146C78",
+        "tonalRamp": [
+          "oklch(15.0% 0.079 209.1)",
+          "oklch(26.4% 0.079 209.1)",
+          "oklch(37.9% 0.079 209.1)",
+          "oklch(49.3% 0.079 209.1)",
+          "oklch(60.7% 0.079 209.1)",
+          "oklch(72.1% 0.079 209.1)",
+          "oklch(83.6% 0.079 209.1)",
+          "oklch(95.0% 0.079 209.1)"
+        ]
+      },
+      "c-red": {
+        "role": "secondary",
+        "displayName": "Rosso Drappo",
+        "canonical": "#D31728",
+        "tonalRamp": [
+          "oklch(15.0% 0.215 25.0)",
+          "oklch(26.4% 0.215 25.0)",
+          "oklch(37.9% 0.215 25.0)",
+          "oklch(49.3% 0.215 25.0)",
+          "oklch(60.7% 0.215 25.0)",
+          "oklch(72.1% 0.215 25.0)",
+          "oklch(83.6% 0.215 25.0)",
+          "oklch(95.0% 0.215 25.0)"
+        ]
+      },
+      "c-orange": {
+        "role": "secondary",
+        "displayName": "Arancio",
+        "canonical": "#E1800A",
+        "tonalRamp": [
+          "oklch(15.0% 0.159 60.5)",
+          "oklch(26.4% 0.159 60.5)",
+          "oklch(37.9% 0.159 60.5)",
+          "oklch(49.3% 0.159 60.5)",
+          "oklch(60.7% 0.159 60.5)",
+          "oklch(72.1% 0.159 60.5)",
+          "oklch(83.6% 0.159 60.5)",
+          "oklch(95.0% 0.159 60.5)"
+        ]
+      },
+      "c-violet": {
+        "role": "secondary",
+        "displayName": "Viola Malva",
+        "canonical": "#975290",
+        "tonalRamp": [
+          "oklch(15.0% 0.123 330.9)",
+          "oklch(26.4% 0.123 330.9)",
+          "oklch(37.9% 0.123 330.9)",
+          "oklch(49.3% 0.123 330.9)",
+          "oklch(60.7% 0.123 330.9)",
+          "oklch(72.1% 0.123 330.9)",
+          "oklch(83.6% 0.123 330.9)",
+          "oklch(95.0% 0.123 330.9)"
+        ]
+      },
+      "c-olive": {
+        "role": "secondary",
+        "displayName": "Verde Oliva",
+        "canonical": "#707726",
+        "tonalRamp": [
+          "oklch(15.0% 0.104 114.1)",
+          "oklch(26.4% 0.104 114.1)",
+          "oklch(37.9% 0.104 114.1)",
+          "oklch(49.3% 0.104 114.1)",
+          "oklch(60.7% 0.104 114.1)",
+          "oklch(72.1% 0.104 114.1)",
+          "oklch(83.6% 0.104 114.1)",
+          "oklch(95.0% 0.104 114.1)"
+        ]
+      },
+      "c-pink": {
+        "role": "secondary",
+        "displayName": "Rosa Orchidea",
+        "canonical": "#DE9CBA",
+        "tonalRamp": [
+          "oklch(15.0% 0.087 350.5)",
+          "oklch(26.4% 0.087 350.5)",
+          "oklch(37.9% 0.087 350.5)",
+          "oklch(49.3% 0.087 350.5)",
+          "oklch(60.7% 0.087 350.5)",
+          "oklch(72.1% 0.087 350.5)",
+          "oklch(83.6% 0.087 350.5)",
+          "oklch(95.0% 0.087 350.5)"
+        ]
+      },
+      "c-aqua": {
+        "role": "secondary",
+        "displayName": "Acqua Polvere",
+        "canonical": "#7DB3B3",
+        "tonalRamp": [
+          "oklch(15.0% 0.057 196.0)",
+          "oklch(26.4% 0.057 196.0)",
+          "oklch(37.9% 0.057 196.0)",
+          "oklch(49.3% 0.057 196.0)",
+          "oklch(60.7% 0.057 196.0)",
+          "oklch(72.1% 0.057 196.0)",
+          "oklch(83.6% 0.057 196.0)",
+          "oklch(95.0% 0.057 196.0)"
+        ]
+      },
+      "c-yellow": {
+        "role": "secondary",
+        "displayName": "Giallo Acido",
+        "canonical": "#DAD90F",
+        "tonalRamp": [
+          "oklch(15.0% 0.185 109.4)",
+          "oklch(26.4% 0.185 109.4)",
+          "oklch(37.9% 0.185 109.4)",
+          "oklch(49.3% 0.185 109.4)",
+          "oklch(60.7% 0.185 109.4)",
+          "oklch(72.1% 0.185 109.4)",
+          "oklch(83.6% 0.185 109.4)",
+          "oklch(95.0% 0.185 109.4)"
+        ]
+      },
+      "c-rose": {
+        "role": "secondary",
+        "displayName": "Rosa Peonia",
+        "canonical": "#E797AA",
+        "tonalRamp": [
+          "oklch(15.0% 0.099 4.2)",
+          "oklch(26.4% 0.099 4.2)",
+          "oklch(37.9% 0.099 4.2)",
+          "oklch(49.3% 0.099 4.2)",
+          "oklch(60.7% 0.099 4.2)",
+          "oklch(72.1% 0.099 4.2)",
+          "oklch(83.6% 0.099 4.2)",
+          "oklch(95.0% 0.099 4.2)"
+        ]
+      },
+      "c-lilac": {
+        "role": "secondary",
+        "displayName": "Lilla Ardesia",
+        "canonical": "#8B8EA7",
+        "tonalRamp": [
+          "oklch(15.0% 0.037 279.9)",
+          "oklch(26.4% 0.037 279.9)",
+          "oklch(37.9% 0.037 279.9)",
+          "oklch(49.3% 0.037 279.9)",
+          "oklch(60.7% 0.037 279.9)",
+          "oklch(72.1% 0.037 279.9)",
+          "oklch(83.6% 0.037 279.9)",
+          "oklch(95.0% 0.037 279.9)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Nero Tessuto",
+        "canonical": "#0A0A0A",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(26.4% 0.000 0)",
+          "oklch(37.9% 0.000 0)",
+          "oklch(49.3% 0.000 0)",
+          "oklch(60.7% 0.000 0)",
+          "oklch(72.1% 0.000 0)",
+          "oklch(83.6% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "fabric": {
+        "role": "neutral",
+        "displayName": "Nero Trama",
+        "canonical": "#0E0E0E",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(26.4% 0.000 0)",
+          "oklch(37.9% 0.000 0)",
+          "oklch(49.3% 0.000 0)",
+          "oklch(60.7% 0.000 0)",
+          "oklch(72.1% 0.000 0)",
+          "oklch(83.6% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Nero Carbone",
+        "canonical": "#1E1D1C",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(26.4% 0.000 0)",
+          "oklch(37.9% 0.000 0)",
+          "oklch(49.3% 0.000 0)",
+          "oklch(60.7% 0.000 0)",
+          "oklch(72.1% 0.000 0)",
+          "oklch(83.6% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "greige": {
+        "role": "neutral",
+        "displayName": "Greige Luce Naturale",
+        "canonical": "#E2E2DA",
+        "tonalRamp": [
+          "oklch(15.0% 0.011 106.6)",
+          "oklch(26.4% 0.011 106.6)",
+          "oklch(37.9% 0.011 106.6)",
+          "oklch(49.3% 0.011 106.6)",
+          "oklch(60.7% 0.011 106.6)",
+          "oklch(72.1% 0.011 106.6)",
+          "oklch(83.6% 0.011 106.6)",
+          "oklch(95.0% 0.011 106.6)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Carta",
+        "canonical": "#F1F1EB",
+        "tonalRamp": [
+          "oklch(15.0% 0.008 106.5)",
+          "oklch(26.4% 0.008 106.5)",
+          "oklch(37.9% 0.008 106.5)",
+          "oklch(49.3% 0.008 106.5)",
+          "oklch(60.7% 0.008 106.5)",
+          "oklch(72.1% 0.008 106.5)",
+          "oklch(83.6% 0.008 106.5)",
+          "oklch(95.0% 0.008 106.5)"
+        ]
+      },
+      "text-2": {
+        "role": "neutral",
+        "displayName": "Grafite Calda",
+        "canonical": "#3E3D37",
+        "tonalRamp": [
+          "oklch(15.0% 0.010 99.2)",
+          "oklch(26.4% 0.010 99.2)",
+          "oklch(37.9% 0.010 99.2)",
+          "oklch(49.3% 0.010 99.2)",
+          "oklch(60.7% 0.010 99.2)",
+          "oklch(72.1% 0.010 99.2)",
+          "oklch(83.6% 0.010 99.2)",
+          "oklch(95.0% 0.010 99.2)"
+        ]
+      },
+      "text-inv": {
+        "role": "neutral",
+        "displayName": "Greige Chiaro",
+        "canonical": "#ECECE4",
+        "tonalRamp": [
+          "oklch(15.0% 0.011 106.6)",
+          "oklch(26.4% 0.011 106.6)",
+          "oklch(37.9% 0.011 106.6)",
+          "oklch(49.3% 0.011 106.6)",
+          "oklch(60.7% 0.011 106.6)",
+          "oklch(72.1% 0.011 106.6)",
+          "oklch(83.6% 0.011 106.6)",
+          "oklch(95.0% 0.011 106.6)"
+        ]
+      },
+      "text-inv-2": {
+        "role": "neutral",
+        "displayName": "Greige Polvere",
+        "canonical": "#B9B8AE",
+        "tonalRamp": [
+          "oklch(15.0% 0.014 102.1)",
+          "oklch(26.4% 0.014 102.1)",
+          "oklch(37.9% 0.014 102.1)",
+          "oklch(49.3% 0.014 102.1)",
+          "oklch(60.7% 0.014 102.1)",
+          "oklch(72.1% 0.014 102.1)",
+          "oklch(83.6% 0.014 102.1)",
+          "oklch(95.0% 0.014 102.1)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Filo Scuro",
+        "canonical": "rgb(10 10 10 / 0.16)",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0 / 0.16)",
+          "oklch(26.4% 0.000 0 / 0.16)",
+          "oklch(37.9% 0.000 0 / 0.16)",
+          "oklch(49.3% 0.000 0 / 0.16)",
+          "oklch(60.7% 0.000 0 / 0.16)",
+          "oklch(72.1% 0.000 0 / 0.16)",
+          "oklch(83.6% 0.000 0 / 0.16)",
+          "oklch(95.0% 0.000 0 / 0.16)"
+        ]
+      },
+      "line-inv": {
+        "role": "neutral",
+        "displayName": "Filo Chiaro",
+        "canonical": "rgb(236 236 228 / 0.18)",
+        "tonalRamp": [
+          "oklch(15.0% 0.011 106.6 / 0.18)",
+          "oklch(26.4% 0.011 106.6 / 0.18)",
+          "oklch(37.9% 0.011 106.6 / 0.18)",
+          "oklch(49.3% 0.011 106.6 / 0.18)",
+          "oklch(60.7% 0.011 106.6 / 0.18)",
+          "oklch(72.1% 0.011 106.6 / 0.18)",
+          "oklch(83.6% 0.011 106.6 / 0.18)",
+          "oklch(95.0% 0.011 106.6 / 0.18)"
+        ]
+      },
+      "error-inv": {
+        "role": "error",
+        "displayName": "Corallo d'Errore",
+        "canonical": "#FF8C82",
+        "tonalRamp": [
+          "oklch(15.0% 0.141 26.1)",
+          "oklch(26.4% 0.141 26.1)",
+          "oklch(37.9% 0.141 26.1)",
+          "oklch(49.3% 0.141 26.1)",
+          "oklch(60.7% 0.141 26.1)",
+          "oklch(72.1% 0.141 26.1)",
+          "oklch(83.6% 0.141 26.1)",
+          "oklch(95.0% 0.141 26.1)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Titolo dell'hero su due righe e grande chiamata del footer; nell'hero limitato a 10.5vh."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Un titolo per sezione, 12–18ch, text-wrap balance, coda in corsivo."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Titoli di card, passi e voci della Facial Shape."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "Paragrafo d'apertura di ogni sezione, massimo 34em."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Testo corrente, massimo 62ch; campi dei form a 16px fissi."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Didascalie, testi delle card, note, footer."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Maiuscolo spaziato per controlli, nomi dei campioni, canali (gamma 0.6875–0.75rem, peso 500–600, 0.14–0.22em). Mai come occhiello sopra un titolo."
+      },
+      "label-button": {
+        "displayName": "Label Button",
+        "purpose": "Etichetta maiuscola di tutti i pulsanti; 0.75rem nei pulsanti piccoli."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-rest",
+        "value": "-1px 1px 1px rgb(0 0 0 / 0.6), -4px 5px 8px -2px rgb(0 0 0 / 0.5), -16px 18px 30px -10px rgb(0 0 0 / 0.65)",
+        "purpose": "Cartoncini del ventaglio appoggiati sul tessuto nero, luce dall'alto a destra."
+      },
+      {
+        "name": "card-lifted",
+        "value": "-1px 1px 2px rgb(0 0 0 / 0.55), -6px 8px 12px -3px rgb(0 0 0 / 0.45), -18px 22px 34px -10px rgb(0 0 0 / 0.78)",
+        "purpose": "Il cartoncino scelto, sollevato."
+      },
+      {
+        "name": "hem-shade",
+        "value": "stroke 8px rgb(0 0 0 / 0.2), 24px rgb(0 0 0 / 0.09), 52px rgb(0 0 0 / 0.045)",
+        "purpose": "Ombra dell'orlo del drappo che si solleva nell'hero: tratti SVG lungo la curva del taglio."
+      },
+      {
+        "name": "print-drop",
+        "value": "0 30px 60px -30px rgb(10 10 10 / 0.55)",
+        "purpose": "Fotografia stampata posata sul greige (ritratto ruotato di -2°)."
+      },
+      {
+        "name": "floating-panel",
+        "value": "0 24px 60px -20px rgb(0 0 0 / 0.6)",
+        "purpose": "L'unico pannello d'interfaccia sospeso: banner cookie."
+      },
+      {
+        "name": "swatch-keyline",
+        "value": "inset 0 0 0 1px color-mix(in srgb, var(--season-ink) 14%, transparent)",
+        "purpose": "Filo interno che tiene il bordo dei campioni pallidi; non è elevazione."
+      },
+      {
+        "name": "focus-field",
+        "value": "0 0 0 3px rgb(216 227 72 / 0.28)",
+        "purpose": "Alone di focus dei campi sul nero, insieme al bordo giallo fluo."
+      },
+      {
+        "name": "focus-thumb",
+        "value": "0 0 0 1px var(--ink), 0 0 0 5px var(--c-lime)",
+        "purpose": "Alone di focus del cursore degli slider."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-silk",
+        "value": "cubic-bezier(0.19, 1, 0.22, 1)",
+        "purpose": "Ingressi, hover e reveal: partenza decisa, atterraggio lungo. Default GSAP (CustomEase 'silk', durata 1s)."
+      },
+      {
+        "name": "ease-drape",
+        "value": "cubic-bezier(0.65, 0.05, 0.36, 1)",
+        "purpose": "Cambi di scena: fondo delle stagioni, velatura della parola-accento, menu in diagonale, firma che si disegna, fili in loop."
+      },
+      {
+        "name": "ease-exit",
+        "value": "power2.in (GSAP); power3.in per la chiusura del menu",
+        "purpose": "Uscite che accelerano: testo dell'hero allo scroll, stagione uscente, menu che si richiude."
+      },
+      {
+        "name": "dur-quick",
+        "value": "180ms",
+        "purpose": "Colore e bordo di pulsanti e link."
+      },
+      {
+        "name": "dur-underline",
+        "value": "420ms",
+        "purpose": "Linee sotto le voci, icona dei pulsanti, burger (silk)."
+      },
+      {
+        "name": "dur-drape-fill",
+        "value": "520ms",
+        "purpose": "Velo giallo fluo dei pulsanti e salita della barra CTA mobile (silk)."
+      },
+      {
+        "name": "dur-accent-wipe",
+        "value": "700ms",
+        "purpose": "La parola-accento prova un nuovo colore (drape)."
+      },
+      {
+        "name": "dur-scene",
+        "value": "900ms",
+        "purpose": "Cambio di fondo delle stagioni, apertura del menu (drape)."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Nessuna animazione: keyframe d'ingresso solo 'from', stagioni impilate, nastro fermo, versione statica completa."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "900px"
+      },
+      {
+        "name": "xl",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Pulsante pieno",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Azione principale sulle sezioni chiare: pillola ink, al passaggio il velo giallo fluo entra da sinistra.",
+      "html": "<a class=\"ds-btn-solid\" href=\"#\">Scopri la tua stagione <svg class=\"ds-btn-solid__icon\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z\"/></svg></a>",
+      "css": ".ds-btn-solid{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:.65em;min-height:52px;padding:.9em 1.6em;border-radius:999px;border:1px solid transparent;background:var(--ink,#0A0A0A);color:var(--greige,#E2E2DA);font-family:var(--font-sans,'Montserrat',Arial,sans-serif);font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;overflow:hidden;cursor:pointer;transition:color 180ms ease,border-color 180ms ease,transform 180ms cubic-bezier(.19,1,.22,1)} .ds-btn-solid::before{content:'';position:absolute;inset:-1px;z-index:-1;background:var(--c-lime,#D8E348);transform:translateX(-101%) skewX(-12deg);transform-origin:left;transition:transform 520ms cubic-bezier(.19,1,.22,1)} .ds-btn-solid:hover{color:var(--ink,#0A0A0A);border-color:var(--c-lime,#D8E348)} .ds-btn-solid:hover::before{transform:translateX(0) skewX(0)} .ds-btn-solid:active{transform:scale(.98)} .ds-btn-solid:focus-visible{outline:2px solid currentColor;outline-offset:4px} .ds-btn-solid__icon{width:1.25em;height:1.25em;flex:none;transition:transform 420ms cubic-bezier(.19,1,.22,1)} .ds-btn-solid:hover .ds-btn-solid__icon{transform:translateX(3px)}"
+    },
+    {
+      "name": "Pulsante chiaro",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Azione principale sul tessuto nero (hero, contatti, menu, barra mobile).",
+      "html": "<div class=\"ds-btn-light-stage\"><a class=\"ds-btn-light\" href=\"#\">Prenota la tua consulenza</a></div>",
+      "css": ".ds-btn-light-stage{background:#0E0E0E;padding:32px;color:var(--text-inv,#ECECE4);font-family:var(--font-sans,'Montserrat',Arial,sans-serif)} .ds-btn-light{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:.65em;min-height:52px;padding:.9em 1.6em;border-radius:999px;border:1px solid transparent;background:var(--greige,#E2E2DA);color:var(--ink,#0A0A0A);font-family:var(--font-sans,'Montserrat',Arial,sans-serif);font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;overflow:hidden;cursor:pointer;transition:color 180ms ease,border-color 180ms ease,transform 180ms cubic-bezier(.19,1,.22,1)} .ds-btn-light::before{content:'';position:absolute;inset:-1px;z-index:-1;background:var(--c-lime,#D8E348);transform:translateX(-101%) skewX(-12deg);transform-origin:left;transition:transform 520ms cubic-bezier(.19,1,.22,1)} .ds-btn-light:hover{color:var(--ink,#0A0A0A);border-color:var(--c-lime,#D8E348)} .ds-btn-light:hover::before{transform:translateX(0) skewX(0)} .ds-btn-light:active{transform:scale(.98)} .ds-btn-light:focus-visible{outline:2px solid currentColor;outline-offset:4px}"
+    },
+    {
+      "name": "Pulsante fantasma chiaro",
+      "kind": "button",
+      "refersTo": "button-ghost-light",
+      "description": "Azione secondaria sul nero, accanto al pulsante chiaro: trasparente con filo greige al 42%.",
+      "html": "<div class=\"ds-btn-ghost-light-stage\"><a class=\"ds-btn-ghost-light\" href=\"#\">Scopri l'armocromia</a></div>",
+      "css": ".ds-btn-ghost-light-stage{background:#0E0E0E;padding:32px;color:var(--text-inv,#ECECE4);font-family:var(--font-sans,'Montserrat',Arial,sans-serif)} .ds-btn-ghost-light{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:.65em;min-height:52px;padding:.9em 1.6em;border-radius:999px;border:1px solid rgb(236 236 228 / .42);background:transparent;color:var(--text-inv,#ECECE4);font-family:var(--font-sans,'Montserrat',Arial,sans-serif);font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;overflow:hidden;cursor:pointer;transition:color 180ms ease,border-color 180ms ease,transform 180ms cubic-bezier(.19,1,.22,1)} .ds-btn-ghost-light::before{content:'';position:absolute;inset:-1px;z-index:-1;background:var(--c-lime,#D8E348);transform:translateX(-101%) skewX(-12deg);transform-origin:left;transition:transform 520ms cubic-bezier(.19,1,.22,1)} .ds-btn-ghost-light:hover{color:var(--ink,#0A0A0A);border-color:var(--c-lime,#D8E348)} .ds-btn-ghost-light:hover::before{transform:translateX(0) skewX(0)} .ds-btn-ghost-light:active{transform:scale(.98)} .ds-btn-ghost-light:focus-visible{outline:2px solid currentColor;outline-offset:4px}"
+    },
+    {
+      "name": "Campo di testo",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Campo del form sul tessuto nero: fondo al 5%, raggio 2px, focus con bordo e alone giallo fluo.",
+      "html": "<div class=\"ds-field-stage\"><div class=\"ds-field\"><label class=\"ds-field__label\" for=\"ds-f-phone\">Telefono o WhatsApp <span class=\"ds-field__opt\">facoltativo</span></label><input class=\"ds-field__input\" id=\"ds-f-phone\" type=\"tel\"><p class=\"ds-field__help\">Se preferisci che ti risponda su WhatsApp.</p></div></div>",
+      "css": ".ds-field-stage{background:#0E0E0E;padding:32px;color:var(--text-inv,#ECECE4);font-family:var(--font-sans,'Montserrat',Arial,sans-serif)} .ds-field{display:grid;gap:.5rem;max-width:360px} .ds-field__label{font-size:.875rem;font-weight:500} .ds-field__opt{font-weight:400;color:var(--text-inv-2,#B9B8AE);margin-left:.35em;font-size:.8125rem} .ds-field__input{box-sizing:border-box;width:100%;min-height:52px;padding:.85em 1em;border-radius:2px;border:1px solid rgb(236 236 228 / .3);background:rgb(236 236 228 / .05);color:var(--text-inv,#ECECE4);font-family:inherit;font-size:1rem;transition:border-color 200ms ease,background-color 200ms ease,box-shadow 200ms ease} .ds-field__input:hover{border-color:rgb(236 236 228 / .5)} .ds-field__input:focus,.ds-field__input:focus-visible{outline:none;border-color:var(--c-lime,#D8E348);background:rgb(236 236 228 / .08);box-shadow:0 0 0 3px rgb(216 227 72 / .28)} .ds-field__help{margin:0;font-size:.8125rem;color:var(--text-inv-2,#B9B8AE)}"
+    },
+    {
+      "name": "Chip di servizio",
+      "kind": "chip",
+      "refersTo": "chip-selected",
+      "description": "Scelta singola a pillole sul nero: il selezionato si riempie di giallo fluo con testo ink.",
+      "html": "<div class=\"ds-chips-stage\"><fieldset class=\"ds-chips\"><legend class=\"ds-chips__legend\">Cosa ti interessa?</legend><div class=\"ds-chips__row\"><input class=\"ds-chips__input\" type=\"radio\" id=\"ds-s1\" name=\"ds-servizio\"><label class=\"ds-chips__chip\" for=\"ds-s1\">Analisi del colore</label><input class=\"ds-chips__input\" type=\"radio\" id=\"ds-s2\" name=\"ds-servizio\"><label class=\"ds-chips__chip\" for=\"ds-s2\">Facial Shape</label><input class=\"ds-chips__input\" type=\"radio\" id=\"ds-s3\" name=\"ds-servizio\"><label class=\"ds-chips__chip\" for=\"ds-s3\">Entrambe</label><input class=\"ds-chips__input\" type=\"radio\" id=\"ds-s4\" name=\"ds-servizio\" checked><label class=\"ds-chips__chip\" for=\"ds-s4\">Non so ancora</label></div></fieldset></div>",
+      "css": ".ds-chips-stage{background:#0E0E0E;padding:32px;color:var(--text-inv,#ECECE4);font-family:var(--font-sans,'Montserrat',Arial,sans-serif)} .ds-chips{display:grid;gap:.5rem;border:0;padding:0;margin:0;min-width:0} .ds-chips__legend{padding:0;margin-bottom:.5rem;font-size:.875rem;font-weight:500} .ds-chips__row{display:flex;flex-wrap:wrap;gap:.5rem} .ds-chips__input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none} .ds-chips__chip{display:inline-flex;align-items:center;min-height:44px;padding:.55em 1.15em;border-radius:999px;border:1px solid rgb(236 236 228 / .32);font-size:.875rem;cursor:pointer;transition:background-color 250ms ease,color 250ms ease,border-color 250ms ease,transform 200ms cubic-bezier(.19,1,.22,1)} .ds-chips__chip:hover{border-color:var(--text-inv,#ECECE4)} .ds-chips__input:checked+.ds-chips__chip{background:var(--c-lime,#D8E348);border-color:var(--c-lime,#D8E348);color:var(--ink,#0A0A0A);font-weight:600} .ds-chips__input:focus-visible+.ds-chips__chip{outline:2px solid var(--text-inv,#ECECE4);outline-offset:3px} .ds-chips__chip:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Navigazione",
+      "kind": "nav",
+      "refersTo": "nav-bar-light",
+      "description": "Barra fissa in tema chiaro dopo lo scroll: velo greige sfocato, voci in maiuscolo con linea che si stende da sinistra. Lo slot del logo è omesso: il logo ufficiale è un asset vettoriale e non va ricostruito.",
+      "html": "<header class=\"ds-nav\"><nav class=\"ds-nav__links\" aria-label=\"Sezioni\"><a href=\"#\" aria-current=\"true\">Armocromia</a><a href=\"#\">16 stagioni</a><a href=\"#\">Facial Shape</a><a href=\"#\">Come funziona</a><a href=\"#\">Chi sono</a></nav><a class=\"ds-nav__cta\" href=\"#\">Prenota</a></header>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:flex-end;gap:2rem;height:64px;padding:0 24px;background:rgb(226 226 218 / .86);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid rgb(10 10 10 / .1);color:var(--ink,#0A0A0A);font-family:var(--font-sans,'Montserrat',Arial,sans-serif)} .ds-nav__links{display:flex;gap:clamp(1rem,2vw,2.25rem)} .ds-nav__links a{position:relative;display:inline-block;padding-block:10px;font-size:.71875rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:inherit} .ds-nav__links a::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform 420ms cubic-bezier(.19,1,.22,1)} .ds-nav__links a:hover::after,.ds-nav__links a[aria-current='true']::after{transform:scaleX(1);transform-origin:left} .ds-nav__links a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px} .ds-nav__cta{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:.65em;min-height:52px;padding:.9em 1.6em;border-radius:999px;border:1px solid transparent;background:var(--ink,#0A0A0A);color:var(--greige,#E2E2DA);font-family:var(--font-sans,'Montserrat',Arial,sans-serif);font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;overflow:hidden;cursor:pointer;transition:color 180ms ease,border-color 180ms ease,transform 180ms cubic-bezier(.19,1,.22,1)} .ds-nav__cta::before{content:'';position:absolute;inset:-1px;z-index:-1;background:var(--c-lime,#D8E348);transform:translateX(-101%) skewX(-12deg);transform-origin:left;transition:transform 520ms cubic-bezier(.19,1,.22,1)} .ds-nav__cta:hover{color:var(--ink,#0A0A0A);border-color:var(--c-lime,#D8E348)} .ds-nav__cta:hover::before{transform:translateX(0) skewX(0)} .ds-nav__cta:active{transform:scale(.98)} .ds-nav__cta:focus-visible{outline:2px solid currentColor;outline-offset:4px} .ds-nav__cta{min-height:44px;padding:.7em 1.25em;font-size:.75rem}"
+    },
+    {
+      "name": "Campioni a zig-zag",
+      "kind": "custom",
+      "description": "Firma del sistema: campioni 3:4 con il bordo inferiore rifilato dalle forbici a zig-zag (denti da 10px) e un filo interno al 14% per i colori pallidi.",
+      "html": "<ul class=\"ds-swatches\" role=\"list\" aria-label=\"Campioni della palette dei drappi\"><li class=\"ds-swatch\" style=\"--c:#146C78\" aria-label=\"Verde petrolio\"></li><li class=\"ds-swatch\" style=\"--c:#D31728\" aria-label=\"Rosso drappo\"></li><li class=\"ds-swatch\" style=\"--c:#E1800A\" aria-label=\"Arancio\"></li><li class=\"ds-swatch\" style=\"--c:#DE9CBA\" aria-label=\"Rosa orchidea\"></li><li class=\"ds-swatch\" style=\"--c:#975290\" aria-label=\"Viola malva\"></li><li class=\"ds-swatch\" style=\"--c:#7DB3B3\" aria-label=\"Acqua polvere\"></li></ul>",
+      "css": ".ds-swatches{display:grid;grid-template-columns:repeat(3,72px);gap:6px;margin:0;padding:24px;list-style:none;background:var(--greige,#E2E2DA)} .ds-swatch{aspect-ratio:3/4;background:var(--c);-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/10px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/10px 100%;box-shadow:inset 0 0 0 1px rgb(10 10 10 / .14)}"
+    },
+    {
+      "name": "Filo e bottoni",
+      "kind": "custom",
+      "description": "Firma di 'Come funziona': filo tratteggiato 6/6 che lo scroll ripassa in ink, bottoni a due fori che si riempiono di giallo fluo quando il filo li raggiunge.",
+      "html": "<div class=\"ds-seam\"><div class=\"ds-seam__thread\" aria-hidden=\"true\"><span class=\"ds-seam__sewn\"></span></div><ol class=\"ds-seam__steps\"><li class=\"ds-seam__step ds-seam__step--sewn\"><span class=\"ds-seam__knot\" aria-hidden=\"true\"></span>Mi scrivi</li><li class=\"ds-seam__step ds-seam__step--sewn\"><span class=\"ds-seam__knot\" aria-hidden=\"true\"></span>Fissiamo l'incontro</li><li class=\"ds-seam__step\"><span class=\"ds-seam__knot\" aria-hidden=\"true\"></span>L'analisi</li><li class=\"ds-seam__step\"><span class=\"ds-seam__knot\" aria-hidden=\"true\"></span>I tuoi colori</li></ol></div>",
+      "css": ".ds-seam{position:relative;padding:32px 24px;background:var(--paper,#F1F1EB);color:var(--ink,#0A0A0A);font-family:var(--font-display,'Bodoni Moda',Georgia,serif)} .ds-seam__thread{position:absolute;left:24px;right:24px;top:41px;height:1px;background:repeating-linear-gradient(90deg,rgb(10 10 10 / .28) 0 6px,transparent 6px 12px)} .ds-seam__sewn{position:absolute;inset:0;background:repeating-linear-gradient(90deg,var(--ink,#0A0A0A) 0 6px,transparent 6px 12px);transform-origin:left;transform:scaleX(.42)} .ds-seam__steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:0;padding:0;list-style:none} .ds-seam__step{position:relative;padding-top:40px;font-size:1.35rem;line-height:1.15;letter-spacing:-.01em} .ds-seam__knot{position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;border:1px solid var(--ink,#0A0A0A);background:var(--paper,#F1F1EB);transition:background-color 400ms ease,transform 500ms cubic-bezier(.19,1,.22,1)} .ds-seam__knot::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 35% 50%,var(--ink,#0A0A0A) 0 1.4px,transparent 1.6px),radial-gradient(circle at 65% 50%,var(--ink,#0A0A0A) 0 1.4px,transparent 1.6px)} .ds-seam__step--sewn .ds-seam__knot{background:var(--c-lime,#D8E348);transform:scale(1.12)}"
+    },
+    {
+      "name": "Canale diretto",
+      "kind": "custom",
+      "description": "Contatto a un tocco sul nero: icona Phosphor in un cerchio con filo, etichetta in maiuscolo, valore; al passaggio il cerchio si riempie di giallo fluo.",
+      "html": "<div class=\"ds-channel-stage\"><a class=\"ds-channel\" href=\"#\"><svg class=\"ds-channel__icon\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z\"/></svg><span class=\"ds-channel__label\">WhatsApp</span><span class=\"ds-channel__value\">Scrivimi un messaggio</span></a></div>",
+      "css": ".ds-channel-stage{background:#0E0E0E;padding:32px;color:var(--text-inv,#ECECE4);font-family:var(--font-sans,'Montserrat',Arial,sans-serif)} .ds-channel{display:grid;grid-template-columns:48px 1fr;grid-template-rows:auto auto;column-gap:1rem;align-items:center;max-width:360px;min-height:64px;padding:.75rem .75rem .75rem 0;border-bottom:1px solid rgb(236 236 228 / .18);color:inherit;text-decoration:none} .ds-channel__icon{box-sizing:border-box;grid-row:span 2;width:48px;height:48px;padding:11px;border-radius:50%;border:1px solid rgb(236 236 228 / .18);transition:background-color 300ms ease,color 300ms ease,border-color 300ms ease} .ds-channel__label{font-size:.6875rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--text-inv-2,#B9B8AE)} .ds-channel__value{font-size:1rem} .ds-channel:hover .ds-channel__icon,.ds-channel:focus-visible .ds-channel__icon{background:var(--c-lime,#D8E348);color:var(--ink,#0A0A0A);border-color:var(--c-lime,#D8E348)} .ds-channel:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Il Rituale dei Drappi",
+    "overview": "Il sito è la consulenza messa in pagina. Come durante l'analisi, c'è un fondale neutro, il tessuto nero e la luce greige che vengono dal logo, e sopra si posano i colori, uno alla volta, vicino a chi guarda. Il colore è materia: drappi, cartoncini del ventaglio, campioni dal bordo a zig-zag, campi pieni delle stagioni. Non è mai decorazione d'interfaccia. L'unico colore che risponde al tocco è il giallo fluo.\n\nLa voce è editoriale e sartoriale insieme. Bodoni Moda, a peso 450 e con il taglio ottico fissato per la lettura, porta i titoli e li chiude in corsivo; Montserrat, il carattere del wordmark, porta il testo e il maiuscolo spaziato di pulsanti, voci e controlli. La densità è ariosa: sezioni alte, colonne asimmetriche su 12, tanto vuoto quanto pieno. Il movimento ha un solo carattere, il tessuto che si posa: partenza decisa e atterraggio lungo, velature di colore che entrano da sinistra, fili che lo scroll cuce. Con movimento ridotto il sito resta completo e statico.\n\nRifiuto confermato dal contratto di direzione: il template beauty pastello. In pratica niente neutri crema o avorio, niente oro come ornamento, niente foto stock, niente griglie di card uguali. Pastelli e oro esistono solo come contenuto (un campione in palette, il drappo in lamé dei video), mai come atmosfera della pagina.",
+    "keyCharacteristics": [
+      "Due luci alternate sezione per sezione: tessuto nero fotografato e greige del logo.",
+      "La palette vivida dei drappi solo negli elementi grafici; un solo accento d'interazione, il giallo fluo.",
+      "Bodoni Moda 450 a taglio ottico fisso, con coda in corsivo; Montserrat per il testo e per il maiuscolo spaziato.",
+      "Contenitori a spigolo vivo, controlli a pillola, campioni con bordo a zig-zag.",
+      "Profondità da tono, texture e ritaglio; ombre solo sugli oggetti fisici.",
+      "Movimento \"silk\": ingressi lunghi, velature da sinistra, fili cuciti; versione statica completa.",
+      "Logo (firma monoline e wordmark Montserrat) solo in nero o greige, mai ricolorato né deformato."
+    ],
+    "rules": [
+      {
+        "name": "The One Lime Rule",
+        "body": "Il giallo fluo è l'unico colore che segnala interazione: velo dei pulsanti, chip e caselle selezionati, bottoni cuciti, compagno del focus, tondo WhatsApp. Nessun altro colore dei drappi indica mai uno stato.",
+        "section": "colors"
+      },
+      {
+        "name": "The Drapes Are Matter Rule",
+        "body": "I colori dei drappi vivono negli elementi grafici (cartoncini, bagliore, campioni, campi delle stagioni, diagrammi), mai nel testo corrente, nelle etichette o nelle cornici d'interfaccia. Unica eccezione: la parola-accento del titolo dell'hero, che \"prova\" il colore scelto nel ventaglio usandone una tinta schiarita leggibile sul nero (viola #B77AB2 invece di #975290, 6.1:1 invece di 3.7:1; rosso #F0303F invece di #D31728, 4.9:1).",
+        "section": "colors"
+      },
+      {
+        "name": "The Lime Is a Fill on Light Rule",
+        "body": "Su greige e carta il giallo fluo compare solo come riempimento dietro testo ink, mai come testo o filo: lì renderebbe 1.07:1. Sul tessuto nero può essere anche testo o filo (asterisco dei campi obbligatori, corsivo del footer al passaggio, tratto dell'indicatore di scroll).",
+        "section": "colors"
+      },
+      {
+        "name": "The Italic Coda Rule",
+        "body": "Ogni headline di sezione e ogni display in Bodoni chiude in corsivo: una parola o l'ultima frase (\"L'armocromia, drappo dopo drappo.\", \"Sono Erica.\", \"ti accende.\"). Mai tutto il titolo in corsivo, mai il grassetto: il Bodoni resta a 450 e la sua sola enfasi è il corsivo. I titoli minori in Bodoni (card, passi, conferma, cookie) restano in tondo.",
+        "section": "typography"
+      },
+      {
+        "name": "The Spaced Capitals Rule",
+        "body": "Il maiuscolo esiste solo in Montserrat, sempre spaziato (da 0.1 a 0.22em), piccolo (0.6875–0.8125rem) e a peso 500–600, ed è riservato a pulsanti, navigazione, controlli e nomi dei campioni. Mai in Bodoni, mai come occhiello sopra un titolo.",
+        "section": "typography"
+      },
+      {
+        "name": "The Empty Column Rule",
+        "body": "Da 900px ogni composizione a due parti (testo e immagine, testo e strumento) usa la griglia a 12 colonne e lascia almeno una colonna vuota fra le parti (6+5, 5+6, 4+5): mai una divisione 6+6 a filo.",
+        "section": "layout"
+      },
+      {
+        "name": "The Objects Cast Shadows Rule",
+        "body": "Proiettano ombra solo gli oggetti fisici posati sulla scena (i cartoncini del ventaglio, il ritratto stampato): ombre morbide, lunghe, con spread negativo. Sezioni, card, campi e navigazione sono piatti e si separano con tono, texture e fili da 1px.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Two Lights Rule",
+        "body": "Le sezioni alternano due luci: il tessuto nero fotografato (hero, galleria, contatti, footer, menu) e la luce greige o carta (tutte le altre). Il campo delle stagioni è l'unico fondo che prende un colore pieno, e lo cambia con lo scroll.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Sharp Container Rule",
+        "body": "Contenitori, card, media e pannelli hanno spigolo vivo; ciò che si preme è una pillola o un cerchio; i campi hanno 2px. Mai una card arrotondata, mai una pillola come contenitore.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Pinking Shears Rule",
+        "body": "Ogni campione di colore (swatch delle stagioni, nastro, coppie del sottotono, scale di valore e intensità) è un rettangolo 3:4 con il bordo inferiore rifilato a zig-zag (denti da 10px, maschera --pinked). Le sezioni che chiudono un campo pieno (stagioni, galleria) finiscono con la stessa rifilatura a denti da 20px. I campioni non si arrotondano mai; gli unici cerchi colorati sono le tinte di pelle, occhi e capelli del contrasto, che non rappresentano tessuto.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Drape Wipe Rule",
+        "body": "Il colore e i cambi di scena entrano da sinistra come un drappo posato: il velo dei pulsanti, la parola-accento, il menu in diagonale, le linee sotto le voci. Ingressi in silk (cubic-bezier(0.19, 1, 0.22, 1)), cambi di scena in drape (cubic-bezier(0.65, 0.05, 0.36, 1)), uscite che accelerano.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do usare il giallo fluo (#D8E348) come unico segnale d'interazione: velo dei pulsanti, chip e caselle selezionati, bottoni cuciti, compagno del focus.",
+      "Do chiudere ogni headline di sezione e ogni display in Bodoni con una coda in corsivo, a peso 450 con taglio ottico fisso, interlinea 1.02–1.06, spaziatura negativa (-0.02/-0.03em), text-wrap: balance, 12–18ch.",
+      "Do alternare tessuto nero (#0E0E0E con la texture del tessuto) e luce greige o carta tra le sezioni, e lasciare il fondo a colore pieno solo al campo delle stagioni.",
+      "Do tagliare ogni campione di colore in 3:4 con il bordo a zig-zag (--pinked).",
+      "Do usare la tinta schiarita di un colore dei drappi (almeno 4.5:1) quando diventa testo sul nero, come la parola-accento dell'hero.",
+      "Do tenere i controlli (pulsanti, chip, campi, interruttore, slider, pulsanti tondi) ad almeno 44px di altezza, i pulsanti a 52px, i link testuali ad almeno 40px, e un focus visibile (2px, offset 3–4px) su ogni elemento.",
+      "Do muovere tutto con le due curve di casa: silk (cubic-bezier(0.19, 1, 0.22, 1)) per ingressi e hover, drape (cubic-bezier(0.65, 0.05, 0.36, 1)) per i cambi di scena; uscite che accelerano (power2.in).",
+      "Do scrivere le coreografie d'ingresso come keyframe solo \"from\", così lo stato finale coincide con lo stile di base e con movimento ridotto il sito resta completo e statico.",
+      "Do usare icone Phosphor inline nel colore del testo, peso light, thin sopra i 40px."
+    ],
+    "donts": [
+      "Don't ricolorare o deformare il logo: firma e wordmark solo in nero (#040606 del file ufficiale o l'inchiostro #0A0A0A) o in bianco/greige, scalati in modo uniforme; mai in giallo fluo, mai in un colore dei drappi.",
+      "Don't usare il giallo fluo come testo o filo su greige o carta (1.07:1): sul chiaro è solo un riempimento dietro testo ink.",
+      "Don't usare un colore dei drappi diverso dal giallo fluo per stati d'interazione, né per testo corrente, etichette o cornici d'interfaccia.",
+      "Don't lasciare l'asse ottico del Bodoni in automatico sui titoli grandi: oltre i 60px le aste sottili diventano capelli e sui fondi pieni delle stagioni il titolo non si legge più. Il taglio ottico resta fisso (28; 32 per i display; 20 per i titoli minori) e il peso a 450.",
+      "Don't aggiungere un terzo carattere, usare il Bodoni in grassetto o in maiuscolo, o mettere un occhiello in maiuscolo spaziato sopra un titolo.",
+      "Don't arrotondare contenitori, card, media o campioni: la pillola e il cerchio sono solo per i controlli.",
+      "Don't dare ombre alle superfici d'interfaccia (sezioni, card, campi, navigazione): la profondità viene da tono, texture, ritaglio e fili da 1px.",
+      "Don't scaldare i neutri di pagina verso crema o avorio (la famiglia resta il greige del logo, tonalità OKLCH 99–107°, croma fino a 0.014), né usare l'oro come ornamento (filetti, cornici, foglia): oro e pastelli entrano solo come contenuto, cioè un campione in palette o il drappo in lamé dei video.",
+      "Don't usare foto stock o immagini generiche: le immagini sono solo la Copertina, il tessuto e i momenti veri delle consulenze.",
+      "Don't comporre griglie di card informative identiche (icona, titolo, testo ripetuti): ogni contenitore di un gruppo cambia luce, proporzione o strumento, come le quattro caratteristiche. La pellicola di reel 9:16 è un formato video, non una griglia di card."
+    ]
+  }
+}

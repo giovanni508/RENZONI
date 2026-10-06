@@ -48,6 +48,12 @@ function initFan() {
   const fan = hero.querySelector('.fan');
   if (!fan) return;
   const cards = [...fan.querySelectorAll('.fan__card')];
+  // texture dei cartoncini: caricate ora (dopo l'immagine principale), applicate quando sono pronte
+  Promise.all(cards.map((_, i) => {
+    const im = new Image();
+    im.src = `/assets/img/fan/card-${i}.webp`;
+    return im.decode().catch(() => {});
+  })).then(() => fan.classList.add('is-textured'));
   let demo = null;
   let used = false;
 

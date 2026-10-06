@@ -28,19 +28,19 @@ typography:
   display:
     fontFamily: "'Bodoni Moda', 'Bodoni Fallback', 'Didot', Georgia, serif"
     fontSize: "clamp(2.65rem, 1.35rem + 5.2vw, 6rem)"
-    fontWeight: 400
+    fontWeight: 450
     lineHeight: 1.02
     letterSpacing: "-0.03em"
   headline:
     fontFamily: "'Bodoni Moda', 'Bodoni Fallback', 'Didot', Georgia, serif"
     fontSize: "clamp(2.25rem, 1.35rem + 3.3vw, 4.6rem)"
-    fontWeight: 400
+    fontWeight: 450
     lineHeight: 1.06
     letterSpacing: "-0.02em"
   title:
     fontFamily: "'Bodoni Moda', 'Bodoni Fallback', 'Didot', Georgia, serif"
     fontSize: "clamp(1.35rem, 1.12rem + 0.85vw, 1.9rem)"
-    fontWeight: 400
+    fontWeight: 450
     lineHeight: 1.15
     letterSpacing: "-0.01em"
   body-lead:
@@ -171,14 +171,14 @@ components:
 
 Il sito è la consulenza messa in pagina. Come durante l'analisi, c'è un fondale neutro, il tessuto nero e la luce greige che vengono dal logo, e sopra si posano i colori, uno alla volta, vicino a chi guarda. Il colore è materia: drappi, cartoncini del ventaglio, campioni dal bordo a zig-zag, campi pieni delle stagioni. Non è mai decorazione d'interfaccia. L'unico colore che risponde al tocco è il giallo fluo.
 
-La voce è editoriale e sartoriale insieme. Bodoni Moda, sempre a peso regolare, porta i titoli e li chiude in corsivo; Montserrat, il carattere del wordmark, porta il testo e il maiuscolo spaziato di pulsanti, voci e controlli. La densità è ariosa: sezioni alte, colonne asimmetriche su 12, tanto vuoto quanto pieno. Il movimento ha un solo carattere, il tessuto che si posa: partenza decisa e atterraggio lungo, velature di colore che entrano da sinistra, fili che lo scroll cuce. Con movimento ridotto il sito resta completo e statico.
+La voce è editoriale e sartoriale insieme. Bodoni Moda, a peso 450 e con il taglio ottico fissato per la lettura, porta i titoli e li chiude in corsivo; Montserrat, il carattere del wordmark, porta il testo e il maiuscolo spaziato di pulsanti, voci e controlli. La densità è ariosa: sezioni alte, colonne asimmetriche su 12, tanto vuoto quanto pieno. Il movimento ha un solo carattere, il tessuto che si posa: partenza decisa e atterraggio lungo, velature di colore che entrano da sinistra, fili che lo scroll cuce. Con movimento ridotto il sito resta completo e statico.
 
 Rifiuto confermato dal contratto di direzione: il template beauty pastello. In pratica niente neutri crema o avorio, niente oro come ornamento, niente foto stock, niente griglie di card uguali. Pastelli e oro esistono solo come contenuto (un campione in palette, il drappo in lamé dei video), mai come atmosfera della pagina.
 
 **Key Characteristics:**
 - Due luci alternate sezione per sezione: tessuto nero fotografato e greige del logo.
 - La palette vivida dei drappi solo negli elementi grafici; un solo accento d'interazione, il giallo fluo.
-- Bodoni Moda 400 con coda in corsivo, Montserrat per il testo e per il maiuscolo spaziato.
+- Bodoni Moda 450 a taglio ottico fisso, con coda in corsivo; Montserrat per il testo e per il maiuscolo spaziato.
 - Contenitori a spigolo vivo, controlli a pillola, campioni con bordo a zig-zag.
 - Profondità da tono, texture e ritaglio; ombre solo sugli oggetti fisici.
 - Movimento "silk": ingressi lunghi, velature da sinistra, fili cuciti; versione statica completa.
@@ -208,7 +208,7 @@ La palette dei drappi, campionata dalla Copertina. Colore materico: vive nei car
 - **Grafite Calda** (#3E3D37, `--text-2`): testo secondario su chiaro, didascalie, nomi dei campioni (8.4:1 su greige, 9.6:1 su carta).
 - **Greige Chiaro** (#ECECE4, `--text-inv`): testo su nero (16.3:1 sul tessuto).
 - **Greige Polvere** (#B9B8AE, `--text-inv-2`): testo secondario su nero, sottotitolo dell'hero, etichette dei canali, aiuti dei campi (9.7:1 sul tessuto).
-- **Filo Scuro** (rgb(10 10 10 / 0.16), `--line`) e **Filo Chiaro** (rgb(236 236 228 / 0.18), `--line-inv`): le uniche linee di separazione, sempre da 1px.
+- **Filo Scuro** (rgb(10 10 10 / 0.16), `--line`) e **Filo Chiaro** (rgb(236 236 228 / 0.18), `--line-inv`): i fili di separazione, sempre da 1px.
 - **Corallo d'Errore** (#FF8C82): stato d'errore dei campi, solo sul nero (8.6:1 sul tessuto), sempre con un pallino e un messaggio scritto.
 
 ### Named Rules
@@ -224,23 +224,23 @@ La palette dei drappi, campionata dalla Copertina. Colore materico: vive nei car
 **Body Font:** Montserrat (con 'Montserrat Fallback', Arial a metriche corrette, poi Helvetica Neue, Arial, sans-serif)
 **Label/Mono Font:** Montserrat in maiuscolo spaziato; nessun mono.
 
-**Character:** Il contrasto alto del Bodoni, con l'asse ottico che segue la dimensione (`font-optical-sizing: auto`), è il gesto sartoriale; Montserrat, il carattere del wordmark e vincolo di marca, è la mano pulita che spiega. Il corsivo del Bodoni è l'unica enfasi del sistema.
+**Character:** Il contrasto alto del Bodoni è il gesto sartoriale, con l'asse ottico fissato a un taglio da lettura (`'opsz' 28`, 32 per i display, 20 per i titoli minori) invece di seguire la dimensione: a quella grandezza le aste sottili restano visibili anche sui fondi pieni delle stagioni; Montserrat, il carattere del wordmark e vincolo di marca, è la mano pulita che spiega. Il corsivo del Bodoni è l'unica enfasi del sistema.
 
 ### Hierarchy
-- **Display** (400, clamp(2.65rem, 1.35rem + 5.2vw, 6rem), limitato a 10.5vh nell'hero; 1.02; -0.03em): il titolo dell'hero su due righe e la grande chiamata del footer (fino a 6rem, interlinea 1, -0.025em). Ogni riga risale da una piega.
-- **Headline** (400, clamp(2.25rem, 1.35rem + 3.3vw, 4.6rem), 1.06, -0.02em): un titolo per sezione, `text-wrap: balance`, larghezza da 12 a 18ch (di solito 12–14ch).
-- **Title** (400, clamp(1.35rem, 1.12rem + 0.85vw, 1.9rem), 1.15, -0.01em): titoli delle card, dei passi, delle voci della Facial Shape.
+- **Display** (450, opsz 32, clamp(2.65rem, 1.35rem + 5.2vw, 6rem), limitato a 10.5vh nell'hero; 1.02; -0.03em): il titolo dell'hero su due righe e la grande chiamata del footer (fino a 6rem, interlinea 1, -0.025em). Ogni riga risale da una piega.
+- **Headline** (450, opsz 28, clamp(2.25rem, 1.35rem + 3.3vw, 4.6rem), 1.06, -0.02em): un titolo per sezione, `text-wrap: balance`, larghezza da 12 a 18ch (di solito 12–14ch).
+- **Title** (450, opsz 20, clamp(1.35rem, 1.12rem + 0.85vw, 1.9rem), 1.15, -0.01em): titoli delle card, dei passi, delle voci della Facial Shape.
 - **Body Lead** (Montserrat 400, clamp(1.1rem, 1rem + 0.42vw, 1.35rem), 1.55): il paragrafo d'apertura di ogni sezione, massimo 34em, `text-wrap: pretty`.
 - **Body** (Montserrat 400, clamp(1rem, 0.97rem + 0.14vw, 1.0625rem), 1.65): testo corrente, massimo 62ch. I campi dei form restano a 16px fissi.
 - **Body Small** (Montserrat 400, 0.875rem, 1.55): didascalie, testi delle card, note, footer.
-- **Label** (Montserrat 600, 0.6875rem, 0.16em, maiuscolo): estremi degli slider, nomi dei campioni, etichette dei canali, chip delle forme del viso. Gamma osservata: 0.6875–0.75rem, peso 500–600, spaziatura 0.14–0.22em; le voci della navbar usano 0.72rem, 500, 0.18em.
+- **Label** (Montserrat 600, 0.6875rem, 0.16em, maiuscolo): estremi degli slider, nomi dei campioni, etichette dei canali, chip delle forme del viso. Gamma osservata: 0.6875–0.75rem, peso 500–600, spaziatura 0.14–0.22em (fino a 0.1em nelle schede delle stagioni su schermi stretti); le voci della navbar usano 0.72rem, 500, 0.18em.
 - **Label Button** (Montserrat 600, 0.8125rem, 0.14em, maiuscolo; 0.75rem nei pulsanti piccoli): tutti i pulsanti.
-- **Varianti di display:** il nome della macrostagione (Bodoni corsivo 400, clamp(3.4rem, 1.6rem + 6.8vw, 6rem), 0.95, -0.035em), le voci del menu mobile (Bodoni clamp(2rem, 8vw, 3.5rem), al passaggio diventano corsive), l'etichetta della forma del viso (Bodoni corsivo, fino a 2.4rem).
+- **Varianti di display:** il nome della macrostagione (Bodoni corsivo 450, opsz 32, clamp(3.4rem, 1.6rem + 6.8vw, 6rem), 0.95, -0.035em), le voci del menu mobile (Bodoni clamp(2rem, 8vw, 3.5rem), al passaggio diventano corsive), l'etichetta della forma del viso (Bodoni corsivo, fino a 2.4rem).
 
 ### Named Rules
-**The Italic Coda Rule.** Ogni titolo in Bodoni chiude in corsivo: una parola o l'ultima frase ("L'armocromia, *drappo dopo drappo.*", "Sono *Erica.*", "ti *accende*."). Mai tutto il titolo in corsivo, mai il grassetto: il Bodoni resta a 400 e la sua sola enfasi è il corsivo.
+**The Italic Coda Rule.** Ogni headline di sezione e ogni display in Bodoni chiude in corsivo: una parola o l'ultima frase ("L'armocromia, *drappo dopo drappo.*", "Sono *Erica.*", "ti *accende*."). Mai tutto il titolo in corsivo, mai il grassetto: il Bodoni resta a 450 e la sua sola enfasi è il corsivo. I titoli minori in Bodoni (card, passi, conferma, cookie) restano in tondo.
 
-**The Spaced Capitals Rule.** Il maiuscolo esiste solo in Montserrat, sempre spaziato (0.14–0.22em), piccolo (0.6875–0.8125rem) e a peso 500–600, ed è riservato a pulsanti, navigazione, controlli e nomi dei campioni. Mai in Bodoni, mai come occhiello sopra un titolo.
+**The Spaced Capitals Rule.** Il maiuscolo esiste solo in Montserrat, sempre spaziato (da 0.1 a 0.22em), piccolo (0.6875–0.8125rem) e a peso 500–600, ed è riservato a pulsanti, navigazione, controlli e nomi dei campioni. Mai in Bodoni, mai come occhiello sopra un titolo.
 
 ## Layout
 
@@ -257,11 +257,12 @@ Breakpoint: 640px (CTA nella navbar), 768px (navbar da 64 a 72px, hero desktop),
 
 ## Elevation & Depth
 
-Il sistema è piatto per principio e profondo per materia. La profondità non viene dalle ombre ma da tre fonti: l'alternanza di due luci (tessuto nero e greige), la texture fotografica del tessuto sulle superfici scure, e i ritagli che sollevano o rivelano (il drappo nero dell'hero che si solleva in diagonale con il suo orlo illuminato e l'ombra portata sulla pagina, il menu che scende come un drappo, la sagoma a piega del video). Le barre fisse (navbar dopo lo scroll, barra CTA mobile) usano un velo traslucido all'86–90% con sfocatura di 14px per restare leggibili sopra contenuti che cambiano; non è un materiale decorativo.
+Il sistema è piatto per principio e profondo per materia. La profondità non viene dalle ombre ma da tre fonti: l'alternanza di due luci (tessuto nero e greige), la texture fotografica del tessuto sulle superfici scure, e i ritagli che sollevano o rivelano (il drappo nero dell'hero che si solleva lungo un taglio curvo, con l'orlo ripiegato, il filo d'impuntura tratteggiato e un'ombra a tre strati sulla sezione che scopre, il menu che scende come un drappo, la sagoma a piega del video). Le barre fisse (navbar dopo lo scroll, barra CTA mobile) usano un velo traslucido all'86–90% con sfocatura di 14px per restare leggibili sopra contenuti che cambiano; non è un materiale decorativo.
 
 ### Shadow Vocabulary
-- **Cartoncino a riposo** (`box-shadow: -1px 1px 2px rgb(0 0 0 / 0.5), -14px 16px 28px -10px rgb(0 0 0 / 0.72)`): i cartoncini del ventaglio appoggiati sul tessuto, luce dall'alto a destra.
-- **Cartoncino sollevato** (`box-shadow: -1px 1px 2px rgb(0 0 0 / 0.55), -18px 22px 34px -10px rgb(0 0 0 / 0.78)`): il cartoncino scelto.
+- **Cartoncino a riposo** (`box-shadow: -1px 1px 1px rgb(0 0 0 / 0.6), -4px 5px 8px -2px rgb(0 0 0 / 0.5), -16px 18px 30px -10px rgb(0 0 0 / 0.65)`): i cartoncini del ventaglio appoggiati sul tessuto, luce dall'alto a destra. Il primo strato è il contatto, il secondo stacca ogni cartoncino da quello sotto, il terzo lo posa sul tessuto.
+- **Cartoncino sollevato** (`box-shadow: -1px 1px 2px rgb(0 0 0 / 0.55), -6px 8px 12px -3px rgb(0 0 0 / 0.45), -18px 22px 34px -10px rgb(0 0 0 / 0.78)`): il cartoncino scelto.
+- **Orlo del drappo** (tre tratti SVG neri lungo la curva del taglio: 8px al 20%, 24px al 9%, 52px al 4.5%): l'ombra che il drappo dell'hero, sollevandosi, proietta sulla sezione sotto. Sopra l'ombra corrono la fascia ripiegata (#1F1E1C, 18px), il filo del bordo (#45433F, 1.6px) e l'impuntura tratteggiata (#8E8B81, 1.3px, 7/6).
 - **Stampa appoggiata** (`box-shadow: 0 30px 60px -30px rgb(10 10 10 / 0.55)`): il ritratto, una fotografia posata e ruotata di -2°.
 - **Pannello sospeso** (`box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.6)`): il banner cookie, l'unico elemento d'interfaccia sospeso.
 
@@ -272,7 +273,7 @@ Il sistema è piatto per principio e profondo per materia. La profondità non vi
 
 ## Shapes
 
-Due geometrie convivono: il rettangolo sartoriale e il cerchio della mano. Contenitori e media hanno spigolo vivo (0). I controlli che si premono sono pillole (999px) o cerchi (50% su un quadrato: pausa del video 44px, icone dei canali 48px, tondo WhatsApp 52px, bottoni dei passi 19px, cursore degli slider 26px). Campi di testo e casella privacy hanno appena 2px, i cartoncini del ventaglio 1px. I bordi sono fili da 1px, mai più spessi.
+Due geometrie convivono: il rettangolo sartoriale e il cerchio della mano. Contenitori e media hanno spigolo vivo (0). I controlli che si premono sono pillole (999px) o cerchi (50% su un quadrato: pausa del video 44px, icone dei canali 48px, tondo WhatsApp 52px, bottoni dei passi 19px, cursore degli slider 26px). Campi di testo e casella privacy hanno appena 2px, i cartoncini del ventaglio 1px. Linee e bordi sono fili da 1px; l'unica eccezione è l'anello di 3px attorno al cursore degli slider.
 
 Le forme sartoriali ricorrenti: il bordo a zig-zag delle forbici (campioni e giunzioni di sezione), la sagoma irregolare a piega del tessuto (l'unico contenitore non rettangolare), i tagli diagonali dei drappi (hero, menu), il quarto di cerchio del ventaglio, il ritratto posato a -2°, il filo tratteggiato 6/6. La firma monoline è l'unica linea curva libera.
 
@@ -318,7 +319,7 @@ Sartoriali e tattili: si toccano come stoffa e cartoncino, rispondono con un vel
 - **Mobile:** burger a due fili (il secondo al 70%) che ruotano in una X (±35°). Il menu è un drappo di tessuto nero che scende in diagonale (0.9s drape), con voci Bodoni grandi che al passaggio diventano corsive, poi la CTA chiara e i contatti diretti. Sotto 900px una barra CTA fissa (pillola greige e tondo WhatsApp) sale dopo l'hero.
 
 ### Il Ventaglio (signature)
-I cartoncini della Copertina, in basso a destra nell'hero. Sette cartoncini quadrati (clamp(112px, 8vw + 64px, 270px)) ruotano attorno all'angolo in basso a destra a passi di 12°, da -36° a +36°, e si aprono un po' di più quando il cursore si avvicina. Ogni cartoncino è una stampa con grana e bordo di cartone sopra il suo colore pieno. Sceglierne uno (passaggio, clic, trascinamento su touch, frecce da tastiera con un solo punto di tabulazione) fa "provare" il colore alla parola-accento del titolo: il nuovo colore la ricopre da sinistra in 0.7s drape. Il cartoncino scelto si solleva di 14px e 18px verso l'alto a sinistra con l'ombra sollevata. Il suggerimento "Prova un colore" (Label con un filo) sparisce al primo uso.
+I cartoncini della Copertina, in basso a destra nell'hero. Sette cartoncini quadrati (clamp(112px, 8vw + 64px, 270px); su mobile clamp(104px, 30vw, 132px)) ruotano attorno all'angolo in basso a destra a passi di 12°, da -36° a +36°, e si aprono un po' di più quando il cursore si avvicina. Ogni cartoncino è una stampa con grana e bordo di cartone sopra il suo colore pieno. Al primo paint è un quarto di cerchio in tre spicchi di colore disegnato in CSS; la stampa (WebP da 480px, circa 5 KB) arriva dopo il caricamento della pagina, così non contende la banda all'immagine principale. Sceglierne uno (passaggio, clic, trascinamento su touch, frecce da tastiera con un solo punto di tabulazione) fa "provare" il colore alla parola-accento del titolo: il nuovo colore la ricopre da sinistra in 0.7s drape. Il cartoncino indicato (passaggio o focus) si solleva di 14px e 18px verso l'alto a sinistra; quello scelto resta sollevato con l'ombra sollevata. Il suggerimento "Prova un colore" (Label con un filo) sparisce al primo uso.
 
 ### Campioni e nastro (signature)
 Rettangoli 3:4 con bordo a zig-zag, in griglie da 3 per sottogruppo con 6px di spazio, e un filo interno al 14% dell'inchiostro che tiene i colori pallidi. Nelle stagioni i campioni cadono in posizione con una leggera rotazione casuale (±4°) che si raddrizza (0.95s silk). Il nastro di campioni sotto "Cosa faccio" è l'unico marquee del sito: 48s lineare, sfumato ai bordi, fermo con movimento ridotto.
@@ -339,7 +340,7 @@ Righe alte almeno 64px con un filo inferiore: icona Phosphor in un cerchio da 48
 Firma monoline (tratto nel colore del testo, 0.9–1.2px) e wordmark Montserrat, dal file vettoriale ufficiale. Solo ink o greige, sempre via colore del testo, scalati in modo uniforme. Nell'hero la firma si disegna (1.4s drape) e le lettere entrano una a una; allo scroll il logo vola nella navbar. La firma da sola chiude la bio e la conferma d'invio.
 
 ### Icone
-Phosphor in SVG inline nel colore del testo, sempre decorative accanto a un testo; peso light di default, thin sopra i 40px (voci della Facial Shape, blocco Instagram, freccia del footer). Dimensione base 1.25em.
+Phosphor in SVG inline nel colore del testo, sempre decorative accanto a un testo; peso light di default, thin sopra i 40px (voci della Facial Shape, blocco Instagram, freccia del footer). Dimensione base 1.25rem (1.25em dentro i pulsanti).
 
 ### Named Rules
 **The Drape Wipe Rule.** Il colore e i cambi di scena entrano da sinistra come un drappo posato: il velo dei pulsanti, la parola-accento, il menu in diagonale, le linee sotto le voci. Ingressi in silk (cubic-bezier(0.19, 1, 0.22, 1)), cambi di scena in drape (cubic-bezier(0.65, 0.05, 0.36, 1)), uscite che accelerano.
@@ -348,7 +349,7 @@ Phosphor in SVG inline nel colore del testo, sempre decorative accanto a un test
 
 ### Do:
 - **Do** usare il giallo fluo (#D8E348) come unico segnale d'interazione: velo dei pulsanti, chip e caselle selezionati, bottoni cuciti, compagno del focus.
-- **Do** chiudere ogni titolo in Bodoni con una coda in corsivo, a peso 400, interlinea 1.02–1.06, spaziatura negativa (-0.02/-0.03em), `text-wrap: balance`, 12–18ch.
+- **Do** chiudere ogni headline di sezione e ogni display in Bodoni con una coda in corsivo, a peso 450 con taglio ottico fisso, interlinea 1.02–1.06, spaziatura negativa (-0.02/-0.03em), `text-wrap: balance`, 12–18ch.
 - **Do** alternare tessuto nero (#0E0E0E con la texture del tessuto) e luce greige o carta tra le sezioni, e lasciare il fondo a colore pieno solo al campo delle stagioni.
 - **Do** tagliare ogni campione di colore in 3:4 con il bordo a zig-zag (`--pinked`).
 - **Do** usare la tinta schiarita di un colore dei drappi (almeno 4.5:1) quando diventa testo sul nero, come la parola-accento dell'hero.
@@ -361,6 +362,7 @@ Phosphor in SVG inline nel colore del testo, sempre decorative accanto a un test
 - **Don't** ricolorare o deformare il logo: firma e wordmark solo in nero (#040606 del file ufficiale o l'inchiostro #0A0A0A) o in bianco/greige, scalati in modo uniforme; mai in giallo fluo, mai in un colore dei drappi.
 - **Don't** usare il giallo fluo come testo o filo su greige o carta (1.07:1): sul chiaro è solo un riempimento dietro testo ink.
 - **Don't** usare un colore dei drappi diverso dal giallo fluo per stati d'interazione, né per testo corrente, etichette o cornici d'interfaccia.
+- **Don't** lasciare l'asse ottico del Bodoni in automatico sui titoli grandi: oltre i 60px le aste sottili diventano capelli e sui fondi pieni delle stagioni il titolo non si legge più. Il taglio ottico resta fisso (28; 32 per i display; 20 per i titoli minori) e il peso a 450.
 - **Don't** aggiungere un terzo carattere, usare il Bodoni in grassetto o in maiuscolo, o mettere un occhiello in maiuscolo spaziato sopra un titolo.
 - **Don't** arrotondare contenitori, card, media o campioni: la pillola e il cerchio sono solo per i controlli.
 - **Don't** dare ombre alle superfici d'interfaccia (sezioni, card, campi, navigazione): la profondità viene da tono, texture, ritaglio e fili da 1px.

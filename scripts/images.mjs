@@ -181,7 +181,6 @@ await out(sharp(COVER).resize(1200, 675).extract({ left: 0, top: 22, width: 1200
       px[i * 4 + 3] = 255;
     }
     const img = sharp(await sharp(px, { raw: { width: S, height: S, channels: 4 } }).resize(480, 480, { kernel: 'lanczos3' }).png().toBuffer());
-    await out(img.clone().avif({ quality: 55, effort: 7 }), path.join(FAN, `card-${n}.avif`));
     await out(img.clone().webp({ quality: 80 }), path.join(FAN, `card-${n}.webp`));
   }
 }
