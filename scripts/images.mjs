@@ -159,7 +159,8 @@ await out(sharp(COVER).resize(1200, 675).extract({ left: 0, top: 22, width: 1200
     ['#D8E348', '#B7C21F', '#F4F4F0'], ['#975290', '#8B8EA7', '#C9B7E2'], ['#146C78', '#7DB3B3', '#2A9AA8'],
     ['#707726', '#7DB3B3', '#8B8EA7'], ['#E1800A', '#DAD90F', '#975290'], ['#DE9CBA', '#E797AA', '#D31728'], ['#D31728', '#E797AA', '#975290'],
   ];
-  const edgeCol = hex('#D9D3C7');
+  const edgeCol = hex('#E3DED2');
+  const cutCol = hex('#A39C8F');
   for (const [n, [a, b, c]] of CARDS.entries()) {
     const cols = { a: hex(a), b: hex(b), c: hex(c) };
     const g = grains[n % grains.length];
@@ -169,10 +170,11 @@ await out(sharp(COVER).resize(1200, 675).extract({ left: 0, top: 22, width: 1200
       const ang = (Math.atan2(x + 0.5, S - y - 0.5) * 180) / Math.PI;
       const base = ang < 24 ? cols.c : ang < 58 ? cols.a : cols.b;
       const i = y * S + x;
-      const light = 1 + g[i] * 2.2 - (x / S) * 0.05 - (y / S) * 0.04; // grana + luce radente come nella foto
-      const edge = Math.min(x, y, S - 1 - x, S - 1 - y) < 6; // spessore del cartone
-      const col = edge ? edgeCol : base;
-      const k = edge ? 1 + g[i] * 0.8 : light;
+      const light = 1 + g[i] * 3.4 - (x / S) * 0.06 - (y / S) * 0.05; // grana + luce radente come nella foto
+      const dEdge = Math.min(x, y, S - 1 - x, S - 1 - y);
+      // spessore del cartone: taglio in ombra (3 px), bordo chiaro (7 px), lieve ombra interna sul colore
+      const col = dEdge < 3 ? cutCol : dEdge < 10 ? edgeCol : base;
+      const k = dEdge < 10 ? 1 + g[i] * 1.2 : dEdge < 14 ? light * 0.9 : light;
       px[i * 4] = Math.max(0, Math.min(255, col[0] * k));
       px[i * 4 + 1] = Math.max(0, Math.min(255, col[1] * k));
       px[i * 4 + 2] = Math.max(0, Math.min(255, col[2] * k));
@@ -182,33 +184,6 @@ await out(sharp(COVER).resize(1200, 675).extract({ left: 0, top: 22, width: 1200
     await out(img.clone().avif({ quality: 55, effort: 7 }), path.join(FAN, `card-${n}.avif`));
     await out(img.clone().webp({ quality: 80 }), path.join(FAN, `card-${n}.webp`));
   }
-}
-
-// 8) Orlo del drappo che si solleva (hero): striscia con alfa = tessuto + piega illuminata + orlo + ombra portata.
-{
-  const L = 2400, H = 160, FOLD = 82;
-  const tile = (await sharp(path.join(IMG, 'fabric-dark.jpg')).toBuffer()).toString('base64');
-  let wave = `M0 ${FOLD}`;
-  for (let x = 0; x <= L; x += 60) wave += ` L${x} ${(FOLD + Math.sin(x / 190) * 2.6 + Math.sin(x / 47) * 0.9).toFixed(2)}`;
-  const body = `${wave} L${L} 0 L0 0 Z`;
-  const shadow = `${wave} L${L} ${H} L0 ${H} Z`;
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${L}" height="${H}">
-    <defs>
-      <pattern id="f" width="512" height="512" patternUnits="userSpaceOnUse"><image width="512" height="512" xlink:href="data:image/jpeg;base64,${tile}"/></pattern>
-      <linearGradient id="lit" x1="0" y1="0" x2="0" y2="${FOLD}" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.62" stop-color="#fff" stop-opacity="0.035"/><stop offset="0.92" stop-color="#fff" stop-opacity="0.11"/><stop offset="1" stop-color="#fff" stop-opacity="0.04"/>
-      </linearGradient>
-      <linearGradient id="sh" x1="0" y1="${FOLD}" x2="0" y2="${H}" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#000" stop-opacity="0.5"/><stop offset="0.25" stop-color="#000" stop-opacity="0.24"/><stop offset="1" stop-color="#000" stop-opacity="0"/>
-      </linearGradient>
-    </defs>
-    <path d="${shadow}" fill="url(#sh)"/>
-    <path d="${body}" fill="url(#f)"/>
-    <path d="${body}" fill="url(#lit)"/>
-    <path d="${wave}" fill="none" stroke="#3b3a37" stroke-width="2.2" stroke-opacity="0.85"/>
-  </svg>`;
-  const png = await sharp(Buffer.from(svg)).png().toBuffer();
-  await out(sharp(png).webp({ quality: 78, alphaQuality: 85 }), path.join(IMG, 'hem.webp'));
 }
 
 // 9) Ritratto provvisorio con passe-partout nero regolare (niente bande irregolari).

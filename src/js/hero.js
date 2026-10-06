@@ -118,13 +118,6 @@ function initFan() {
 }
 
 /* ------------------------------------------------------------------ scroll */
-// Poligono della parte di drappo ancora visibile: x/W + y/H <= s (s da 2 a 0).
-function clipFor(s) {
-  if (s >= 1) { const a = ((s - 1) * 100).toFixed(2); return `polygon(0% 0%, 100% 0%, 100% ${a}%, ${a}% 100%, 0% 100%)`; }
-  const b = (s * 100).toFixed(2);
-  return `polygon(0% 0%, ${b}% 0%, ${b}% 0%, 0% ${b}%, 0% ${b}%)`;
-}
-
 let glApi = null;
 const glState = { open: 0 };
 
@@ -136,21 +129,33 @@ function initScrollTransform() {
   const cue = hero.querySelector('.hero__scroll');
   const navLogo = document.querySelector('.nav__logo');
   const hem = hero.querySelector('.hero__hem');
+  const hemPaths = hem ? [...hem.querySelectorAll('path')] : [];
   const cloth = { s: 2 };
-  // Orlo: centrato sul punto medio del bordo (W*s/2, H*s/2), ruotato lungo la diagonale, ombra verso la pagina.
+  // Bordo del drappo: curva quadratica tra i due punti del taglio (x/W + y/H = s), che si gonfia verso la pagina
+  // scoperta; la stessa curva disegna il ritaglio (clip-path: path) e l'orlo (ombre, fascia ripiegata, impunture).
+  const HEM = [22, 11, 4, -9, -0.5, -12]; // distanza dal bordo di: ombre (3), fascia, filo, impunture
   const placeHem = (s) => {
-    if (!hem) return;
     const W = hero.clientWidth;
     const H = hero.clientHeight;
-    const show = s < 1.985 && s > 0.015;
-    hem.style.opacity = show ? '1' : '0';
-    if (!show) return;
+    if (s >= 1.985) { stage.style.clipPath = 'none'; if (hem) hem.style.opacity = '0'; return; }
+    if (s <= 0.015) { stage.style.clipPath = 'polygon(0 0, 0 0, 0 0)'; if (hem) hem.style.opacity = '0'; return; }
+    const P1 = s >= 1 ? [W, H * (s - 1)] : [W * s, 0];
+    const P2 = s >= 1 ? [W * (s - 1), H] : [0, H * s];
     const len = Math.hypot(W, H);
-    const w = hem.offsetWidth;
-    const oy = hem.offsetHeight * 0.5125;
-    const phi = Math.atan2(-H / len, W / len); // asse y locale = normale verso la pagina scoperta
-    hem.style.transform = `translate(${(W * s) / 2 - w / 2}px, ${(H * s) / 2 - oy}px) rotate(${phi}rad)`;
+    const n = [H / len, W / len]; // normale verso la pagina scoperta (in basso a destra)
+    const chord = Math.hypot(P2[0] - P1[0], P2[1] - P1[1]);
+    const bow = Math.min(90, chord * 0.075) * 2; // la curva si scosta di bow/2 al centro
+    const C = [(P1[0] + P2[0]) / 2 + n[0] * bow, (P1[1] + P2[1]) / 2 + n[1] * bow];
+    const f = (v) => v.toFixed(1);
+    const pt = (p, d) => `${f(p[0] + n[0] * d)} ${f(p[1] + n[1] * d)}`;
+    stage.style.clipPath = s >= 1
+      ? `path('M0 0 L${W} 0 L${pt(P1, 0)} Q${pt(C, 0)} ${pt(P2, 0)} L0 ${H} Z')`
+      : `path('M0 0 L${pt(P1, 0)} Q${pt(C, 0)} ${pt(P2, 0)} Z')`;
+    if (!hem) return;
+    hem.style.opacity = '1';
+    hemPaths.forEach((p, i) => p.setAttribute('d', `M${pt(P1, HEM[i])} Q${pt(C, HEM[i])} ${pt(P2, HEM[i])}`));
   };
+
 
   // Spostamento del logo verso lo slot nella navbar (ricalcolato a ogni refresh/resize).
   const flight = () => {
@@ -206,7 +211,7 @@ function initScrollTransform() {
       s: 0,
       duration: 0.82,
       ease: 'power1.inOut',
-      onUpdate: () => { stage.style.clipPath = clipFor(cloth.s); placeHem(cloth.s); },
+      onUpdate: () => placeHem(cloth.s),
     }, 0.18);
     // i drappi DOM (mobile e fallback) restano appoggiati sul drappo nero e vengono portati via con lui;
     // su desktop li muove lo shader (uOpen).

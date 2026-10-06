@@ -2,7 +2,8 @@
 //
 //   npm run fonts
 //
-// - Bodoni Moda (titoli): asse opsz completo (6-96: contrasto ottico corretto a ogni misura), peso fissato a 400.
+// - Bodoni Moda (titoli): asse opsz completo e pesi 400-600. Il CSS fissa opsz ~28 e peso 450 sui titoli grandi:
+//   all'ottica 96 i filetti diventano troppo sottili per gli schermi (si spezzano).
 // - Bodoni Moda Italic: come sopra.
 // - Montserrat (testi, etichette): pesi 400-600 (gli unici usati nel CSS).
 import subsetFont from 'subset-font';
@@ -22,8 +23,8 @@ chars += 'àèéìíòóùúÀÈÉÌÍÒÓÙÚâêîôûäëïöüçñÇÑßæœ
 chars += '’‘“”«»–—…·•€°×→←↑↓ ';
 
 const jobs = [
-  { src: '@fontsource-variable/bodoni-moda/files/bodoni-moda-latin-opsz-normal.woff2', out: 'bodoni-moda-latin-opsz-normal.woff2', axes: { wght: 400 } },
-  { src: '@fontsource-variable/bodoni-moda/files/bodoni-moda-latin-opsz-italic.woff2', out: 'bodoni-moda-latin-opsz-italic.woff2', axes: { wght: 400 } },
+  { src: '@fontsource-variable/bodoni-moda/files/bodoni-moda-latin-opsz-normal.woff2', out: 'bodoni-moda-latin-opsz-normal.woff2', axes: { wght: { min: 400, max: 600 } } },
+  { src: '@fontsource-variable/bodoni-moda/files/bodoni-moda-latin-opsz-italic.woff2', out: 'bodoni-moda-latin-opsz-italic.woff2', axes: { wght: { min: 400, max: 600 } } },
   { src: '@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2', out: 'montserrat-latin-wght-normal.woff2', axes: { wght: { min: 400, max: 600 } } },
 ];
 

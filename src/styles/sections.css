@@ -187,14 +187,15 @@
 .seasons.is-enhanced .seasons__note { margin-top: var(--s-5); }
 /* Mobile (JS, < 900 px): niente blocco dello scroll. Le stagioni scorrono in colonna con tutti i testi,
    il fondo della sezione cambia colore in modo fluido e le voci restano fisse in alto. */
-.seasons.is-flow .season { background: transparent; box-shadow: none; clip-path: none; padding-block: var(--s-7) var(--s-6); }
+/* ogni stagione col suo colore a tutta larghezza: le palette non finiscono mai sul colore di un'altra stagione */
+.seasons.is-flow .season { background: var(--season-bg); color: var(--season-ink); box-shadow: 0 0 0 100vmax var(--season-bg); clip-path: inset(0 -100vmax); padding-block: var(--s-7) var(--s-6); }
 .seasons.is-flow .seasons__nav {
   position: sticky;
   top: calc(var(--nav-h) + env(safe-area-inset-top));
   z-index: 4;
   margin-top: var(--s-5);
-  margin-inline: calc(var(--gutter) * -1);
-  padding: var(--s-2) var(--gutter);
+  margin-inline: 0;
+  padding: var(--s-2) max(var(--gutter), env(safe-area-inset-left));
   background: var(--season-bg);
   border-bottom: 1px solid color-mix(in srgb, var(--season-ink) 14%, transparent);
 }
@@ -524,3 +525,23 @@
 }
 .seasons::after { background: var(--season-bg); }
 .gallery::after { background: #0E0E0E; }
+
+/* Chi sono: formazione */
+.bio__training { width: 100%; max-width: 34em; margin-top: var(--s-2); }
+.bio__training-title {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: var(--s-3);
+}
+.bio__list li {
+  display: grid;
+  gap: 2px;
+  padding-block: var(--s-3);
+  border-top: 1px solid var(--line);
+}
+.bio__list li:last-child { border-bottom: 1px solid var(--line); }
+.bio__list strong { font-family: var(--font-display); font-weight: var(--display-wght); font-variation-settings: 'opsz' 20; font-size: 1.2rem; line-height: 1.25; }
+.bio__list span { font-size: var(--fs-small); color: var(--text-2); }

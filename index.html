@@ -76,6 +76,11 @@
         "name": "Erica Renzoni",
         "jobTitle": "Consulente d'immagine",
         "worksFor": { "@id": "{{siteUrl}}/#studio" },
+        "alumniOf": [
+          { "@type": "EducationalOrganization", "name": "Italian Image Institute", "address": "Milano" },
+          { "@type": "EducationalOrganization", "name": "Il Sole 24 Ore" }
+        ],
+        "knowsAbout": ["Armocromia", "Analisi del colore", "Body Shape", "Facial Shape", "Stile"],
         "sameAs": ["{{instagramUrl}}"]
       }
     ]
@@ -149,7 +154,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <canvas class="hero__gl"></canvas>
       </div>
       <!-- orlo del drappo che si solleva allo scroll: piega illuminata + ombra portata sulla pagina -->
-      <div class="hero__hem" aria-hidden="true"></div>
+      <svg class="hero__hem" aria-hidden="true" focusable="false"><path class="hem-shade hem-shade--3"/><path class="hem-shade hem-shade--2"/><path class="hem-shade hem-shade--1"/><path class="hem-fold"/><path class="hem-lip"/><path class="hem-stitch"/></svg>
 
       <div class="hero__content">
         <div class="hero__logo">
@@ -469,7 +474,15 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <div class="bio__text">
           <h2 class="h2" id="bio-title" data-split>Sono <em>Erica.</em></h2>
           <p class="lead">Consulente d’immagine. Mi occupo di armocromia con il metodo a 16 stagioni e di Facial Shape.</p>
-          <p class="todo" data-todo="Bio da fornire">[DA INSERIRE: due o tre frasi su di te, sul tuo percorso e su dove ricevi le clienti.]</p>
+          <div class="bio__training">
+            <h3 class="bio__training-title">La mia formazione</h3>
+            <ul class="bio__list" role="list">
+              <li><strong>Italian Image Institute</strong><span>Diploma all’istituto di Milano fondato da Rossella Migliaccio</span></li>
+              <li><strong>Master in Luxury and Fashion Management</strong><span>Il Sole 24 Ore</span></li>
+              <li><strong>Corsi</strong><span>Armocromia, Body Shape &amp; Facial Shape, Stile</span></li>
+            </ul>
+          </div>
+          <p class="todo" data-todo="Da completare">[DA INSERIRE: dove ricevi le clienti (città, studio, a domicilio, online?)]</p>
           <svg class="bio__sign" viewBox="0 0 635.32 183.57" aria-hidden="true" focusable="false"><use href="#er-sign"/></svg>
         </div>
       </div>

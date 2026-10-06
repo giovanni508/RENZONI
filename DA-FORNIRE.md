@@ -6,14 +6,15 @@ confermare sono evidenziate in rosso.
 ## Dati e contatti (in `site.config.js`)
 - [ ] Email per le richieste
 - [ ] Telefono e numero WhatsApp (con prefisso, es. 39333…)
-- [ ] Profilo Instagram (indirizzo e @nome)
+- [x] Instagram: **@ericarenzoni__** (unico social collegato al sito; Facebook e TikTok non vengono mostrati)
 - [ ] Città e zona; indirizzo dello studio oppure "su appuntamento"; consulenze anche online o a domicilio?
 - [x] Dominio del sito: **https://ericarenzoni.com** (impostato in `site.config.js`)
 - [ ] Dati legali: nome o ragione sociale, **P.IVA**, sede legale, email per la privacy, data dell'informativa
 
 ## Contenuti
 - [ ] **Foto ritratto professionale** di Erica (consigliata verticale 10:11, almeno 800 px). Ora c'è un ritratto **provvisorio**, preso dalla card finale del reel `f3988…` (Erica con la cornice arcobaleno)
-- [ ] **Bio**: due o tre frasi su di te, il tuo percorso, dove ricevi. Il sito non inventa titoli, certificazioni o anni di esperienza
+- [x] **Formazione** (in "Chi sono"): diploma all'Italian Image Institute di Milano, Master in Luxury and Fashion Management (Il Sole 24 Ore), corsi di Armocromia, Body Shape & Facial Shape, Stile
+- [ ] **Dove ricevi** le clienti (città, studio, a domicilio, online?): unico punto ancora aperto della bio
 - [ ] Servizi: durata, prezzi (se vuoi mostrarli), cosa comprende ciascuna consulenza
 - [ ] Testimonianze reali, con consenso, se vuoi una sezione recensioni (oggi assente di proposito)
 

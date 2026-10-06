@@ -195,3 +195,14 @@ html.lenis, html.lenis body { height: auto; }
 /* Nessuna animazione (rotazioni, spostamenti) puo' allargare la pagina: clip non crea un contenitore
    di scroll, quindi position: sticky continua a funzionare. */
 main > section, .ribbon, .footer { overflow-x: clip; }
+
+/* Titoli in Bodoni Moda: ottica ~28 e peso 450. Mantiene il contrasto "da rivista" ma i filetti
+   restano visibili anche su schermi a bassa densita' (all'ottica 96 si spezzavano). */
+:root :is(.h2, .h3, .hero__title, .season__name, .group__name, .footer__cta, .menu__links a,
+  .success__title, .reel__end-title, .face__label, .cookie__title, .legal h1, .legal h2) {
+  font-weight: var(--display-wght);
+  font-variation-settings: 'opsz' var(--opsz, var(--display-opsz));
+}
+:root :is(.h3, .group__name, .reel__end-title, .cookie__title) { --opsz: 20; }
+:root :is(.hero__title, .season__name, .footer__cta) { --opsz: 32; }
+:root :is(.h2, .h3, .hero__title, .group__name, .footer__cta) em { font-weight: var(--display-wght); }

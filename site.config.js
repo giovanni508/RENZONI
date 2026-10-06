@@ -25,8 +25,9 @@ export default {
   whatsappText: "Ciao Erica! Vorrei informazioni sull'analisi del colore.",
 
   // Social
-  instagramUrl: 'https://www.instagram.com/[PROFILO]/',
-  instagramHandle: '@[PROFILO]',
+  // Erica usa solo Instagram (Facebook e TikTok non vanno collegati al sito)
+  instagramUrl: 'https://www.instagram.com/ericarenzoni__/',
+  instagramHandle: '@ericarenzoni__',
 
   // Dati legali (footer, privacy, cookie)
   legalName: 'Erica Renzoni',
