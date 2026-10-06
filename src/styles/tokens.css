@@ -1,0 +1,135 @@
+/* =====================================================================================
+   DESIGN TOKENS - Erica Renzoni
+   Neutri dal logo (PDF), palette campionata dai drappi e dal ventaglio della Copertina.
+   ===================================================================================== */
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/assets/fonts/bodoni-moda-latin-opsz-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/assets/fonts/bodoni-moda-latin-opsz-italic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/montserrat-latin-wght-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Fallback con metriche vicine, per limitare lo spostamento al caricamento dei font */
+@font-face { font-family: 'Bodoni Fallback'; src: local('Georgia'); size-adjust: 92%; ascent-override: 98%; descent-override: 26%; }
+@font-face { font-family: 'Montserrat Fallback'; src: local('Arial'); size-adjust: 112%; ascent-override: 86%; descent-override: 22%; }
+
+@property --accent-word { syntax: '<color>'; inherits: true; initial-value: #E2E2DA; }
+@property --undertone { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --season-bg { syntax: '<color>'; inherits: true; initial-value: #E2E2DA; }
+@property --season-ink { syntax: '<color>'; inherits: true; initial-value: #0A0A0A; }
+
+:root {
+  /* --- Neutri di marca --- */
+  --ink: #0A0A0A;         /* tessuto nero (hero, galleria, footer) */
+  --ink-2: #141313;       /* nero del tessuto fotografato */
+  --ink-3: #1E1D1C;
+  --greige: #E2E2DA;      /* fondo del logo nel PDF: la "luce naturale" del sito */
+  --greige-2: #D3D3C9;
+  --paper: #F1F1EB;
+  --white: #FAFAF6;
+
+  /* --- Testo --- */
+  --text: #0A0A0A;
+  --text-2: #3E3D37;      /* 8.9:1 su greige */
+  --text-inv: #ECECE4;
+  --text-inv-2: #B9B8AE;  /* 9.4:1 su ink */
+  --line: rgb(10 10 10 / 0.16);
+  --line-inv: rgb(236 236 228 / 0.18);
+
+  /* --- Palette dei drappi (campionata dalla Copertina) --- */
+  --c-lime: #D8E348;      /* giallo fluo: unico accento di interazione */
+  --c-yellow: #DAD90F;
+  --c-teal: #146C78;
+  --c-aqua: #7DB3B3;
+  --c-pink: #DE9CBA;
+  --c-rose: #E797AA;
+  --c-red: #D31728;
+  --c-orange: #E1800A;
+  --c-violet: #975290;
+  --c-plum: #822F6A;
+  --c-olive: #707726;
+  --c-lilac: #8B8EA7;
+
+  --accent: var(--c-lime);
+
+  /* --- Tipografia --- */
+  --font-display: 'Bodoni Moda', 'Bodoni Fallback', 'Didot', Georgia, serif;
+  --font-sans: 'Montserrat', 'Montserrat Fallback', 'Helvetica Neue', Arial, sans-serif;
+
+  --fs-display: clamp(2.65rem, 1.35rem + 5.2vw, 6rem);
+  --fs-h2: clamp(2.25rem, 1.35rem + 3.3vw, 4.6rem);
+  --fs-h3: clamp(1.35rem, 1.12rem + 0.85vw, 1.9rem);
+  --fs-lead: clamp(1.1rem, 1rem + 0.42vw, 1.35rem);
+  --fs-body: clamp(1rem, 0.97rem + 0.14vw, 1.0625rem);
+  --fs-small: 0.875rem;
+  --fs-label: 0.75rem;
+
+  --lh-display: 1.02;
+  --lh-head: 1.06;
+  --lh-body: 1.65;
+  --track-label: 0.26em;
+  --track-brand: 0.44em;
+
+  /* --- Spazi (base 4 px) --- */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --s-9: 6rem;
+  --s-10: 8rem;
+  --gutter: clamp(1rem, 0.35rem + 2.7vw, 4rem);
+  --section-y: clamp(5rem, 2.8rem + 8vw, 11rem);
+  --container: 1440px;
+  --nav-h: 64px;
+
+  /* --- Forma: contenitori a spigolo vivo, controlli a pillola --- */
+  --radius-pill: 999px;
+  --radius-field: 2px;
+
+  /* --- Movimento: il tessuto che si posa --- */
+  --ease-silk: cubic-bezier(0.19, 1, 0.22, 1);     /* entrate: partenza decisa, atterraggio lungo */
+  --ease-drape: cubic-bezier(0.65, 0.05, 0.36, 1); /* spostamenti in scena */
+  --ease-pull: cubic-bezier(0.7, 0, 0.84, 0);      /* uscite: accelerano */
+  --dur-quick: 180ms;
+  --dur-base: 600ms;
+  --dur-slow: 1100ms;
+  --stagger: 80ms;
+
+  /* --- Livelli --- */
+  --z-content: 1;
+  --z-pin: 10;
+  --z-nav: 50;
+  --z-bar: 60;
+  --z-menu: 80;
+  --z-cookie: 90;
+  --z-skip: 100;
+
+  /* --- Bordo a zig-zag dei drappi (forbici a zig-zag) --- */
+  --pinked: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 10px 100%;
+}
+
+@media (min-width: 768px) {
+  :root { --nav-h: 72px; }
+}

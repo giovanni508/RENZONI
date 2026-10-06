@@ -1,0 +1,526 @@
+/* =====================================================================================
+   SEZIONI
+   ===================================================================================== */
+
+/* ---------- Media (poster + video lazy) ---------- */
+.media { position: relative; overflow: hidden; background: var(--ink-3); }
+.media__poster, .media__poster img, .media__video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+}
+.media__video { opacity: 0; transition: opacity 600ms ease; }
+.media.is-playing .media__video { opacity: 1; }
+.media__toggle {
+  position: absolute;
+  right: var(--s-3); bottom: var(--s-3);
+  z-index: 2;
+  display: grid; place-items: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgb(10 10 10 / 0.55);
+  color: var(--greige);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.media:hover .media__toggle, .media__toggle:focus-visible, .media.is-paused .media__toggle { opacity: 1; }
+@media (hover: none) { .media__toggle { opacity: 0.85; } }
+.media__toggle .icon { width: 18px; height: 18px; }
+
+/* ---------- COSA FACCIO ---------- */
+.intro { background: var(--greige); overflow: clip; }
+.intro__grid { display: grid; gap: var(--s-8); align-items: center; }
+.intro__text { display: grid; gap: var(--s-6); justify-items: start; }
+.intro__text .h2 { max-width: 14ch; }
+.intro__media { position: relative; width: min(100%, 520px); justify-self: center; }
+.fold {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  clip-path: url(#fold-clip);
+  -webkit-clip-path: url(#fold-clip);
+}
+.fold .media { position: absolute; inset: 0; }
+.fold .media__poster img, .fold .media__video { transform: scale(var(--zoom, 1.08)); transform-origin: 50% 40%; }
+.intro__media .caption { text-align: right; }
+@media (min-width: 900px) {
+  .intro__grid { grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
+  .intro__text { grid-column: 1 / span 6; padding-top: var(--s-8); }
+  .intro__media { grid-column: 8 / span 5; width: 100%; }
+}
+
+/* ---------- NASTRO DI SWATCH (unico marquee) ---------- */
+.ribbon {
+  --speed: 48s;
+  display: flex;
+  overflow: hidden;
+  background: var(--greige);
+  padding-block: var(--s-6) var(--section-y);
+  -webkit-mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.ribbon__track {
+  display: flex;
+  flex: none;
+  gap: clamp(0.75rem, 1.4vw, 1.5rem);
+  padding-right: clamp(0.75rem, 1.4vw, 1.5rem);
+  animation: ribbon var(--speed) linear infinite;
+}
+.ribbon__item { display: grid; gap: var(--s-2); justify-items: start; }
+.ribbon__chip {
+  display: block;
+  width: clamp(72px, 7vw, 112px);
+  aspect-ratio: 3 / 4;
+  background: var(--c);
+  -webkit-mask: var(--pinked);
+  mask: var(--pinked);
+}
+.ribbon__name { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-2); }
+@keyframes ribbon { to { transform: translateX(-100%); } }
+.reduced-motion .ribbon__track { animation: none; }
+@media (prefers-reduced-motion: reduce) { .ribbon__track { animation: none; } }
+
+/* ---------- 16 STAGIONI ---------- */
+.seasons {
+  --season-bg: #F5D6BF;
+  --season-ink: var(--ink);
+  position: relative;
+  background: var(--season-bg);
+  color: var(--season-ink);
+}
+.seasons__pin { padding-block: var(--section-y); }
+.seasons__top { display: grid; gap: var(--s-6); }
+.seasons__title { max-width: 14ch; }
+.seasons__nav ul { display: flex; flex-wrap: wrap; gap: var(--s-2) clamp(0.9rem, 2.4vw, 1.5rem); }
+.seasons__tab {
+  position: relative;
+  display: inline-block;
+  padding-block: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: clamp(0.1em, 0.6vw, 0.2em);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+}
+.seasons__tab::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: 4px;
+  height: 1px; background: currentColor;
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 500ms var(--ease-silk);
+}
+.seasons__tab[aria-current='true'] { font-weight: 700; }
+.seasons__tab:hover::after, .seasons__tab[aria-current='true']::after { transform: scaleX(1); }
+.seasons__note { margin-top: var(--s-7); font-size: var(--fs-small); }
+
+/* Senza JS o con movimento ridotto: le quattro stagioni una sotto l'altra, ognuna col suo colore */
+.seasons__panels { display: grid; gap: 0; margin-top: var(--s-7); }
+.season {
+  background: var(--season-bg);
+  color: var(--season-ink);
+  padding-block: var(--s-7);
+  /* fondo a tutta larghezza senza allargare la pagina */
+  box-shadow: 0 0 0 100vmax var(--season-bg);
+  clip-path: inset(0 -100vmax);
+}
+.season__head { display: grid; gap: var(--s-2); margin-bottom: var(--s-6); }
+.season__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(3.4rem, 1.6rem + 6.8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+.season__traits { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; }
+.season__text { max-width: 36ch; font-size: var(--fs-lead); line-height: 1.5; }
+.season__groups { display: grid; gap: var(--s-6) var(--s-5); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.group__name { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem); line-height: 1.15; }
+.group__name em { font-style: italic; }
+.group__gloss { font-size: 0.8125rem; line-height: 1.45; margin-top: var(--s-1); min-height: 2.9em; }
+.swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: var(--s-3); }
+.swatch {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: var(--c);
+  -webkit-mask: var(--pinked);
+  mask: var(--pinked);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--season-ink) 14%, transparent);
+}
+.swatch::after {
+  content: attr(aria-label);
+  position: absolute; left: 4px; right: 4px; bottom: 10px;
+  font-size: 0.5625rem; font-weight: 600; letter-spacing: 0.06em; line-height: 1.15;
+  color: #fff; mix-blend-mode: difference;
+  opacity: 0; transform: translateY(4px);
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+.swatch:hover::after { opacity: 1; transform: none; }
+@media (min-width: 900px) {
+  .seasons__top { grid-template-columns: 1fr auto; align-items: end; }
+  .season { padding-block: var(--s-8); }
+  .season__head { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; column-gap: var(--gutter); }
+  .season__name { grid-row: span 2; }
+  .season__groups { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-6); }
+}
+
+/* Modalita' "pinned" (JS): le stagioni si avvicendano nello stesso spazio, il fondo cambia colore */
+.seasons.is-enhanced .seasons__pin {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: calc(var(--nav-h) + var(--s-5)) var(--s-6);
+}
+.seasons.is-enhanced .seasons__panels { display: grid; margin-top: var(--s-6); }
+.seasons.is-enhanced .season {
+  grid-area: 1 / 1;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  clip-path: none;
+  visibility: hidden;
+}
+.seasons.is-enhanced .season.is-active { visibility: visible; }
+.seasons.is-enhanced .seasons__note { margin-top: var(--s-5); }
+/* Mobile (JS, < 900 px): niente blocco dello scroll. Le stagioni scorrono in colonna con tutti i testi,
+   il fondo della sezione cambia colore in modo fluido e le voci restano fisse in alto. */
+.seasons.is-flow .season { background: transparent; box-shadow: none; clip-path: none; padding-block: var(--s-7) var(--s-6); }
+.seasons.is-flow .seasons__nav {
+  position: sticky;
+  top: calc(var(--nav-h) + env(safe-area-inset-top));
+  z-index: 4;
+  margin-top: var(--s-5);
+  margin-inline: calc(var(--gutter) * -1);
+  padding: var(--s-2) var(--gutter);
+  background: var(--season-bg);
+  border-bottom: 1px solid color-mix(in srgb, var(--season-ink) 14%, transparent);
+}
+.seasons.is-flow .seasons__panels { margin-top: 0; }
+
+/* ---------- LE 4 CARATTERISTICHE ---------- */
+.traits { background: var(--paper); }
+.traits__head { display: grid; gap: var(--s-5); margin-bottom: var(--s-8); }
+.traits__head .h2 { max-width: 12ch; }
+.traits__grid { display: grid; gap: var(--s-4); }
+.trait {
+  position: relative;
+  display: grid;
+  align-content: space-between;
+  gap: var(--s-6);
+  min-height: 420px;
+  padding: clamp(1.5rem, 1rem + 2vw, 3rem);
+  overflow: hidden;
+}
+.trait__copy { display: grid; gap: var(--s-2); max-width: 30ch; }
+.trait__copy p { font-size: var(--fs-small); line-height: 1.55; }
+.trait--undertone { background: var(--ink); color: var(--text-inv); }
+.trait--undertone .trait__copy p { color: var(--text-inv-2); }
+.trait--value { background: var(--greige); }
+.trait--chroma { background: #EFE7DA; }
+.trait--chroma .trait__copy p, .trait--value .trait__copy p { color: var(--text-2); }
+.trait--contrast { background: #D9DBE6; }
+.trait--contrast .trait__copy p { color: #343546; }
+
+/* Sottotono: coppie freddo/caldo */
+.pairs { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-3); }
+.pair { display: grid; gap: var(--s-2); }
+.pair__chip {
+  display: block;
+  aspect-ratio: 3 / 4;
+  background: color-mix(in oklch, var(--cool) calc(100% - var(--undertone) * 100%), var(--warm));
+  -webkit-mask: var(--pinked);
+  mask: var(--pinked);
+}
+.pair__name { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-inv-2); }
+.switch {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  width: min(100%, 300px);
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-inv);
+}
+.switch button {
+  position: relative;
+  z-index: 1;
+  min-height: 44px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-inv-2);
+  transition: color 300ms ease;
+}
+.switch button[aria-checked='true'] { color: var(--ink); }
+.switch__thumb {
+  position: absolute;
+  top: 4px; bottom: 4px; left: 4px;
+  width: calc(50% - 4px);
+  border-radius: var(--radius-pill);
+  background: var(--greige);
+  transform: translateX(calc(var(--undertone) * 100%));
+}
+
+/* Valore e intensita': scale di colore in OKLCH guidate dagli slider */
+.scale { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.scale span {
+  aspect-ratio: 3 / 4;
+  -webkit-mask: var(--pinked);
+  mask: var(--pinked);
+  transition: background-color 120ms linear;
+}
+.scale[data-scale='value'] span { background: oklch(calc(0.28 + var(--v) * 0.62) 0.11 var(--h)); }
+.scale[data-scale='chroma'] span { background: oklch(0.66 calc(0.012 + var(--s) * 0.19) var(--h)); }
+
+/* Contrasto: pelle, occhi, capelli */
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); }
+.trio__item { display: grid; gap: var(--s-2); justify-items: start; }
+.trio__dot { width: 100%; aspect-ratio: 1; border-radius: 50%; transition: background-color 120ms linear; }
+.trio__item--skin .trio__dot { background: oklch(calc(0.84 - var(--k) * 0.06) 0.045 60); }
+.trio__item--eyes .trio__dot { background: oklch(calc(0.70 - var(--k) * 0.36) 0.06 230); }
+.trio__item--hair .trio__dot { background: oklch(calc(0.66 - var(--k) * 0.5) 0.05 55); }
+.trio figcaption { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+
+/* Slider */
+.range { display: grid; gap: var(--s-2); }
+.range__label { display: flex; justify-content: space-between; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+.range input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  cursor: grab;
+}
+.range input::-webkit-slider-runnable-track { height: 1px; background: currentColor; }
+.range input::-moz-range-track { height: 1px; background: currentColor; }
+.range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px; height: 26px; margin-top: -13px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 3px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--ink);
+  transition: transform 200ms var(--ease-silk);
+}
+.range input::-moz-range-thumb {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 3px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--ink);
+}
+.range input:active { cursor: grabbing; }
+.range input:active::-webkit-slider-thumb { transform: scale(1.15); }
+.range input:focus-visible { outline: none; }
+.range input:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 1px var(--ink), 0 0 0 5px var(--c-lime); }
+.range input:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 1px var(--ink), 0 0 0 5px var(--c-lime); }
+
+@media (min-width: 900px) {
+  .traits__grid { grid-template-columns: repeat(12, 1fr); gap: var(--s-4); }
+  .trait--undertone { grid-column: span 7; }
+  .trait--value { grid-column: span 5; }
+  .trait--chroma { grid-column: span 5; }
+  .trait--contrast { grid-column: span 7; }
+  .trait { min-height: 460px; }
+}
+
+/* ---------- FACIAL SHAPE ---------- */
+.facial { background: var(--greige); }
+.facial__grid { display: grid; gap: var(--s-8); }
+.facial__sticky { display: grid; justify-items: center; gap: var(--s-4); }
+.face { width: min(100%, 380px); overflow: visible; }
+.face__grid line { stroke: rgb(10 10 10 / 0.12); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.face__mask { fill: none; stroke: var(--c-teal); stroke-width: 1.5; stroke-dasharray: 3 7; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.face__shape { fill: rgb(10 10 10 / 0.04); stroke: var(--ink); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+.face__measures .m { stroke: var(--c-red); stroke-width: 1.2; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+.face__label { font-family: var(--font-display); font-style: italic; font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem); line-height: 1; min-height: 1.2em; }
+.facial__text { display: grid; gap: var(--s-6); justify-items: start; }
+.facial__text .h2 { max-width: 13ch; }
+.facial__list { display: grid; width: 100%; }
+.facial__item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  column-gap: var(--s-4);
+  align-items: start;
+  padding-block: var(--s-5);
+  border-top: 1px solid var(--line);
+}
+.facial__item:last-child { border-bottom: 1px solid var(--line); }
+.facial__item .icon { width: 40px; height: 40px; grid-row: span 2; }
+.facial__item p { color: var(--text-2); font-size: var(--fs-small); grid-column: 2; }
+@media (min-width: 900px) {
+  .facial__grid { grid-template-columns: repeat(12, 1fr); gap: var(--gutter); align-items: start; }
+  .facial__visual { grid-column: 1 / span 5; grid-row: 1; align-self: stretch; }
+  .facial__sticky { position: sticky; top: calc(var(--nav-h) + 6vh); }
+  .facial__text { grid-column: 7 / span 6; grid-row: 1; }
+}
+
+/* ---------- COME FUNZIONA ---------- */
+.steps { background: var(--paper); }
+.steps .h2 { margin-bottom: var(--s-8); }
+.steps__wrap { position: relative; }
+.steps__thread {
+  position: absolute;
+  left: 11px; top: 6px; bottom: 6px;
+  width: 1px;
+  background: repeating-linear-gradient(180deg, rgb(10 10 10 / 0.28) 0 6px, transparent 6px 12px);
+}
+.steps__sewn {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(180deg, var(--ink) 0 6px, transparent 6px 12px);
+  transform-origin: top;
+  transform: scaleY(var(--sew, 1));
+}
+.steps__list { display: grid; gap: var(--s-7); }
+.step { position: relative; display: grid; gap: var(--s-3); padding-left: var(--s-8); max-width: 34rem; }
+.step p { color: var(--text-2); }
+.step__knot {
+  position: absolute;
+  left: 2px; top: 0.35em;
+  width: 19px; height: 19px;
+  border-radius: 50%;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  transition: background-color 400ms ease, transform 500ms var(--ease-silk);
+}
+.step__knot::after {
+  /* i due fori del bottone */
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 35% 50%, var(--ink) 0 1.4px, transparent 1.6px), radial-gradient(circle at 65% 50%, var(--ink) 0 1.4px, transparent 1.6px);
+}
+.step.is-sewn .step__knot { background: var(--c-lime); transform: scale(1.12); }
+@media (min-width: 900px) {
+  .steps__thread {
+    left: 0; right: 0; top: 9px; bottom: auto;
+    width: auto; height: 1px;
+    background: repeating-linear-gradient(90deg, rgb(10 10 10 / 0.28) 0 6px, transparent 6px 12px);
+  }
+  .steps__sewn {
+    background: repeating-linear-gradient(90deg, var(--ink) 0 6px, transparent 6px 12px);
+    transform-origin: left;
+    transform: scaleX(var(--sew, 1));
+  }
+  .steps__list { grid-template-columns: repeat(4, 1fr); gap: var(--gutter); }
+  .step { padding-left: 0; padding-top: var(--s-8); }
+  .step__knot { left: 0; top: 0; }
+}
+
+/* ---------- GALLERIA ---------- */
+.gallery {
+  position: relative;
+  background: #0E0E0E url('/assets/img/fabric-dark.jpg') repeat;
+  background-size: 512px;
+  color: var(--text-inv);
+  overflow: clip;
+}
+.gallery__pin { padding-block: var(--section-y); }
+.gallery__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
+.gallery__head .lead { color: var(--text-inv-2); }
+.gallery__viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  padding-inline: var(--gutter);
+  scroll-padding-inline: var(--gutter);
+}
+.gallery__viewport::-webkit-scrollbar { display: none; }
+.gallery__track { display: flex; gap: var(--s-4); width: max-content; }
+.reel { width: min(72vw, 300px); scroll-snap-align: start; display: grid; gap: var(--s-3); }
+.media--reel { aspect-ratio: 9 / 16; }
+.reel .media { transition: transform 700ms var(--ease-silk); }
+@media (hover: hover) { .reel:hover .media { transform: scale(1.02); } }
+.reel__caption { font-size: var(--fs-small); color: var(--text-inv-2); max-width: 26ch; }
+.reel--end { align-self: stretch; }
+.reel__end {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: var(--s-3);
+  aspect-ratio: 9 / 16;
+  padding: var(--s-6);
+  border: 1px solid var(--line-inv);
+  text-decoration: none;
+  transition: background-color 400ms ease, color 400ms ease;
+}
+.reel__end .icon { width: 48px; height: 48px; }
+.reel__end-title { font-family: var(--font-display); font-size: 1.75rem; line-height: 1.1; }
+.reel__end-handle { font-size: var(--fs-small); color: var(--text-inv-2); }
+.reel__end:hover { background: var(--c-lime); color: var(--ink); }
+.reel__end:hover .reel__end-handle { color: var(--ink); }
+
+@media (min-width: 900px) {
+  .gallery.is-enhanced .gallery__pin { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding-block: calc(var(--nav-h) + 2vh) 3vh; }
+  .gallery.is-enhanced .gallery__head { margin-bottom: 3.5vh; }
+  .gallery.is-enhanced .gallery__viewport { overflow: visible; scroll-snap-type: none; }
+  .gallery.is-enhanced .gallery__track { will-change: transform; }
+  .reel { width: clamp(200px, 30vh, 320px); }
+}
+
+/* ---------- CHI SONO ---------- */
+.bio { background: var(--greige); }
+.bio__grid { display: grid; gap: var(--s-8); align-items: center; }
+.bio__portrait {
+  position: relative;
+  width: min(100%, 460px);
+  justify-self: center;
+  background: var(--ink);
+  transform: rotate(-2deg);
+  box-shadow: 0 30px 60px -30px rgb(10 10 10 / 0.55);
+}
+.bio__portrait img { width: 100%; height: auto; }
+.bio__text { display: grid; gap: var(--s-5); justify-items: start; }
+.bio__sign { width: min(100%, 360px); color: var(--ink); --sw: 1px; margin-top: var(--s-4); }
+@media (min-width: 900px) {
+  .bio__grid { grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
+  .bio__portrait { grid-column: 2 / span 4; }
+  .bio__text { grid-column: 7 / span 5; }
+}
+
+/* Pulsanti delle forme del viso */
+.face__chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; max-width: 440px; }
+.face__chips button {
+  min-height: 44px;
+  padding: 0.4em 1em;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+}
+.face__chips button:hover { border-color: var(--ink); }
+.face__chips button[aria-pressed='true'] { background: var(--ink); color: var(--greige); border-color: var(--ink); }
+
+/* Stagioni impilate (senza JS o con movimento ridotto): titolo e nota su fondo neutro, i colori vivono nei blocchi */
+.seasons:not(.is-enhanced):not(.is-flow) { --season-bg: var(--greige); --season-ink: var(--ink); }
+.seasons:not(.is-enhanced):not(.is-flow) .season { background: var(--season-bg); }
+
+/* Schermi stretti (360-399 px): le quattro stagioni restano su una riga */
+@media (max-width: 399px) {
+  .seasons__nav ul { gap: var(--s-2) 0.85rem; }
+  .seasons__tab { font-size: 0.6875rem; letter-spacing: 0.1em; }
+}
+
+
+/* Giunzioni tra sezioni a "forbici a zig-zag": il bordo inferiore di stagioni e galleria e' rifilato come un drappo */
+.seasons, .gallery { position: relative; z-index: 2; }
+.seasons::after, .gallery::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -10px;
+  height: 10px;
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% 0 / 20px 10px repeat-x;
+  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% 0 / 20px 10px repeat-x;
+  pointer-events: none;
+}
+.seasons::after { background: var(--season-bg); }
+.gallery::after { background: #0E0E0E; }

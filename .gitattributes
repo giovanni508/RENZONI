@@ -1,0 +1,12 @@
+# Fine riga LF ovunque (Windows in locale, Linux sui servizi di deploy)
+* text=auto eol=lf
+# Asset binari
+*.woff2 binary
+*.avif binary
+*.webp binary
+*.jpg binary
+*.png binary
+*.ico binary
+*.mp4 binary
+*.webm binary
+*.pdf binary

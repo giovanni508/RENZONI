@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="it" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Armocromia e Facial Shape a {{city}} | Erica Renzoni, consulente d'immagine</title>
+  <meta name="description" content="Armocromia con il metodo a 16 stagioni e Facial Shape a {{city}}: scopri i colori, il taglio e gli accessori che valorizzano il tuo viso. Prenota la tua consulenza.">
+  <link rel="canonical" href="{{siteUrl}}/">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Erica Renzoni">
+  <meta property="og:title" content="Il colore giusto ti accende. Erica Renzoni, consulente d'immagine">
+  <meta property="og:description" content="Armocromia con il metodo a 16 stagioni e Facial Shape: scopri i colori che valorizzano il tuo viso.">
+  <meta property="og:url" content="{{siteUrl}}/">
+  <meta property="og:image" content="{{siteUrl}}/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo di Erica Renzoni su tessuto nero, con drappi e cartoncini colorati">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preload" href="/assets/fonts/bodoni-moda-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="/assets/img/drapes.avif" imagesrcset="/assets/img/drapes-m.avif 780w, /assets/img/drapes.avif 1340w" imagesizes="(max-width: 767px) 96vw, 62vw" type="image/avif" fetchpriority="high">
+
+  <script>
+    // Stato iniziale prima del CSS: JS attivo, riduzione del movimento, risparmio dati.
+    (function (d) {
+      var c = d.documentElement.classList; c.remove('no-js'); c.add('js');
+      try { if (matchMedia('(prefers-reduced-motion: reduce)').matches) c.add('reduced-motion'); } catch (e) {}
+      var n = navigator.connection; if (n && n.saveData) c.add('save-data');
+    })(document);
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "{{siteUrl}}/#studio",
+        "name": "Erica Renzoni, consulente d'immagine",
+        "description": "Analisi del colore (armocromia) con il metodo a 16 stagioni e Facial Shape.",
+        "url": "{{siteUrl}}/",
+        "image": "{{siteUrl}}/og-image.jpg",
+        "logo": "{{siteUrl}}/icon-512.png",
+        "email": "{{email}}",
+        "telephone": "{{phoneHref}}",
+        "address": { "@type": "PostalAddress", "streetAddress": "{{address}}", "addressLocality": "{{city}}", "addressRegion": "{{region}}", "addressCountry": "IT" },
+        "areaServed": "{{city}}",
+        "sameAs": ["{{instagramUrl}}"],
+        "founder": { "@id": "{{siteUrl}}/#erica" },
+        "knowsAbout": ["Armocromia", "Analisi del colore", "Metodo a 16 stagioni", "Facial Shape", "Consulenza d'immagine"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Consulenze",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analisi del colore con il metodo a 16 stagioni" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facial Shape: analisi della forma del viso" } }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "{{siteUrl}}/#erica",
+        "name": "Erica Renzoni",
+        "jobTitle": "Consulente d'immagine",
+        "worksFor": { "@id": "{{siteUrl}}/#studio" },
+        "sameAs": ["{{instagramUrl}}"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<!--
+THESIS: la Copertina di Erica prende vita e il rituale dei drappi diventa il sito: il visitatore "prova" i colori come sotto i drappi. Rifiuta il template beauty pastello (crema, oro, stock, card uguali).
+OWN-WORLD: tessuto nero #0A0A0A e greige #E2E2DA del logo; palette vivida campionata dai drappi (lime fluo, rosa, teal, rosso, arancio, viola, oliva, lilla) negli elementi grafici; Bodoni Moda + Montserrat maiuscolo spaziato; swatch con bordo a zig-zag; filo di cucitura; CTA a pillola.
+STORY: capisco cosa fa Erica, lo vedo nei video veri, provo i concetti con le mani (stagioni, sottotono, valore, intensita', contrasto), mi fido, scrivo.
+FIRST VIEWPORT: nero tessuto; drappi in alto a sinistra, ventaglio interattivo in basso a destra; firma che si disegna al centro; titolo Bodoni su due righe; CTA "Prenota la tua consulenza".
+FORM: fissata dal brief del cliente (Copertina + metafora del drappo), nessun roll. Seed: brief-pinned.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+  <a class="skip-link" href="#main">Salta al contenuto</a>
+
+  <header class="nav" data-nav-theme="dark">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Erica Renzoni, torna all'inizio">
+        <svg class="nav__logo" viewBox="0 0 638.32 186.57" aria-hidden="true" focusable="false"><use href="#er-logo-mark"/></svg>
+      </a>
+      <nav class="nav__links" aria-label="Sezioni">
+        <ul role="list">
+          <li><a href="#armocromia">Armocromia</a></li>
+          <li><a href="#stagioni">16 stagioni</a></li>
+          <li><a href="#facial-shape">Facial Shape</a></li>
+          <li><a href="#come-funziona">Come funziona</a></li>
+          <li><a href="#chi-sono">Chi sono</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--sm btn--solid nav__cta" href="#contatti" data-cta="nav_prenota">Prenota</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="sr-only" data-label>Apri il menu</span>
+        <span class="nav__burger" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <div class="menu__inner">
+      <nav aria-label="Menu">
+        <ul class="menu__links" role="list">
+          <li><a href="#armocromia">Armocromia</a></li>
+          <li><a href="#stagioni">16 stagioni</a></li>
+          <li><a href="#caratteristiche">Cosa osservo</a></li>
+          <li><a href="#facial-shape">Facial Shape</a></li>
+          <li><a href="#come-funziona">Come funziona</a></li>
+          <li><a href="#galleria">Dalle consulenze</a></li>
+          <li><a href="#chi-sono">Chi sono</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--light menu__cta" href="#contatti" data-cta="menu_prenota">Prenota la tua consulenza</a>
+      <p class="menu__contacts">
+        <a href="https://wa.me/{{whatsapp}}?text={{whatsappText|url}}" target="_blank" rel="noopener" data-cta="menu_whatsapp"><i data-icon="whatsapp-logo"></i>WhatsApp</a>
+        <a href="{{instagramUrl}}" target="_blank" rel="noopener" data-cta="menu_instagram"><i data-icon="instagram-logo"></i>Instagram</a>
+      </p>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title" data-nav="dark">
+      <div class="hero__stage" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <picture class="hero__drapes">
+          <source type="image/avif" srcset="/assets/img/drapes-m.avif 780w, /assets/img/drapes.avif 1340w" sizes="(max-width: 767px) 96vw, 62vw">
+          <source type="image/webp" srcset="/assets/img/drapes-m.webp 780w, /assets/img/drapes.webp 1340w" sizes="(max-width: 767px) 96vw, 62vw">
+          <img src="/assets/img/drapes.webp" alt="" width="1340" height="600" fetchpriority="high" decoding="async">
+        </picture>
+        <canvas class="hero__gl"></canvas>
+      </div>
+      <!-- orlo del drappo che si solleva allo scroll: piega illuminata + ombra portata sulla pagina -->
+      <div class="hero__hem" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__logo">
+          <!-- @include src/assets/logo/logo.svg -->
+        </div>
+        <div class="hero__copy">
+          <h1 class="hero__title" id="hero-title">
+            <span class="line"><span class="line__in">Il colore giusto</span></span>
+            <span class="line"><span class="line__in">ti <em class="hero__accent" data-accent data-word="accende">accende</em>.</span></span>
+          </h1>
+          <p class="hero__sub">Armocromia a 16 stagioni e Facial Shape. Scopri i colori, il taglio e gli accessori che valorizzano il tuo viso.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--light" href="#contatti" data-cta="hero_prenota" data-magnetic>Prenota la tua consulenza</a>
+            <a class="btn btn--ghost-light" href="#armocromia" data-cta="hero_scopri">Scopri l'armocromia</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ventaglio di cartoncini (dalla Copertina): ogni cartoncino "prova" il suo colore sulla parola "accende". -->
+      <div class="fan" role="group" aria-label="Prova un colore sul titolo">
+        <p class="fan__hint" aria-hidden="true">Prova un colore</p>
+        <button class="fan__card" type="button" aria-pressed="false" style="--i:0;--a:#D8E348;--b:#B7C21F;--c:#F4F4F0" data-color="#D8E348"><span class="sr-only">Prova il giallo fluo</span></button>
+        <button class="fan__card" type="button" aria-pressed="false" style="--i:1;--a:#975290;--b:#8B8EA7;--c:#C9B7E2" data-color="#B77AB2"><span class="sr-only">Prova il viola</span></button>
+        <button class="fan__card" type="button" aria-pressed="false" style="--i:2;--a:#146C78;--b:#7DB3B3;--c:#2A9AA8" data-color="#2A9AA8"><span class="sr-only">Prova il verde acqua</span></button>
+        <button class="fan__card" type="button" aria-pressed="false" style="--i:3;--a:#707726;--b:#7DB3B3;--c:#8B8EA7" data-color="#9AA235"><span class="sr-only">Prova il verde oliva</span></button>
+        <button class="fan__card" type="button" aria-pressed="false" style="--i:4;--a:#E1800A;--b:#DAD90F;--c:#975290" data-color="#E9922B"><span class="sr-only">Prova l'arancio</span></button>
+        <button class="fan__card" type="button" aria-pressed="false" style="--i:5;--a:#DE9CBA;--b:#E797AA;--c:#D31728" data-color="#E79CC0"><span class="sr-only">Prova il rosa</span></button>
+        <button class="fan__card" type="button" aria-pressed="false" style="--i:6;--a:#D31728;--b:#E797AA;--c:#975290" data-color="#F0303F"><span class="sr-only">Prova il rosso</span></button>
+      </div>
+
+      <a class="hero__scroll" href="#armocromia" aria-label="Vai alla sezione Armocromia"><span class="hero__thread" aria-hidden="true"></span></a>
+    </section>
+
+    <!-- ============================== COSA FACCIO ============================== -->
+    <section class="intro section" id="armocromia" aria-labelledby="armocromia-title" data-nav="light">
+      <div class="container intro__grid">
+        <div class="intro__text">
+          <h2 class="h2" id="armocromia-title" data-split>L’armocromia, <em>drappo dopo drappo.</em></h2>
+          <div class="prose" data-reveal-lines>
+            <p class="lead">Mi occupo di analisi del colore sulle persone: l’armocromia. Con i drappi colorati, posati uno dopo l’altro vicino al viso, scopro quali colori ti valorizzano davvero.</p>
+            <p>Lavoro con il metodo a 16 stagioni. Non mi fermo alle quattro macrostagioni, Primavera, Estate, Autunno e Inverno: ogni stagione si divide in quattro sottogruppi, per descrivere con più precisione le tue caratteristiche cromatiche.</p>
+          </div>
+          <a class="btn btn--solid" href="#contatti" data-cta="intro_stagione" data-service="Analisi del colore" data-magnetic>Scopri la tua stagione <i data-icon="arrow-right"></i></a>
+        </div>
+        <figure class="intro__media">
+          <div class="fold" data-fold>
+            <div class="media media--fold" data-video="drappo" data-autoplay>
+              <picture class="media__poster">
+                <source type="image/avif" srcset="/assets/video/drappo-m.avif 480w, /assets/video/drappo.avif 720w" sizes="(max-width: 767px) 88vw, 40vw">
+                <source type="image/webp" srcset="/assets/video/drappo-m.webp 480w, /assets/video/drappo.webp 720w" sizes="(max-width: 767px) 88vw, 40vw">
+                <img src="/assets/video/drappo.jpg" alt="Erica lancia un drappo rosso lampone sul petto di una cliente: l'immagine passa dal bianco e nero al colore." width="720" height="900" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+          <figcaption class="caption">Dal grigio al colore: il primo drappo.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Nastro di swatch: l'unico marquee della pagina, decorativo -->
+    <div class="ribbon" aria-hidden="true">
+      <!-- @ribbon -->
+    </div>
+
+    <!-- ============================== 16 STAGIONI ============================== -->
+    <!-- TODO(Erica): validare nomi dei 16 sottogruppi e palette (src/data/seasons.js) -->
+    <section class="seasons" id="stagioni" aria-labelledby="stagioni-title" data-nav="light">
+      <div class="seasons__pin">
+        <div class="container seasons__top">
+          <h2 class="h2 seasons__title" id="stagioni-title">Sedici stagioni. <em>Una è la tua.</em></h2>
+          <nav class="seasons__nav" aria-label="Le quattro stagioni">
+            <ul role="list">
+            <!-- @seasons-nav -->
+            </ul>
+          </nav>
+        </div>
+        <div class="seasons__panels container">
+          <!-- @seasons -->
+        </div>
+        <p class="seasons__note container">Palette dimostrative: la tua la scopri in consulenza.</p>
+      </div>
+    </section>
+
+    <!-- ============================== LE 4 CARATTERISTICHE ============================== -->
+    <section class="traits section" id="caratteristiche" aria-labelledby="traits-title" data-nav="light">
+      <div class="container">
+        <div class="traits__head">
+          <h2 class="h2" id="traits-title" data-split>Cosa osservo, <em>prima di tutto.</em></h2>
+          <p class="lead">Quattro caratteristiche guidano l’analisi. Muovi i controlli e guarda come cambia il colore.</p>
+        </div>
+
+        <div class="traits__grid">
+          <article class="trait trait--undertone" aria-labelledby="t-under">
+            <div class="trait__copy">
+              <h3 class="h3" id="t-under">Sottotono</h3>
+              <p>Caldo o freddo: la temperatura di fondo del tuo incarnato. Lo stesso colore cambia anima.</p>
+            </div>
+            <ul class="pairs" role="list" data-undertone="0">
+              <li class="pair" style="--cool:#C2185B;--warm:#E4572E"><span class="pair__chip"></span><span class="pair__name" data-cool="Lampone" data-warm="Pomodoro">Lampone</span></li>
+              <li class="pair" style="--cool:#E0408A;--warm:#F0806A"><span class="pair__chip"></span><span class="pair__name" data-cool="Fucsia" data-warm="Corallo">Fucsia</span></li>
+              <li class="pair" style="--cool:#0F8A72;--warm:#7D8C2A"><span class="pair__chip"></span><span class="pair__name" data-cool="Smeraldo" data-warm="Oliva">Smeraldo</span></li>
+              <li class="pair" style="--cool:#2E4FB8;--warm:#1E7A7E"><span class="pair__chip"></span><span class="pair__name" data-cool="Cobalto" data-warm="Petrolio">Cobalto</span></li>
+            </ul>
+            <div class="switch" role="radiogroup" aria-label="Sottotono">
+              <button type="button" role="radio" aria-checked="true" data-value="0">Freddo</button>
+              <button type="button" role="radio" aria-checked="false" data-value="1">Caldo</button>
+              <span class="switch__thumb" aria-hidden="true"></span>
+            </div>
+          </article>
+
+          <article class="trait trait--value" aria-labelledby="t-value">
+            <div class="trait__copy">
+              <h3 class="h3" id="t-value">Valore</h3>
+              <p>Quanto sei luminosa: dallo scuro al chiaro.</p>
+            </div>
+            <div class="scale" data-scale="value" style="--v:0.5" aria-hidden="true">
+              <span style="--h:28"></span><span style="--h:150"></span><span style="--h:255"></span><span style="--h:330"></span><span style="--h:80"></span>
+            </div>
+            <label class="range">
+              <span class="range__label"><span>Scuro</span><span>Chiaro</span></span>
+              <input type="range" min="0" max="100" value="50" data-control="value" aria-label="Valore, da scuro a chiaro">
+            </label>
+          </article>
+
+          <article class="trait trait--chroma" aria-labelledby="t-chroma">
+            <div class="trait__copy">
+              <h3 class="h3" id="t-chroma">Intensità</h3>
+              <p>Brillante o smorzata: colori saturi oppure più polverosi.</p>
+            </div>
+            <div class="scale" data-scale="chroma" style="--s:0.5" aria-hidden="true">
+              <span style="--h:20"></span><span style="--h:95"></span><span style="--h:175"></span><span style="--h:250"></span><span style="--h:330"></span>
+            </div>
+            <label class="range">
+              <span class="range__label"><span>Smorzata</span><span>Brillante</span></span>
+              <input type="range" min="0" max="100" value="50" data-control="chroma" aria-label="Intensità, da smorzata a brillante">
+            </label>
+          </article>
+
+          <article class="trait trait--contrast" aria-labelledby="t-contrast">
+            <div class="trait__copy">
+              <h3 class="h3" id="t-contrast">Contrasto</h3>
+              <p>Il contrasto naturale tra pelle, occhi e capelli.</p>
+            </div>
+            <div class="trio" data-trio style="--k:0.5">
+              <figure class="trio__item trio__item--skin"><span class="trio__dot"></span><figcaption>Pelle</figcaption></figure>
+              <figure class="trio__item trio__item--eyes"><span class="trio__dot"></span><figcaption>Occhi</figcaption></figure>
+              <figure class="trio__item trio__item--hair"><span class="trio__dot"></span><figcaption>Capelli</figcaption></figure>
+            </div>
+            <label class="range">
+              <span class="range__label"><span>Basso</span><span>Alto</span></span>
+              <input type="range" min="0" max="100" value="50" data-control="contrast" aria-label="Contrasto, da basso ad alto">
+            </label>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FACIAL SHAPE ============================== -->
+    <section class="facial section" id="facial-shape" aria-labelledby="facial-title" data-nav="light">
+      <div class="container facial__grid">
+        <div class="facial__text">
+          <h2 class="h2" id="facial-title" data-split>Facial Shape. <em>La forma del viso, misurata.</em></h2>
+          <p class="lead">Osservo la forma del tuo viso e la misuro con strumenti specifici, le mascherine. Così capisco cosa ti valorizza davvero.</p>
+          <ul class="facial__list" role="list">
+            <li class="facial__item">
+              <i data-icon="scissors" data-weight="thin"></i>
+              <h3 class="h3">Capelli</h3>
+              <p>Il taglio adatto alle proporzioni del tuo viso.</p>
+            </li>
+            <li class="facial__item">
+              <i data-icon="diamond" data-weight="thin"></i>
+              <h3 class="h3">Accessori</h3>
+              <p>Gli accessori da usare, scelti sulla tua forma.</p>
+            </li>
+            <li class="facial__item">
+              <i data-icon="eyeglasses" data-weight="thin"></i>
+              <h3 class="h3">Occhiali</h3>
+              <p>La forma della montatura che ti sta meglio.</p>
+            </li>
+          </ul>
+          <a class="btn btn--solid" href="#contatti" data-cta="facial_prenota" data-service="Facial Shape" data-magnetic>Prenota la Facial Shape <i data-icon="arrow-right"></i></a>
+        </div>
+        <div class="facial__visual">
+          <div class="facial__sticky">
+            <!-- TODO(Erica): confermare le forme del viso usate nella sua Facial Shape -->
+            <svg class="face" viewBox="0 0 260 320" role="img" aria-labelledby="face-t">
+              <title id="face-t">Sagoma di un viso che cambia forma: ovale, tondo, quadrato, rettangolare, a cuore, a diamante, triangolare.</title>
+              <g class="face__grid" aria-hidden="true">
+                <line x1="20" y1="96" x2="240" y2="96"/><line x1="20" y1="150" x2="240" y2="150"/><line x1="20" y1="226" x2="240" y2="226"/><line x1="130" y1="14" x2="130" y2="306"/>
+              </g>
+              <path class="face__mask" d="M130 30C182 30 206 76 206 132C206 196 176 266 130 290C84 266 54 196 54 132C54 76 78 30 130 30Z"/>
+              <path class="face__shape" d="M130 30C182 30 206 76 206 132C206 196 176 266 130 290C84 266 54 196 54 132C54 76 78 30 130 30Z"/>
+              <g class="face__measures" aria-hidden="true">
+                <line class="m m--fore" x1="80" y1="96" x2="180" y2="96"/>
+                <line class="m m--cheek" x1="56" y1="150" x2="204" y2="150"/>
+                <line class="m m--jaw" x1="86" y1="226" x2="174" y2="226"/>
+              </g>
+            </svg>
+            <p class="face__label" aria-hidden="true"><span data-face-label>Ovale</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== COME FUNZIONA ============================== -->
+    <!-- DA CONFERMARE CON ERICA: i passaggi non sono nel materiale fornito, sono una proposta plausibile. -->
+    <section class="steps section" id="come-funziona" aria-labelledby="steps-title" data-nav="light">
+      <div class="container">
+        <h2 class="h2" id="steps-title" data-split>Come <em>funziona.</em></h2>
+        <div class="steps__wrap">
+          <div class="steps__thread" aria-hidden="true"><span class="steps__sewn"></span></div>
+          <ol class="steps__list" role="list">
+            <li class="step" data-todo="Da confermare con Erica">
+              <span class="step__knot" aria-hidden="true"></span>
+              <h3 class="h3">Mi scrivi</h3>
+              <p>Dal modulo qui sotto, su WhatsApp o in direct su Instagram. Ti rispondo entro {{responseTime}}.</p>
+            </li>
+            <li class="step" data-todo="Da confermare con Erica: luogo, preparazione">
+              <span class="step__knot" aria-hidden="true"></span>
+              <h3 class="h3">Fissiamo l’incontro</h3>
+              <p>Scegliamo insieme giorno e ora. Ti spiego come arrivare: per l’analisi servono luce naturale e viso struccato.</p>
+            </li>
+            <li class="step" data-todo="Da confermare con Erica">
+              <span class="step__knot" aria-hidden="true"></span>
+              <h3 class="h3">L’analisi</h3>
+              <p>Drappi colorati e metallici, uno dopo l’altro, vicino al tuo viso. Con la Facial Shape misuro anche la forma del viso con le mascherine.</p>
+            </li>
+            <li class="step" data-todo="Da confermare con Erica: cosa riceve la cliente">
+              <span class="step__knot" aria-hidden="true"></span>
+              <h3 class="h3">I tuoi colori</h3>
+              <p>Scopri la tua stagione tra le sedici e porti con te i colori, il taglio, gli accessori e gli occhiali che ti valorizzano.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== GALLERIA ============================== -->
+    <!-- LIBERATORIE: in tutte le clip compaiono volti di clienti. Pubblicare solo con liberatoria firmata. -->
+    <section class="gallery" id="galleria" aria-labelledby="gallery-title" data-nav="dark">
+      <div class="gallery__pin">
+        <div class="container gallery__head">
+          <h2 class="h2" id="gallery-title" data-split>Dalle mie <em>consulenze.</em></h2>
+          <p class="lead">Momenti veri: il primo drappo, la prova dei metalli, la palette che prende forma.</p>
+        </div>
+        <div class="gallery__viewport">
+          <ul class="gallery__track" role="list">
+            <li class="reel">
+              <div class="media media--reel" data-video="sequenza" data-hover>
+                <picture class="media__poster">
+                  <source type="image/avif" srcset="/assets/video/sequenza-m.avif 540w, /assets/video/sequenza.avif 720w" sizes="(max-width: 767px) 72vw, 22vw">
+                  <img src="/assets/video/sequenza.jpg" alt="Drappi rosso, giallo e turchese provati uno dopo l'altro su una cliente." width="720" height="1280" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <p class="reel__caption">Rosso, giallo, turchese. Un drappo alla volta.</p>
+            </li>
+            <li class="reel">
+              <div class="media media--reel" data-video="lame" data-hover>
+                <picture class="media__poster">
+                  <source type="image/avif" srcset="/assets/video/lame-m.avif 540w, /assets/video/lame.avif 720w" sizes="(max-width: 767px) 72vw, 22vw">
+                  <img src="/assets/video/lame.jpg" alt="Erica sistema un drappo in lamé dorato per il test dei metalli." width="720" height="1280" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <p class="reel__caption">Oro o argento? La prova dei metalli.</p>
+            </li>
+            <li class="reel">
+              <div class="media media--reel" data-video="lilla" data-hover>
+                <picture class="media__poster">
+                  <source type="image/avif" srcset="/assets/video/lilla-m.avif 540w, /assets/video/lilla.avif 720w" sizes="(max-width: 767px) 72vw, 22vw">
+                  <img src="/assets/video/lilla.jpg" alt="Primo piano di una cliente con un drappo lilla, le mani di Erica sulle spalle." width="720" height="1280" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <p class="reel__caption">Lilla, cipria, salvia: i colori soft.</p>
+            </li>
+            <li class="reel">
+              <div class="media media--reel" data-video="viola" data-hover>
+                <picture class="media__poster">
+                  <source type="image/avif" srcset="/assets/video/viola-m.avif 540w, /assets/video/viola.avif 720w" sizes="(max-width: 767px) 72vw, 22vw">
+                  <img src="/assets/video/viola.jpg" alt="Drappi viola, magenta e verde acqua sovrapposti sulla cliente." width="720" height="1280" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <p class="reel__caption">Viola e magenta: il test dell’inverno.</p>
+            </li>
+            <li class="reel">
+              <div class="media media--reel" data-video="ventaglio" data-hover>
+                <picture class="media__poster">
+                  <source type="image/avif" srcset="/assets/video/ventaglio-m.avif 540w, /assets/video/ventaglio.avif 720w" sizes="(max-width: 767px) 72vw, 22vw">
+                  <img src="/assets/video/ventaglio.jpg" alt="Drappi giallo, marrone e arancio aperti a ventaglio sulla cliente." width="720" height="1280" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <p class="reel__caption">La palette prende forma.</p>
+            </li>
+            <li class="reel reel--end">
+              <a class="reel__end" href="{{instagramUrl}}" target="_blank" rel="noopener" data-cta="gallery_instagram">
+                <i data-icon="instagram-logo" data-weight="thin"></i>
+                <span class="reel__end-title">Altri momenti su Instagram</span>
+                <span class="reel__end-handle">{{instagramHandle}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CHI SONO ============================== -->
+    <section class="bio section" id="chi-sono" aria-labelledby="bio-title" data-nav="light">
+      <div class="container bio__grid">
+        <figure class="bio__portrait">
+          <!-- RITRATTO PROVVISORIO: fotogramma della card finale del reel f3988 (Erica con la cornice arcobaleno).
+               Sostituire con un ritratto professionale: public/assets/img/erica.(avif|webp|jpg), proporzione 10:11. -->
+          <picture>
+            <source type="image/avif" srcset="/assets/img/erica-m.avif 480w, /assets/img/erica.avif 800w" sizes="(max-width: 767px) 86vw, 34vw">
+            <source type="image/webp" srcset="/assets/img/erica-m.webp 480w, /assets/img/erica.webp 800w" sizes="(max-width: 767px) 86vw, 34vw">
+            <img src="/assets/img/erica.jpg" alt="Erica Renzoni sorride tenendo davanti al viso una cornice con i colori dell'arcobaleno." width="800" height="880" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <div class="bio__text">
+          <h2 class="h2" id="bio-title" data-split>Sono <em>Erica.</em></h2>
+          <p class="lead">Consulente d’immagine. Mi occupo di armocromia con il metodo a 16 stagioni e di Facial Shape.</p>
+          <p class="todo" data-todo="Bio da fornire">[DA INSERIRE: due o tre frasi su di te, sul tuo percorso e su dove ricevi le clienti.]</p>
+          <svg class="bio__sign" viewBox="0 0 635.32 183.57" aria-hidden="true" focusable="false"><use href="#er-sign"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTATTI ============================== -->
+    <section class="contact section" id="contatti" aria-labelledby="contact-title" data-nav="dark">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <h2 class="h2" id="contact-title" data-split>E tu? <em>Vorresti scoprire i tuoi colori?</em></h2>
+          <p class="lead">Scrivimi: ti rispondo entro {{responseTime}}. Se preferisci, sono a un tocco di distanza.</p>
+          <ul class="channels" role="list">
+            <li><a class="channel" href="https://wa.me/{{whatsapp}}?text={{whatsappText|url}}" target="_blank" rel="noopener" data-cta="contact_whatsapp"><i data-icon="whatsapp-logo"></i><span class="channel__label">WhatsApp</span><span class="channel__value">Scrivimi un messaggio</span></a></li>
+            <li><a class="channel" href="{{instagramUrl}}" target="_blank" rel="noopener" data-cta="contact_instagram"><i data-icon="instagram-logo"></i><span class="channel__label">Instagram</span><span class="channel__value">{{instagramHandle}}</span></a></li>
+            <li><a class="channel" href="tel:{{phoneHref}}" data-cta="contact_phone"><i data-icon="phone"></i><span class="channel__label">Telefono</span><span class="channel__value">{{phoneDisplay}}</span></a></li>
+            <li><a class="channel" href="mailto:{{email}}" data-cta="contact_email"><i data-icon="envelope-simple"></i><span class="channel__label">Email</span><span class="channel__value">{{email}}</span></a></li>
+          </ul>
+        </div>
+
+        <div class="contact__panel">
+          <form class="form" id="contact-form" action="#" method="post" novalidate data-response-time="{{responseTime}}" data-mail="{{email}}">
+            <p class="form__intro">Raccontami qualcosa di te. I campi con <span aria-hidden="true">*</span><span class="sr-only">asterisco</span> sono obbligatori.</p>
+
+            <div class="field">
+              <label class="field__label" for="f-name">Nome e cognome <span class="req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="f-name" name="nome" type="text" autocomplete="name" required maxlength="80" aria-describedby="f-name-err">
+              <p class="field__error" id="f-name-err"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120" aria-describedby="f-email-err">
+              <p class="field__error" id="f-email-err"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-phone">Telefono o WhatsApp <span class="field__opt">facoltativo</span></label>
+              <input class="field__input" id="f-phone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="f-phone-help f-phone-err">
+              <p class="field__help" id="f-phone-help">Se preferisci che ti risponda su WhatsApp.</p>
+              <p class="field__error" id="f-phone-err"></p>
+            </div>
+
+            <fieldset class="field field--chips">
+              <legend class="field__label">Cosa ti interessa?</legend>
+              <div class="chips">
+                <input type="radio" id="s-colore" name="servizio" value="Analisi del colore"><label for="s-colore">Analisi del colore</label>
+                <input type="radio" id="s-facial" name="servizio" value="Facial Shape"><label for="s-facial">Facial Shape</label>
+                <input type="radio" id="s-entrambe" name="servizio" value="Entrambe"><label for="s-entrambe">Entrambe</label>
+                <input type="radio" id="s-nonso" name="servizio" value="Non so ancora" checked><label for="s-nonso">Non so ancora</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="field__label" for="f-msg">Messaggio <span class="field__opt">facoltativo</span></label>
+              <textarea class="field__input field__input--area" id="f-msg" name="messaggio" rows="4" maxlength="1500"></textarea>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-source">Come mi hai conosciuta? <span class="field__opt">facoltativo</span></label>
+              <div class="select">
+                <select class="field__input" id="f-source" name="fonte">
+                  <option value="">Scegli un’opzione</option>
+                  <option>Instagram</option>
+                  <option>Passaparola</option>
+                  <option>Google</option>
+                  <option>Altro</option>
+                </select>
+                <i data-icon="caret-down"></i>
+              </div>
+            </div>
+
+            <!-- Anti-spam: campo trappola (i bot lo compilano, le persone non lo vedono) -->
+            <div class="hp" aria-hidden="true">
+              <label for="f-website">Non compilare questo campo</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <!-- Cloudflare Turnstile: si attiva da solo se imposti VITE_TURNSTILE_SITEKEY -->
+            <div class="turnstile" data-turnstile hidden></div>
+
+            <div class="field field--check">
+              <input class="check" id="f-privacy" name="privacy" type="checkbox" required aria-describedby="f-privacy-err">
+              <label for="f-privacy">Ho letto l’<a href="/privacy.html" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati per ricevere una risposta. <span class="req" aria-hidden="true">*</span></label>
+              <p class="field__error" id="f-privacy-err"></p>
+            </div>
+
+            <button class="btn btn--light btn--submit" type="submit" data-magnetic>
+              <span class="btn__label">Invia la richiesta</span>
+              <span class="btn__thread" aria-hidden="true"></span>
+            </button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="success" id="form-success" tabindex="-1" hidden>
+            <svg class="success__sign" viewBox="0 0 635.32 183.57" aria-hidden="true" focusable="false"><use href="#er-sign"/></svg>
+            <h3 class="success__title">Grazie<span data-success-name></span>, ho ricevuto la tua richiesta.</h3>
+            <p>Ti rispondo entro {{responseTime}}, all’email che mi hai lasciato. Intanto puoi scrivermi su WhatsApp o curiosare tra le consulenze su Instagram.</p>
+            <p class="success__actions">
+              <a class="btn btn--light" href="https://wa.me/{{whatsapp}}?text={{whatsappText|url}}" target="_blank" rel="noopener" data-cta="success_whatsapp"><i data-icon="whatsapp-logo"></i> WhatsApp</a>
+              <a class="btn btn--ghost-light" href="{{instagramUrl}}" target="_blank" rel="noopener" data-cta="success_instagram"><i data-icon="instagram-logo"></i> Instagram</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer" data-nav="dark">
+    <div class="container">
+      <a class="footer__cta" href="#contatti" data-cta="footer_prenota">
+        <span class="footer__cta-line">Il colore giusto</span>
+        <span class="footer__cta-line"><em>ti aspetta.</em> <i data-icon="arrow-up-right" data-weight="thin"></i></span>
+      </a>
+      <div class="footer__grid">
+        <svg class="footer__logo" viewBox="0 0 636.32 225.29" role="img" aria-label="Erica Renzoni, consulente d'immagine"><use href="#er-logo"/></svg>
+        <nav class="footer__nav" aria-label="Sezioni del sito">
+          <ul role="list">
+            <li><a href="#armocromia">Armocromia</a></li>
+            <li><a href="#stagioni">16 stagioni</a></li>
+            <li><a href="#facial-shape">Facial Shape</a></li>
+            <li><a href="#come-funziona">Come funziona</a></li>
+            <li><a href="#chi-sono">Chi sono</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+          </ul>
+        </nav>
+        <address class="footer__contacts">
+          <a href="mailto:{{email}}">{{email}}</a>
+          <a href="tel:{{phoneHref}}">{{phoneDisplay}}</a>
+          <a href="{{instagramUrl}}" target="_blank" rel="noopener">Instagram {{instagramHandle}}</a>
+          <span>{{city}}, {{address}}</span>
+        </address>
+      </div>
+      <div class="footer__legal">
+        <p>© <span data-year>2026</span> {{legalName}}. P.IVA {{vat}}</p>
+        <ul role="list">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/cookie.html">Cookie</a></li>
+          <li><button type="button" class="linklike" data-cookie-open>Preferenze cookie</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barra CTA fissa (solo mobile, compare dopo l'hero) -->
+  <div class="cta-bar" data-cta-bar inert>
+    <a class="btn btn--solid cta-bar__main" href="#contatti" data-cta="sticky_prenota">Prenota la consulenza</a>
+    <a class="cta-bar__wa" href="https://wa.me/{{whatsapp}}?text={{whatsappText|url}}" target="_blank" rel="noopener" data-cta="sticky_whatsapp" aria-label="Scrivimi su WhatsApp"><i data-icon="whatsapp-logo"></i></a>
+  </div>
+
+  <!-- Banner cookie (template: compare solo se configuri strumenti di statistica/marketing, vedi README) -->
+  <div class="cookie" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc" hidden>
+    <h2 class="cookie__title" id="cookie-title">Cookie</h2>
+    <p class="cookie__desc" id="cookie-desc">Uso solo cookie tecnici necessari. Con il tuo consenso, anche cookie di statistica e marketing per capire come migliorare il sito. <a href="/cookie.html">Cookie policy</a></p>
+    <form class="cookie__prefs" hidden>
+      <label><input type="checkbox" checked disabled> Necessari</label>
+      <label><input type="checkbox" name="analytics"> Statistica</label>
+      <label><input type="checkbox" name="marketing"> Marketing</label>
+    </form>
+    <div class="cookie__actions">
+      <button type="button" class="btn btn--sm btn--ghost-light" data-consent="reject">Rifiuta</button>
+      <button type="button" class="btn btn--sm btn--ghost-light" data-consent="custom">Personalizza</button>
+      <button type="button" class="btn btn--sm btn--light" data-consent="accept">Accetta</button>
+    </div>
+  </div>
+
+  <!-- @include src/assets/logo/sprite.svg -->
+  <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+    <!-- Maschera "a piega di tessuto" per il video di "Cosa faccio" (coordinate 0-1, si adatta al riquadro) -->
+    <clipPath id="fold-clip" clipPathUnits="objectBoundingBox">
+      <path id="fold-a" d="M0.03 0.05C0.18 0 0.32 0.06 0.5 0.025C0.68 -0.005 0.82 0.05 0.97 0.02C1 0.25 0.96 0.5 0.985 0.72C1 0.86 0.93 0.95 0.84 0.97C0.7 0.99 0.58 0.93 0.46 0.985C0.34 1.02 0.2 0.95 0.08 0.975C0 0.99 0.02 0.8 0.015 0.62C0.01 0.42 0.04 0.2 0.03 0.05Z"/>
+    </clipPath>
+    <path id="fold-b" d="M0.04 0.02C0.2 0.05 0.36 -0.01 0.52 0.04C0.66 0.08 0.84 0 0.98 0.05C0.96 0.3 1 0.52 0.97 0.75C0.96 0.88 0.9 0.99 0.8 0.95C0.68 0.92 0.56 1 0.44 0.95C0.3 0.9 0.18 1.01 0.06 0.95C0.01 0.92 0.03 0.74 0.02 0.58C0.01 0.4 0 0.2 0.04 0.02Z"/>
+  </svg>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

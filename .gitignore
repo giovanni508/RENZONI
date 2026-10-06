@@ -1,0 +1,15 @@
+node_modules/
+dist/
+dist-test/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+Thumbs.db
+# verifiche locali (schermate, report Lighthouse)
+.shots/
+.lighthouse/
+# I video sorgente (60-210 MB) restano fuori dal sito: vivono in ../mateirali e non vanno mai in public/
+*.mov
+public/assets/video/*.poster.png
