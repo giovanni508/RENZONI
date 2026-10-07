@@ -29,12 +29,13 @@ Successo = richieste inviate dal form e clic sui canali diretti (eventi `generat
 ## Positioning
 
 Erica fa analisi del colore con il metodo a 16 stagioni (4 macrostagioni x 4 sottogruppi), usando drappi colorati
-e metallici vicino al viso, e la Facial Shape: misura la forma del viso con mascherine per consigliare taglio di capelli,
+e metallici vicino al viso, e la Facial Shape: misura la forma del viso con strumenti specifici per consigliare taglio di capelli,
 accessori e forma degli occhiali. Il brand esiste gia': firma monoline E-R + wordmark Montserrat, Copertina su tessuto nero
 con drappi e cartoncini colorati.
 
 ## Operating Context
 
+- Lessico di Erica: nei testi niente "mascherine", si dice "gli strumenti per la Facial Shape". Per l'analisi la cliente arriva con il viso struccato.
 - Consulenze dal vivo con drappi colorati, drappi in lame' oro/argento (test dei metalli), cornici colorate attorno al viso (visibili nei reel).
 - Comunicazione attuale: reel Instagram con sottotitoli, tono diretto e caldo, dà del "tu" ("E tu? Vorresti scoprire quali sono i tuoi colori? Scrivimi in direct").
 - Tempo di risposta dichiarato nel brief: 24/48 ore.
@@ -43,7 +44,7 @@ con drappi e cartoncini colorati.
 
 - Servizi: Analisi del colore (armocromia, 16 stagioni), Facial Shape. Prezzi, durata, luogo e modalita' della consulenza: **non forniti**.
 - Nomenclatura dei 16 sottogruppi e palette: indicative, **da validare con Erica**.
-- Passaggi "Come funziona": proposta plausibile, **da confermare con Erica**.
+- Passaggi "Come funziona": 2 e 3 rivisti da Erica; 1 (tempi di risposta) e 4 (cosa riceve la cliente) **da confermare**.
 - Forme del viso nella Facial Shape (ovale, tondo, quadrato, rettangolare, cuore, diamante, triangolo): **da confermare**.
 - Lingua: italiano. Logo solo nero o bianco, mai deformato ne' ricolorato.
 
@@ -57,7 +58,8 @@ con drappi e cartoncini colorati.
 ## Evidence on Hand
 
 - `../mateirali/Copertina report_.png` (moodboard), `er.pdf`, `er-02.png`, `er-03.png`, 3 animazioni del logo, 9 reel di consulenze.
-- **Assenti (non inventare)**: testimonianze, recensioni, prezzi, numeri, certificazioni, anni di esperienza, foto ritratto professionale, contatti, citta', P.IVA.
+- `../materiali-nuovi/ritratto-erica-studio.jpg`: ritratto in studio inviato da Erica (camicia nera, cornice a spicchi), copia WhatsApp 996×1580.
+- **Assenti (non inventare)**: testimonianze, recensioni, prezzi, numeri, certificazioni, anni di esperienza, contatti, citta', P.IVA.
 - Nei reel compaiono volti di clienti: servono liberatorie prima della pubblicazione.
 
 ## Product Principles

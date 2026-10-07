@@ -45,7 +45,7 @@ Mostra la build di `dist/` su http://localhost:4173.
 | 16 stagioni: nomi, descrizioni, palette, colori di fondo | `src/data/seasons.js` |
 | Nastro di colori (marquee) | `RIBBON` in `src/data/seasons.js` |
 | Clip video (quali, da che secondo, ritaglio) | `scripts/media.config.mjs`, poi `npm run media` |
-| Ritratto di Erica | sostituisci `public/assets/img/erica.(avif\|webp\|jpg)` ed `erica-m.*` (proporzione 10:11) |
+| Ritratto di Erica | metti la foto in `../materiali-nuovi/ritratto-erica-studio.jpg` e lancia `npm run images` (taglio 2:3 dall'alto, crea `ritratto-480/720/996`) |
 | Informativa privacy e cookie | `privacy.html`, `cookie.html` (template da far verificare a un legale) |
 | Colori, font, spazi, movimento | `src/styles/tokens.css` |
 | Endpoint del form, statistiche | file `.env` (vedi punto 4 e 5) |
@@ -58,6 +58,7 @@ Tutto ciò che è tra **[PARENTESI QUADRE]** è un segnaposto da sostituire.
 ## 3. Media: video, immagini, logo, font
 
 Gli originali restano intatti in `../mateirali/` e **non vanno mai copiati in `public/`** (i video originali pesano 60–210 MB).
+I materiali arrivati dopo (il ritratto in studio) stanno in `../materiali-nuovi/`.
 Le versioni per il web si rigenerano con gli script:
 
 ```bash
@@ -68,7 +69,7 @@ Esegue in sequenza:
 
 - `npm run logo`: estrae dal PDF il logo vettoriale (`src/assets/logo/`). La firma resta un unico tracciato, così si può animare.
 - `npm run fonts`: crea i font self-hosted alleggeriti (sottoinsieme per l'italiano, assi variabili ridotti) in `public/assets/fonts/`.
-- `npm run images`: drappi della Copertina scontornati per l'hero, texture del tessuto nero, immagine social OG 1200×630, favicon e icone, ritratto provvisorio.
+- `npm run images`: drappi della Copertina scontornati per l'hero, texture del tessuto nero, immagine social OG 1200×630, favicon e icone, ritratto di Erica (da `../materiali-nuovi/`).
 - `npm run media`: taglia, ritaglia e codifica le clip (H.264 + AV1, versioni desktop e mobile, poster AVIF/WebP/JPG) in `public/assets/video/`. I video HDR dell'iPhone vengono convertiti in SDR.
 
 Per cambiare una clip modifica `scripts/media.config.mjs`. Per ciascuna clip indichi file sorgente, secondo di inizio, durata, ritaglio e fotogramma del poster. Poi rilancia `npm run media` (puoi passare anche solo alcune clip, es. `npm run media -- lilla`).

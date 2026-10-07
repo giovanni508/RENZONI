@@ -12,7 +12,7 @@ confermare sono evidenziate in rosso.
 - [ ] Dati legali: nome o ragione sociale, **P.IVA**, sede legale, email per la privacy, data dell'informativa
 
 ## Contenuti
-- [ ] **Foto ritratto professionale** di Erica (consigliata verticale 10:11, almeno 800 px). Ora c'è un ritratto **provvisorio**, preso dalla card finale del reel `f3988…` (Erica con la cornice arcobaleno)
+- [x] **Ritratto**: foto in studio con la cornice a spicchi, inviata da Erica (ottobre 2026). Facoltativo: il file originale del fotografo, più nitido della copia passata da WhatsApp (996×1580). Va messo in `../materiali-nuovi/ritratto-erica-studio.jpg`, poi `npm run images`
 - [x] **Formazione** (in "Chi sono"): diploma all'Italian Image Institute di Milano, Master in Luxury and Fashion Management (Il Sole 24 Ore), corsi di Armocromia, Body Shape & Facial Shape, Stile
 - [ ] **Dove ricevi** le clienti (città, studio, a domicilio, online?): unico punto ancora aperto della bio
 - [ ] Servizi: durata, prezzi (se vuoi mostrarli), cosa comprende ciascuna consulenza
@@ -21,11 +21,9 @@ confermare sono evidenziate in rosso.
 ## Da confermare con Erica
 - [ ] **Nomenclatura delle 16 stagioni** (in `src/data/seasons.js`). Ora è quella più diffusa: Primavera Pura/Light/Warm/Bright, Estate Pura/Light/Cool/Soft, Autunno Puro/Deep/Warm/Soft, Inverno Puro/Deep/Cool/Bright
 - [ ] **Palette dei 16 sottogruppi**: oggi sono dimostrative (il sito lo dice). Meglio sostituirle con quelle che usa Erica
-- [ ] **Come funziona** (4 passaggi proposti):
-  - contatto e risposta entro 24/48 ore;
-  - appuntamento con luce naturale e viso struccato;
-  - analisi con drappi colorati e metallici, più mascherine per la Facial Shape;
-  - risultati. Cosa riceve la cliente: palette fisica? report digitale?
+- [ ] **Come funziona**: i passaggi 2 e 3 sono stati rivisti da Erica (si arriva con il viso struccato; "gli strumenti per la Facial Shape", mai "mascherine"). Da confermare ancora:
+  - passaggio 1: risposta entro 24/48 ore;
+  - passaggio 4: cosa riceve la cliente alla fine (palette fisica? report digitale?).
 - [ ] **Forme del viso** mostrate nella Facial Shape: ovale, tondo, quadrato, rettangolare, cuore, diamante, triangolo
 - [ ] Tempo di risposta "24/48 ore" (da brief)
 - [ ] Testi delle didascalie della galleria

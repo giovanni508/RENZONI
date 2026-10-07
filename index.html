@@ -75,6 +75,7 @@
         "@id": "{{siteUrl}}/#erica",
         "name": "Erica Renzoni",
         "jobTitle": "Consulente d'immagine",
+        "image": "{{siteUrl}}/assets/img/ritratto-720.jpg",
         "worksFor": { "@id": "{{siteUrl}}/#studio" },
         "alumniOf": [
           { "@type": "EducationalOrganization", "name": "Italian Image Institute", "address": "Milano" },
@@ -317,7 +318,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div class="container facial__grid">
         <div class="facial__text">
           <h2 class="h2" id="facial-title" data-split>Facial Shape. <em>La forma del viso, misurata.</em></h2>
-          <p class="lead">Osservo la forma del tuo viso e la misuro con strumenti specifici, le mascherine. Così capisco cosa ti valorizza davvero.</p>
+          <p class="lead">Osservo la forma del tuo viso e la misuro con strumenti specifici. Così capisco cosa ti valorizza davvero.</p>
           <ul class="facial__list" role="list">
             <li class="facial__item">
               <i data-icon="scissors" data-weight="thin"></i>
@@ -360,7 +361,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </section>
 
     <!-- ============================== COME FUNZIONA ============================== -->
-    <!-- DA CONFERMARE CON ERICA: i passaggi non sono nel materiale fornito, sono una proposta plausibile. -->
+    <!-- Passaggi 2 e 3 rivisti da Erica (ottobre 2026). Ancora da confermare: 1 (tempi di risposta) e 4 (cosa riceve la cliente). -->
     <section class="steps section" id="come-funziona" aria-labelledby="steps-title" data-nav="light">
       <div class="container">
         <h2 class="h2" id="steps-title" data-split>Come <em>funziona.</em></h2>
@@ -372,15 +373,15 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
               <h3 class="h3">Mi scrivi</h3>
               <p>Dal modulo qui sotto, su WhatsApp o in direct su Instagram. Ti rispondo entro {{responseTime}}.</p>
             </li>
-            <li class="step" data-todo="Da confermare con Erica: luogo, preparazione">
+            <li class="step">
               <span class="step__knot" aria-hidden="true"></span>
               <h3 class="h3">Fissiamo l’incontro</h3>
-              <p>Scegliamo insieme giorno e ora. Ti spiego come arrivare: per l’analisi servono luce naturale e viso struccato.</p>
+              <p>Scegliamo insieme giorno e ora. Per un’analisi precisa serve arrivare con il viso struccato.</p>
             </li>
-            <li class="step" data-todo="Da confermare con Erica">
+            <li class="step">
               <span class="step__knot" aria-hidden="true"></span>
               <h3 class="h3">L’analisi</h3>
-              <p>Drappi colorati e metallici, uno dopo l’altro, vicino al tuo viso. Con la Facial Shape misuro anche la forma del viso con le mascherine.</p>
+              <p>Drappi colorati e metallici, uno dopo l’altro, vicino al tuo viso. Con gli strumenti per la Facial Shape misuro la forma del tuo viso.</p>
             </li>
             <li class="step" data-todo="Da confermare con Erica: cosa riceve la cliente">
               <span class="step__knot" aria-hidden="true"></span>
@@ -463,12 +464,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <section class="bio section" id="chi-sono" aria-labelledby="bio-title" data-nav="light">
       <div class="container bio__grid">
         <figure class="bio__portrait">
-          <!-- RITRATTO PROVVISORIO: fotogramma della card finale del reel f3988 (Erica con la cornice arcobaleno).
-               Sostituire con un ritratto professionale: public/assets/img/erica.(avif|webp|jpg), proporzione 10:11. -->
+          <!-- Ritratto in studio inviato da Erica: sorgente in ../materiali-nuovi, versioni web da `npm run images` (taglio 2:3). -->
           <picture>
-            <source type="image/avif" srcset="/assets/img/erica-m.avif 480w, /assets/img/erica.avif 800w" sizes="(max-width: 767px) 86vw, 34vw">
-            <source type="image/webp" srcset="/assets/img/erica-m.webp 480w, /assets/img/erica.webp 800w" sizes="(max-width: 767px) 86vw, 34vw">
-            <img src="/assets/img/erica.jpg" alt="Erica Renzoni sorride tenendo davanti al viso una cornice con i colori dell'arcobaleno." width="800" height="880" loading="lazy" decoding="async">
+            <source type="image/avif" srcset="/assets/img/ritratto-480.avif 480w, /assets/img/ritratto-720.avif 720w, /assets/img/ritratto-996.avif 996w" sizes="(max-width: 520px) 84vw, 420px">
+            <source type="image/webp" srcset="/assets/img/ritratto-480.webp 480w, /assets/img/ritratto-720.webp 720w, /assets/img/ritratto-996.webp 996w" sizes="(max-width: 520px) 84vw, 420px">
+            <img src="/assets/img/ritratto-720.jpg" alt="Erica Renzoni, in camicia nera, tiene accanto al viso una cornice ovale a spicchi di colore." width="720" height="1080" loading="lazy" decoding="async">
           </picture>
         </figure>
         <div class="bio__text">

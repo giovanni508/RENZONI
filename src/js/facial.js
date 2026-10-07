@@ -1,5 +1,6 @@
-// FACIAL SHAPE: una sagoma di viso che cambia forma mentre scorri; la "mascherina" tratteggiata
+// FACIAL SHAPE: una sagoma di viso che cambia forma mentre scorri; la sagoma tratteggiata
 // la insegue come un modello che viene appoggiato, le linee rosse misurano fronte, zigomi e mandibola.
+// (Nei testi niente "mascherine": Erica parla di "strumenti per la Facial Shape".)
 // TODO(Erica): confermare l'elenco delle forme usate nella sua Facial Shape.
 import { gsap, ScrollTrigger, reduced } from './motion.js';
 import { track } from './tracking.js';

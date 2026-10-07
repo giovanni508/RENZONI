@@ -379,7 +379,8 @@
   transform: scaleY(var(--sew, 1));
 }
 .steps__list { display: grid; gap: var(--s-7); }
-.step { position: relative; display: grid; gap: var(--s-3); padding-left: var(--s-8); max-width: 34rem; }
+/* align-content: start: nelle colonne con meno righe il testo non scende (le righe della griglia non si allungano) */
+.step { position: relative; display: grid; align-content: start; gap: var(--s-3); padding-left: var(--s-8); max-width: 34rem; }
 .step p { color: var(--text-2); }
 .step__knot {
   position: absolute;
@@ -468,13 +469,18 @@
 /* ---------- CHI SONO ---------- */
 .bio { background: var(--greige); }
 .bio__grid { display: grid; gap: var(--s-8); align-items: center; }
+/* una stampa fotografica col suo bordo bianco, posata storta sul tavolo greige:
+   ombra di contatto sui bordi + ombra lunga sotto */
 .bio__portrait {
   position: relative;
   width: min(100%, 460px);
   justify-self: center;
-  background: var(--ink);
+  padding: clamp(10px, 4.5%, 20px);
+  background: var(--paper);
   transform: rotate(-2deg);
-  box-shadow: 0 30px 60px -30px rgb(10 10 10 / 0.55);
+  box-shadow:
+    0 1px 2px rgb(10 10 10 / 0.14),
+    0 30px 60px -30px rgb(10 10 10 / 0.55);
 }
 .bio__portrait img { width: 100%; height: auto; }
 .bio__text { display: grid; gap: var(--s-5); justify-items: start; }

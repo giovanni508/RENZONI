@@ -6,7 +6,18 @@ import { renderSeasons, renderSeasonsNav, renderRibbon } from './src/data/render
 
 // 1) <!-- @include percorso [id=suffisso] -->  inserisce un file (es. il logo SVG) rendendo unici gli id.
 // 2) <!-- @seasons -->, <!-- @seasons-nav -->, <!-- @ribbon -->  markup generato da src/data/seasons.js.
-// 3) {{chiave}} -> valori di site.config.js (testo e attributi); {{chiave|url}} applica encodeURIComponent.
+// 3) {{chiave}} -> valori di site.config.js, escapati per l'HTML (testo e attributi) oppure come stringhe JSON
+//    dentro i dati strutturati (ld+json): un valore con le virgolette non rompe la pagina ne' lo schema.
+//    {{chiave|url}} applica encodeURIComponent.
+const escape = {
+  html: (v) => v.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'),
+  json: (v) => JSON.stringify(v).slice(1, -1).replace(/</g, '\\u003c'),
+};
+const fillSite = (s, mode) => s.replace(/\{\{\s*(\w+)(\|url)?\s*\}\}/g, (m, key, enc) => {
+  if (!(key in site)) return m;
+  const v = String(site[key]);
+  return enc ? encodeURIComponent(v) : escape[mode](v);
+});
 function siteData() {
   const blocks = { seasons: renderSeasons, 'seasons-nav': renderSeasonsNav, ribbon: renderRibbon };
   return {
@@ -20,11 +31,8 @@ function siteData() {
           return s;
         });
         html = html.replace(/<!--\s*@(seasons-nav|seasons|ribbon)\s*-->/g, (m, key) => blocks[key]());
-        return html.replace(/\{\{\s*(\w+)(\|url)?\s*\}\}/g, (m, key, enc) => {
-          if (!(key in site)) return m;
-          const v = String(site[key]);
-          return enc ? encodeURIComponent(v) : v;
-        });
+        html = html.replace(/(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/g, (m, open, body, close) => open + fillSite(body, 'json') + close);
+        return fillSite(html, 'html');
       },
     },
   };

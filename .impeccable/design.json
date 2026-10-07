@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-06T09:52:42.552Z",
+  "generatedAt": "2026-10-07T13:16:29.550Z",
   "title": "Design System: Erica Renzoni",
   "extensions": {
     "colorMeta": {
@@ -387,8 +387,8 @@
       },
       {
         "name": "print-drop",
-        "value": "0 30px 60px -30px rgb(10 10 10 / 0.55)",
-        "purpose": "Fotografia stampata posata sul greige (ritratto ruotato di -2°)."
+        "value": "0 1px 2px rgb(10 10 10 / 0.14), 0 30px 60px -30px rgb(10 10 10 / 0.55)",
+        "purpose": "Ritratto: stampa fotografica col bordo bianco (Carta) posata sul greige e ruotata di -2°; contatto sui bordi + ombra lunga."
       },
       {
         "name": "floating-panel",

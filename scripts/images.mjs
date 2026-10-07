@@ -5,11 +5,9 @@
 // - drapes.{avif,webp,png}      drappi della Copertina (alto-sinistra) scontornati con canale alfa, per l'hero
 // - fabric.{avif,jpg}           tessuto nero della Copertina reso ripetibile (texture di fondo)
 // - og-image.jpg                immagine social 1200x630 (Open Graph / Twitter)
-// - erica.{avif,webp,jpg}       ritratto PROVVISORIO di Erica (fotogramma del reel f3988), da sostituire
+// - ritratto-{480,720,996}      ritratto di Erica in studio (foto inviata da Erica, in ../materiali-nuovi)
 // - icone: favicon.svg/.ico, apple-touch-icon.png, icon-192/512.png (dalla firma E-R)
-import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -74,19 +72,18 @@ const out = async (pipeline, file) => { const buf = await pipeline.toBuffer(); w
 // 3) Open Graph 1200x630 dalla Copertina (gia' contiene logo, drappi e ventaglio).
 await out(sharp(COVER).resize(1200, 675).extract({ left: 0, top: 22, width: 1200, height: 630 }).jpeg({ quality: 84, mozjpeg: true }), path.join(PUB, 'og-image.jpg'));
 
-// 4) Ritratto provvisorio: card finale del reel f3988 (Erica con la cornice arcobaleno).
+// 4) Ritratto di Erica: foto in studio con la cornice a spicchi, inviata da Erica (aggiunta dopo i materiali originali).
+//    Taglio 2:3 dall'alto, cosi' resta il drappo nero nell'angolo; il bordo bianco della stampa e' in CSS.
 {
-  const src = path.join(MAT, 'f3988dafcafa4139933da4314be2fafd.mov');
-  const png = path.join(tmpdir(), `erica-${process.pid}.png`);
-  const TM = 'zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p';
-  execFileSync('ffmpeg', ['-v', 'error', '-y', '-ss', '46.5', '-i', src, '-frames:v', '1', '-vf', TM, png]);
-  const crop = sharp(png).extract({ left: 196, top: 0, width: 1000, height: 1100 });
-  const buf = await crop.toBuffer();
-  for (const [w, sfx] of [[800, ''], [480, '-m']]) {
-    const s = sharp(buf).resize({ width: w });
-    await out(s.clone().avif({ quality: 55, effort: 6 }), path.join(IMG, `erica${sfx}.avif`));
-    await out(s.clone().webp({ quality: 78 }), path.join(IMG, `erica${sfx}.webp`));
-    await out(s.clone().jpeg({ quality: 80, mozjpeg: true }), path.join(IMG, `erica${sfx}.jpg`));
+  const src = path.resolve(ROOT, '../materiali-nuovi/ritratto-erica-studio.jpg');
+  const { width, height } = await sharp(src).metadata();
+  const buf = await sharp(src).extract({ left: 0, top: 0, width, height: Math.min(height, Math.round(width * 1.5)) }).toBuffer();
+  for (const w of [480, 720, 996]) {
+    const s = sharp(buf).resize({ width: Math.min(w, width) });
+    await out(s.clone().avif({ quality: 58, effort: 6 }), path.join(IMG, `ritratto-${w}.avif`));
+    await out(s.clone().webp({ quality: 80 }), path.join(IMG, `ritratto-${w}.webp`));
+    // JPEG solo come fallback dell'<img> e per i dati strutturati
+    if (w === 720) await out(s.clone().jpeg({ quality: 82, mozjpeg: true }), path.join(IMG, `ritratto-${w}.jpg`));
   }
 }
 
@@ -185,18 +182,4 @@ await out(sharp(COVER).resize(1200, 675).extract({ left: 0, top: 22, width: 1200
   }
 }
 
-// 9) Ritratto provvisorio con passe-partout nero regolare (niente bande irregolari).
-{
-  for (const sfx of ['', '-m']) {
-    const srcJpg = path.join(IMG, `erica${sfx}.jpg`);
-    const trimmed = await sharp(srcJpg).trim({ background: '#000000', threshold: 28 }).toBuffer({ resolveWithObject: true });
-    const pad = Math.round(trimmed.info.width * 0.06);
-    const framed = await sharp(trimmed.data).extend({ top: pad, bottom: pad, left: pad, right: pad, background: '#0A0A0A' }).toBuffer({ resolveWithObject: true });
-    const s = sharp(framed.data);
-    await out(s.clone().avif({ quality: 55, effort: 6 }), path.join(IMG, `erica${sfx}.avif`));
-    await out(s.clone().webp({ quality: 78 }), path.join(IMG, `erica${sfx}.webp`));
-    await out(s.clone().jpeg({ quality: 80, mozjpeg: true }), path.join(IMG, `erica${sfx}.jpg`));
-    console.log(`erica${sfx}: ${framed.info.width}x${framed.info.height}`);
-  }
-}
 console.log('Immagini generate.', existsSync(path.join(IMG, 'drapes.avif')) ? '' : '(attenzione: drapes mancante)');

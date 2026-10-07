@@ -193,7 +193,7 @@ Neutri presi dal logo, colori presi dai drappi: un fondale quasi acromatico su c
 
 ### Secondary
 La palette dei drappi, campionata dalla Copertina. Colore materico: vive nei cartoncini del ventaglio, nel bagliore dell'hero, nei campioni e nei diagrammi, mai nel testo corrente o nell'interfaccia.
-- **Verde Petrolio** (#146C78): cartoncino del ventaglio, bagliore freddo dell'hero, tratteggio della mascherina nel diagramma della Facial Shape (4.7:1 su greige, valido come grafica).
+- **Verde Petrolio** (#146C78): cartoncino del ventaglio, bagliore freddo dell'hero, tratteggio della sagoma nel diagramma della Facial Shape (4.7:1 su greige, valido come grafica).
 - **Rosso Drappo** (#D31728): cartoncino, bagliore caldo in basso a destra dell'hero, linee di misura del viso (4.1:1 su greige).
 - **Arancio** (#E1800A) e **Viola Malva** (#975290): cartoncini e campo di bagliore (il viola solo su mobile, dove il bagliore sostituisce il WebGL).
 - **Verde Oliva** (#707726) e **Rosa Orchidea** (#DE9CBA): cartoncini del ventaglio.
@@ -263,7 +263,7 @@ Il sistema è piatto per principio e profondo per materia. La profondità non vi
 - **Cartoncino a riposo** (`box-shadow: -1px 1px 1px rgb(0 0 0 / 0.6), -4px 5px 8px -2px rgb(0 0 0 / 0.5), -16px 18px 30px -10px rgb(0 0 0 / 0.65)`): i cartoncini del ventaglio appoggiati sul tessuto, luce dall'alto a destra. Il primo strato è il contatto, il secondo stacca ogni cartoncino da quello sotto, il terzo lo posa sul tessuto.
 - **Cartoncino sollevato** (`box-shadow: -1px 1px 2px rgb(0 0 0 / 0.55), -6px 8px 12px -3px rgb(0 0 0 / 0.45), -18px 22px 34px -10px rgb(0 0 0 / 0.78)`): il cartoncino scelto.
 - **Orlo del drappo** (tre tratti SVG neri lungo la curva del taglio: 8px al 20%, 24px al 9%, 52px al 4.5%): l'ombra che il drappo dell'hero, sollevandosi, proietta sulla sezione sotto. Sopra l'ombra corrono la fascia ripiegata (#1F1E1C, 18px), il filo del bordo (#45433F, 1.6px) e l'impuntura tratteggiata (#8E8B81, 1.3px, 7/6).
-- **Stampa appoggiata** (`box-shadow: 0 30px 60px -30px rgb(10 10 10 / 0.55)`): il ritratto, una fotografia posata e ruotata di -2°.
+- **Stampa appoggiata** (`box-shadow: 0 1px 2px rgb(10 10 10 / 0.14), 0 30px 60px -30px rgb(10 10 10 / 0.55)`): il ritratto, una stampa fotografica col suo bordo bianco (Carta, 10–20px) posata e ruotata di -2°. L'ombra di contatto disegna i bordi sul greige, quella lunga la stacca dal tavolo.
 - **Pannello sospeso** (`box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.6)`): il banner cookie, l'unico elemento d'interfaccia sospeso.
 
 ### Named Rules
