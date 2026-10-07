@@ -5,7 +5,7 @@ confermare sono evidenziate in rosso.
 
 ## Dati e contatti (in `site.config.js`)
 - [ ] Email per le richieste
-- [ ] Telefono e numero WhatsApp (con prefisso, es. 39333…)
+- [x] Telefono e WhatsApp: **346 699 7102** (stesso numero per chiamate e WhatsApp)
 - [x] Instagram: **@ericarenzoni__** (unico social collegato al sito; Facebook e TikTok non vengono mostrati)
 - [ ] Città e zona; indirizzo dello studio oppure "su appuntamento"; consulenze anche online o a domicilio?
 - [x] Dominio del sito: **https://ericarenzoni.com** (impostato in `site.config.js`)

@@ -19,9 +19,9 @@ export default {
 
   // Contatti
   email: '[EMAIL DA INSERIRE]', // es. ciao@ericarenzoni.com
-  phoneDisplay: '[TELEFONO DA INSERIRE]', // come appare a schermo, es. 333 123 4567
-  phoneHref: '+39[NUMERO]', // formato internazionale senza spazi, es. +393331234567
-  whatsapp: '39[NUMERO]', // solo cifre con prefisso, es. 393331234567 (usato in https://wa.me/...)
+  phoneDisplay: '346 699 7102', // come appare a schermo
+  phoneHref: '+393466997102', // formato internazionale senza spazi (link tel:)
+  whatsapp: '393466997102', // solo cifre con prefisso (usato in https://wa.me/...)
   whatsappText: "Ciao Erica! Vorrei informazioni sull'analisi del colore.",
 
   // Social
