@@ -235,6 +235,7 @@ La palette dei drappi, campionata dalla Copertina. Colore materico: vive nei car
 - **Body Small** (Montserrat 400, 0.875rem, 1.55): didascalie, testi delle card, note, footer.
 - **Label** (Montserrat 600, 0.6875rem, 0.16em, maiuscolo): estremi degli slider, nomi dei campioni, etichette dei canali, chip delle forme del viso. Gamma osservata: 0.6875–0.75rem, peso 500–600, spaziatura 0.14–0.22em (fino a 0.1em nelle schede delle stagioni su schermi stretti); le voci della navbar usano 0.72rem, 500, 0.18em.
 - **Label Button** (Montserrat 600, 0.8125rem, 0.14em, maiuscolo; 0.75rem nei pulsanti piccoli): tutti i pulsanti.
+- **Voce** (Bodoni corsivo 450, opsz 20, 1.25em del testo, interlinea 1, non va a capo): una frase citata dentro il testo corrente, come “Mi piaccio veramente.” in Chi sono. Montserrat non ha il corsivo, quindi l'enfasi nel testo è sempre questa e resta rara.
 - **Varianti di display:** il nome della macrostagione (Bodoni corsivo 450, opsz 32, clamp(3.4rem, 1.6rem + 6.8vw, 6rem), 0.95, -0.035em), le voci del menu mobile (Bodoni clamp(2rem, 8vw, 3.5rem), al passaggio diventano corsive), l'etichetta della forma del viso (Bodoni corsivo, fino a 2.4rem).
 
 ### Named Rules
@@ -248,7 +249,7 @@ Una pagina sola, verticale, a sezioni piene. Contenitore massimo 1440px centrato
 
 Mobile first, a colonna singola. Da 900px le composizioni passano a una griglia di 12 colonne con spazio pari al gutter, sempre asimmetriche: testo 1–6 e video 8–12 (Cosa faccio), diagramma 1–5 e testo 7–12 (Facial Shape), ritratto 2–5 e testo 7–11 (Chi sono), introduzione 1–5 fissa a lato e form 7–12 (Contatti). Le quattro caratteristiche formano un mosaico 7/5 sopra 5/7. I passi passano da una colonna con filo verticale a quattro colonne con filo orizzontale.
 
-Le sezioni-scena vivono di scroll. L'hero (100svh) resta fermo mentre il drappo nero si solleva in diagonale e scopre la sezione che sale da sotto. Le stagioni si fermano su desktop e cambiano nello stesso spazio; su mobile scorrono in colonna con le schede fisse in alto. La galleria scorre in orizzontale (guidata dallo scroll su desktop, a scatto nativo su mobile). Colonne laterali fisse per il diagramma del viso e per l'introduzione dei contatti.
+Le sezioni-scena vivono di scroll. L'hero (100svh) resta fermo mentre il drappo nero si solleva in diagonale e scopre la sezione che sale da sotto. Le stagioni si fermano su desktop e cambiano nello stesso spazio; su mobile scorrono in colonna con le schede fisse in alto. La galleria scorre in orizzontale (guidata dallo scroll su desktop, a scatto nativo su mobile). Colonne laterali fisse per il diagramma del viso, per l'introduzione dei contatti e per il ritratto in Chi sono (resta accanto al racconto mentre si legge).
 
 Breakpoint: 640px (CTA nella navbar), 768px (navbar da 64 a 72px, hero desktop), 900px (griglie a 12 colonne, sezioni fissate, barra CTA mobile nascosta), 1100px (voci di navigazione al posto del burger). Correzioni per schermi bassi (altezza fino a 720px e 640px) e stretti (fino a 399px). Nessun elemento può allargare la pagina: le sezioni ritagliano l'overflow orizzontale senza rompere lo sticky, e i fondi a tutta larghezza delle stagioni si estendono oltre il contenitore senza scroll orizzontale.
 

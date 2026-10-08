@@ -147,6 +147,8 @@ html.lenis, html.lenis body { height: auto; }
 .btn:focus-visible { outline-offset: 4px; border-radius: var(--radius-pill); }
 
 /* --- Utilita' --- */
+/* parole che non vanno separate (funziona anche dopo SplitText, dove &nbsp; non basta) */
+.nowrap { white-space: nowrap; }
 .sr-only {
   position: absolute !important;
   width: 1px; height: 1px;

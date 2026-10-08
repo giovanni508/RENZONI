@@ -14,6 +14,7 @@ confermare sono evidenziate in rosso.
 ## Contenuti
 - [x] **Ritratto**: foto in studio con la cornice a spicchi, inviata da Erica (ottobre 2026). Facoltativo: il file originale del fotografo, più nitido della copia passata da WhatsApp (996×1580). Va messo in `../materiali-nuovi/ritratto-erica-studio.jpg`, poi `npm run images`
 - [x] **Formazione** (in "Chi sono"): diploma all'Italian Image Institute di Milano, Master in Luxury and Fashion Management (Il Sole 24 Ore), corsi di Armocromia, Body Shape & Facial Shape, Stile
+- [x] **Racconto in Chi sono** e testo della **Facial Shape**: scritti da Erica (ottobre 2026)
 - [ ] **Dove ricevi** le clienti (città, studio, a domicilio, online?): unico punto ancora aperto della bio
 - [ ] Servizi: durata, prezzi (se vuoi mostrarli), cosa comprende ciascuna consulenza
 - [ ] Testimonianze reali, con consenso, se vuoi una sezione recensioni (oggi assente di proposito)

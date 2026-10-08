@@ -342,7 +342,8 @@
 .face__measures .m { stroke: var(--c-red); stroke-width: 1.2; vector-effect: non-scaling-stroke; stroke-linecap: round; }
 .face__label { font-family: var(--font-display); font-style: italic; font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem); line-height: 1; min-height: 1.2em; }
 .facial__text { display: grid; gap: var(--s-6); justify-items: start; }
-.facial__text .h2 { max-width: 13ch; }
+/* "Capiamo insieme" su una riga, la coda in corsivo sotto (a capo nel testo; "tuo viso." resta unito) */
+.facial__text .h2 { max-width: 15ch; }
 .facial__list { display: grid; width: 100%; }
 .facial__item {
   display: grid;
@@ -484,10 +485,25 @@
 }
 .bio__portrait img { width: 100%; height: auto; }
 .bio__text { display: grid; gap: var(--s-5); justify-items: start; }
+/* il racconto di Erica: paragrafi brevi, stessa misura del lead */
+.bio__story { display: grid; gap: var(--s-4); max-width: 34em; }
+.bio__story p { text-wrap: pretty; }
+/* la frase che le clienti si dicono allo specchio: unica enfasi nel testo, in Bodoni corsivo
+   (Montserrat non ha il corsivo), un po' piu' grande perche' il Bodoni ha l'occhio piccolo */
+.bio__voice {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: var(--display-wght);
+  font-variation-settings: 'opsz' 20;
+  font-size: 1.25em;
+  line-height: 1;
+  white-space: nowrap; /* la frase non si spezza: va a capo intera */
+}
 .bio__sign { width: min(100%, 360px); color: var(--ink); --sw: 1px; margin-top: var(--s-4); }
 @media (min-width: 900px) {
-  .bio__grid { grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
-  .bio__portrait { grid-column: 2 / span 4; }
+  /* il racconto e' lungo: il ritratto resta fermo accanto al testo mentre si legge */
+  .bio__grid { grid-template-columns: repeat(12, 1fr); gap: var(--gutter); align-items: start; }
+  .bio__portrait { grid-column: 2 / span 4; position: sticky; top: calc(var(--nav-h) + 8vh); }
   .bio__text { grid-column: 7 / span 5; }
 }
 

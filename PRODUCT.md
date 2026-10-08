@@ -28,6 +28,8 @@ Successo = richieste inviate dal form e clic sui canali diretti (eventi `generat
 
 ## Positioning
 
+- La voce di Erica (suo testo in Chi sono): consulente d'immagine "ma prima ancora una donna che ha dovuto imparare a ritrovarsi allo specchio". Dopo la gravidanza armocromia e studio del viso l'hanno aiutata a riscoprirsi; oggi aiuta altre donne a pensare "Mi piaccio veramente". I testi nuovi partono da qui: personali, caldi, in prima persona.
+
 Erica fa analisi del colore con il metodo a 16 stagioni (4 macrostagioni x 4 sottogruppi), usando drappi colorati
 e metallici vicino al viso, e la Facial Shape: misura la forma del viso con strumenti specifici per consigliare taglio di capelli,
 accessori e forma degli occhiali. Il brand esiste gia': firma monoline E-R + wordmark Montserrat, Copertina su tessuto nero
