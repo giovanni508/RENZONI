@@ -12,13 +12,13 @@ export default {
   // Sito pubblicato (serve per canonical, Open Graph, sitemap). Senza slash finale.
   siteUrl: 'https://ericarenzoni.com',
 
-  // Zona in cui ricevi: compare in title/description, nei dati strutturati e nel footer.
-  city: '[CITTÀ]',
-  region: '[PROVINCIA/REGIONE]',
-  address: '[INDIRIZZO STUDIO o "Su appuntamento"]',
+  // Zona in cui ricevi: compare in title/description, nei dati strutturati, in "Chi sono" e nel footer.
+  // Erica si sposta tra due saloni a Torino: nessun indirizzo pubblico, solo la citta'.
+  city: 'Torino',
+  region: 'TO',
 
   // Contatti
-  email: '[EMAIL DA INSERIRE]', // es. ciao@ericarenzoni.com
+  email: 'ericarenzoni@libero.it',
   phoneDisplay: '346 699 7102', // come appare a schermo
   phoneHref: '+393466997102', // formato internazionale senza spazi (link tel:)
   whatsapp: '393466997102', // solo cifre con prefisso (usato in https://wa.me/...)
@@ -32,8 +32,8 @@ export default {
   // Dati legali (footer, privacy, cookie)
   legalName: 'Erica Renzoni',
   vat: '[P.IVA DA INSERIRE]',
-  legalAddress: '[SEDE LEGALE DA INSERIRE]',
-  privacyEmail: '[EMAIL PRIVACY DA INSERIRE]',
+  legalAddress: 'Torino', // generico, come l'indirizzo pubblico: cambialo se la sede legale va indicata per intero
+  privacyEmail: 'ericarenzoni@libero.it',
   policyUpdated: '[DATA ULTIMO AGGIORNAMENTO]',
 
   // Tempi di risposta mostrati nel form e nella conferma

@@ -18,7 +18,7 @@ OGL (WebGL hero, solo desktop). Build statica in `dist/`, deploy su qualsiasi ho
 ## Users
 
 - Donne (e persone) che seguono Erica su Instagram e arrivano al sito dal link in bio, quasi sempre da smartphone. **[inferito dal brief: "la maggior parte dei contatti arrivera' da smartphone/Instagram"]**
-- Persone che cercano "armocromia" / "analisi del colore" / "consulente d'immagine" nella zona di Erica ([CITTÀ] da fornire).
+- Persone che cercano "armocromia" / "analisi del colore" / "consulente d'immagine" a Torino, dove Erica riceve (si sposta tra due saloni: nessun indirizzo pubblico).
 - Il loro compito: capire cosa fa Erica e come si svolge la consulenza, convincersi che fa per loro, chiedere informazioni o prenotare.
 
 ## Product Purpose
@@ -44,7 +44,7 @@ con drappi e cartoncini colorati.
 
 ## Capabilities and Constraints
 
-- Servizi: Analisi del colore (armocromia, 16 stagioni), Facial Shape. Prezzi, durata, luogo e modalita' della consulenza: **non forniti**.
+- Servizi: Analisi del colore (armocromia, 16 stagioni), Facial Shape. Luogo: Torino, su appuntamento (due saloni, nessun indirizzo pubblico). Prezzi e durata della consulenza: **non forniti**.
 - Nomenclatura dei 16 sottogruppi e palette: indicative, **da validare con Erica**.
 - Passaggi "Come funziona": 2 e 3 rivisti da Erica; 1 (tempi di risposta) e 4 (cosa riceve la cliente) **da confermare**.
 - Forme del viso nella Facial Shape (ovale, tondo, quadrato, rettangolare, cuore, diamante, triangolo): **da confermare**.

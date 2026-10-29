@@ -499,6 +499,9 @@
   line-height: 1;
   white-space: nowrap; /* la frase non si spezza: va a capo intera */
 }
+/* dove riceve: un dato pratico, con lo spillo come le altre icone Phosphor */
+.bio__place { display: flex; align-items: center; gap: var(--s-2); }
+.bio__place .icon { flex: none; }
 .bio__sign { width: min(100%, 360px); color: var(--ink); --sw: 1px; margin-top: var(--s-4); }
 @media (min-width: 900px) {
   /* il racconto e' lungo: il ritratto resta fermo accanto al testo mentre si legge */

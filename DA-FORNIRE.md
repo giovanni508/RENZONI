@@ -4,18 +4,17 @@ Tutti i segnaposto sono visibili nel sito come **[TESTO TRA PARENTESI QUADRE]**.
 confermare sono evidenziate in rosso.
 
 ## Dati e contatti (in `site.config.js`)
-- [ ] Email per le richieste
+- [x] Email: **ericarenzoni@libero.it** (contatti, form, privacy)
 - [x] Telefono e WhatsApp: **346 699 7102** (stesso numero per chiamate e WhatsApp)
 - [x] Instagram: **@ericarenzoni__** (unico social collegato al sito; Facebook e TikTok non vengono mostrati)
-- [ ] Città e zona; indirizzo dello studio oppure "su appuntamento"; consulenze anche online o a domicilio?
+- [x] Dove riceve: **Torino**, su appuntamento (si sposta tra due saloni, quindi nessun indirizzo pubblico)
 - [x] Dominio del sito: **https://ericarenzoni.com** (impostato in `site.config.js`)
-- [ ] Dati legali: nome o ragione sociale, **P.IVA**, sede legale, email per la privacy, data dell'informativa
+- [ ] Dati legali: manca la **P.IVA** (obbligatoria nel footer). Sede legale indicata solo come "Torino": da completare se serve per intero. Data dell'informativa da mettere dopo la revisione legale
 
 ## Contenuti
 - [x] **Ritratto**: foto in studio con la cornice a spicchi, inviata da Erica (ottobre 2026). Facoltativo: il file originale del fotografo, più nitido della copia passata da WhatsApp (996×1580). Va messo in `../materiali-nuovi/ritratto-erica-studio.jpg`, poi `npm run images`
 - [x] **Formazione** (in "Chi sono"): diploma all'Italian Image Institute di Milano, Master in Luxury and Fashion Management (Il Sole 24 Ore), corsi di Armocromia, Body Shape & Facial Shape, Stile
 - [x] **Racconto in Chi sono** e testo della **Facial Shape**: scritti da Erica (ottobre 2026)
-- [ ] **Dove ricevi** le clienti (città, studio, a domicilio, online?): unico punto ancora aperto della bio
 - [ ] Servizi: durata, prezzi (se vuoi mostrarli), cosa comprende ciascuna consulenza
 - [ ] Testimonianze reali, con consenso, se vuoi una sezione recensioni (oggi assente di proposito)
 

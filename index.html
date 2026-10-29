@@ -56,7 +56,7 @@
         "logo": "{{siteUrl}}/icon-512.png",
         "email": "{{email}}",
         "telephone": "{{phoneHref}}",
-        "address": { "@type": "PostalAddress", "streetAddress": "{{address}}", "addressLocality": "{{city}}", "addressRegion": "{{region}}", "addressCountry": "IT" },
+        "address": { "@type": "PostalAddress", "addressLocality": "{{city}}", "addressRegion": "{{region}}", "addressCountry": "IT" },
         "areaServed": "{{city}}",
         "sameAs": ["{{instagramUrl}}"],
         "founder": { "@id": "{{siteUrl}}/#erica" },
@@ -488,7 +488,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
               <li><strong>Corsi</strong><span>Armocromia, Body Shape &amp; Facial Shape, Stile</span></li>
             </ul>
           </div>
-          <p class="todo" data-todo="Da completare">[DA INSERIRE: dove ricevi le clienti (città, studio, a domicilio, online?)]</p>
+          <p class="bio__place"><i data-icon="map-pin"></i>Ricevo a {{city}}, su appuntamento.</p>
           <svg class="bio__sign" viewBox="0 0 635.32 183.57" aria-hidden="true" focusable="false"><use href="#er-sign"/></svg>
         </div>
       </div>
@@ -618,7 +618,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <a href="mailto:{{email}}">{{email}}</a>
           <a href="tel:{{phoneHref}}">{{phoneDisplay}}</a>
           <a href="{{instagramUrl}}" target="_blank" rel="noopener">Instagram {{instagramHandle}}</a>
-          <span>{{city}}, {{address}}</span>
+          <span>{{city}}, su appuntamento</span>
         </address>
       </div>
       <div class="footer__legal">
