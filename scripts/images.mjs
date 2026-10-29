@@ -5,7 +5,7 @@
 // - drapes.{avif,webp,png}      drappi della Copertina (alto-sinistra) scontornati con canale alfa, per l'hero
 // - fabric.{avif,jpg}           tessuto nero della Copertina reso ripetibile (texture di fondo)
 // - og-image.jpg                immagine social 1200x630 (Open Graph / Twitter)
-// - ritratto-{480,720,996}      ritratto di Erica in studio (foto inviata da Erica, in ../materiali-nuovi)
+// - ritratto-v2-{480,720,996}   ritratto di Erica in studio (foto inviata da Erica, in ../materiali-nuovi)
 // - icone: favicon.svg/.ico, apple-touch-icon.png, icon-192/512.png (dalla firma E-R)
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
@@ -72,18 +72,19 @@ const out = async (pipeline, file) => { const buf = await pipeline.toBuffer(); w
 // 3) Open Graph 1200x630 dalla Copertina (gia' contiene logo, drappi e ventaglio).
 await out(sharp(COVER).resize(1200, 675).extract({ left: 0, top: 22, width: 1200, height: 630 }).jpeg({ quality: 84, mozjpeg: true }), path.join(PUB, 'og-image.jpg'));
 
-// 4) Ritratto di Erica: foto in studio con la cornice a spicchi, inviata da Erica (aggiunta dopo i materiali originali).
-//    Taglio 2:3 dall'alto, cosi' resta il drappo nero nell'angolo; il bordo bianco della stampa e' in CSS.
+// 4) Ritratto di Erica: foto in studio su fondo bianco, sorridente con la cornice a spicchi (inviata dopo i materiali
+//    originali; la prima versione, ritratto-erica-studio.jpg, resta in ../materiali-nuovi). Taglio 2:3 dall'alto
+//    (questa foto e' gia' 2:3); il bordo bianco della stampa e' in CSS. Nomi "-v2" perche' cambia la foto (niente cache).
 {
-  const src = path.resolve(ROOT, '../materiali-nuovi/ritratto-erica-studio.jpg');
+  const src = path.resolve(ROOT, '../materiali-nuovi/ritratto-erica-studio-2.webp');
   const { width, height } = await sharp(src).metadata();
   const buf = await sharp(src).extract({ left: 0, top: 0, width, height: Math.min(height, Math.round(width * 1.5)) }).toBuffer();
   for (const w of [480, 720, 996]) {
     const s = sharp(buf).resize({ width: Math.min(w, width) });
-    await out(s.clone().avif({ quality: 58, effort: 6 }), path.join(IMG, `ritratto-${w}.avif`));
-    await out(s.clone().webp({ quality: 80 }), path.join(IMG, `ritratto-${w}.webp`));
+    await out(s.clone().avif({ quality: 58, effort: 6 }), path.join(IMG, `ritratto-v2-${w}.avif`));
+    await out(s.clone().webp({ quality: 80 }), path.join(IMG, `ritratto-v2-${w}.webp`));
     // JPEG solo come fallback dell'<img> e per i dati strutturati
-    if (w === 720) await out(s.clone().jpeg({ quality: 82, mozjpeg: true }), path.join(IMG, `ritratto-${w}.jpg`));
+    if (w === 720) await out(s.clone().jpeg({ quality: 82, mozjpeg: true }), path.join(IMG, `ritratto-v2-${w}.jpg`));
   }
 }
 

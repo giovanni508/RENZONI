@@ -45,7 +45,7 @@ Mostra la build di `dist/` su http://localhost:4173.
 | 16 stagioni: nomi, descrizioni, palette, colori di fondo | `src/data/seasons.js` |
 | Nastro di colori (marquee) | `RIBBON` in `src/data/seasons.js` |
 | Clip video (quali, da che secondo, ritaglio) | `scripts/media.config.mjs`, poi `npm run media` |
-| Ritratto di Erica | metti la foto in `../materiali-nuovi/ritratto-erica-studio.jpg` e lancia `npm run images` (taglio 2:3 dall'alto, crea `ritratto-480/720/996`) |
+| Ritratto di Erica | metti la foto in `../materiali-nuovi/`, indica il file nel passo 4 di `scripts/images.mjs` e lancia `npm run images` (taglio 2:3 dall'alto, crea `ritratto-v2-480/720/996`; se cambi foto cambia anche il nome dei file, così nessuno vede la vecchia in cache) |
 | Informativa privacy e cookie | `privacy.html`, `cookie.html` (template da far verificare a un legale) |
 | Colori, font, spazi, movimento | `src/styles/tokens.css` |
 | Endpoint del form, statistiche | file `.env` (vedi punto 4 e 5) |

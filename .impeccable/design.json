@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-07T13:16:29.550Z",
+  "generatedAt": "2026-10-29T13:18:54.612Z",
   "title": "Design System: Erica Renzoni",
   "extensions": {
     "colorMeta": {
@@ -244,6 +244,21 @@
           "oklch(95.0% 0.008 106.5)"
         ]
       },
+      "white": {
+        "role": "neutral",
+        "displayName": "Bianco Stampa",
+        "canonical": "#FAFAF6",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 106.5)",
+          "oklch(26.4% 0.005 106.5)",
+          "oklch(37.9% 0.005 106.5)",
+          "oklch(49.3% 0.005 106.5)",
+          "oklch(60.7% 0.005 106.5)",
+          "oklch(72.1% 0.005 106.5)",
+          "oklch(83.6% 0.005 106.5)",
+          "oklch(95.0% 0.005 106.5)"
+        ]
+      },
       "text-2": {
         "role": "neutral",
         "displayName": "Grafite Calda",
@@ -388,7 +403,7 @@
       {
         "name": "print-drop",
         "value": "0 1px 2px rgb(10 10 10 / 0.14), 0 30px 60px -30px rgb(10 10 10 / 0.55)",
-        "purpose": "Ritratto: stampa fotografica col bordo bianco (Carta) posata sul greige e ruotata di -2°; contatto sui bordi + ombra lunga."
+        "purpose": "Ritratto: stampa fotografica col bordo Bianco Stampa (lo stesso bianco del fondo della foto) posata sul greige e ruotata di -2°; contatto sui bordi + ombra lunga."
       },
       {
         "name": "floating-panel",

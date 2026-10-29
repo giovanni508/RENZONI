@@ -18,6 +18,7 @@ colors:
   ink-3: "#1E1D1C"
   greige: "#E2E2DA"
   paper: "#F1F1EB"
+  white: "#FAFAF6"
   text-2: "#3E3D37"
   text-inv: "#ECECE4"
   text-inv-2: "#B9B8AE"
@@ -204,6 +205,7 @@ La palette dei drappi, campionata dalla Copertina. Colore materico: vive nei car
 - **Nero Trama** (#0E0E0E): base di ogni superficie di tessuto fotografato (hero, galleria, contatti, menu, footer), sempre sotto la texture `fabric-dark.jpg` ripetuta a 512px. Nel CSS è un valore letterale, non una custom property.
 - **Nero Carbone** (#1E1D1C, `--ink-3`): pannelli scuri rialzati (banner cookie) e fondo dei video prima del caricamento.
 - **Greige Luce Naturale** (#E2E2DA, `--greige`): il fondo del logo nel PDF e la luce del sito. Fondo della pagina e delle sezioni chiare, testo dei pulsanti pieni, colore del logo e della firma sul nero.
+- **Bianco Stampa** (#FAFAF6, `--white`): il bordo del ritratto stampato, lo stesso bianco del fondo della foto in studio. Solo materia della stampa, mai fondo di sezione o d'interfaccia.
 - **Carta** (#F1F1EB, `--paper`): la seconda luce chiara, per non affiancare due sezioni greige (Caratteristiche, Come funziona); anello attorno al cursore degli slider.
 - **Grafite Calda** (#3E3D37, `--text-2`): testo secondario su chiaro, didascalie, nomi dei campioni (8.4:1 su greige, 9.6:1 su carta).
 - **Greige Chiaro** (#ECECE4, `--text-inv`): testo su nero (16.3:1 sul tessuto).
@@ -264,7 +266,7 @@ Il sistema è piatto per principio e profondo per materia. La profondità non vi
 - **Cartoncino a riposo** (`box-shadow: -1px 1px 1px rgb(0 0 0 / 0.6), -4px 5px 8px -2px rgb(0 0 0 / 0.5), -16px 18px 30px -10px rgb(0 0 0 / 0.65)`): i cartoncini del ventaglio appoggiati sul tessuto, luce dall'alto a destra. Il primo strato è il contatto, il secondo stacca ogni cartoncino da quello sotto, il terzo lo posa sul tessuto.
 - **Cartoncino sollevato** (`box-shadow: -1px 1px 2px rgb(0 0 0 / 0.55), -6px 8px 12px -3px rgb(0 0 0 / 0.45), -18px 22px 34px -10px rgb(0 0 0 / 0.78)`): il cartoncino scelto.
 - **Orlo del drappo** (tre tratti SVG neri lungo la curva del taglio: 8px al 20%, 24px al 9%, 52px al 4.5%): l'ombra che il drappo dell'hero, sollevandosi, proietta sulla sezione sotto. Sopra l'ombra corrono la fascia ripiegata (#1F1E1C, 18px), il filo del bordo (#45433F, 1.6px) e l'impuntura tratteggiata (#8E8B81, 1.3px, 7/6).
-- **Stampa appoggiata** (`box-shadow: 0 1px 2px rgb(10 10 10 / 0.14), 0 30px 60px -30px rgb(10 10 10 / 0.55)`): il ritratto, una stampa fotografica col suo bordo bianco (Carta, 10–20px) posata e ruotata di -2°. L'ombra di contatto disegna i bordi sul greige, quella lunga la stacca dal tavolo.
+- **Stampa appoggiata** (`box-shadow: 0 1px 2px rgb(10 10 10 / 0.14), 0 30px 60px -30px rgb(10 10 10 / 0.55)`): il ritratto, una stampa fotografica col suo bordo bianco (Bianco Stampa, 10–20px, lo stesso bianco del fondo della foto) posata e ruotata di -2°. L'ombra di contatto disegna i bordi sul greige, quella lunga la stacca dal tavolo.
 - **Pannello sospeso** (`box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.6)`): il banner cookie, l'unico elemento d'interfaccia sospeso.
 
 ### Named Rules

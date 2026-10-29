@@ -60,7 +60,7 @@ con drappi e cartoncini colorati.
 ## Evidence on Hand
 
 - `../mateirali/Copertina report_.png` (moodboard), `er.pdf`, `er-02.png`, `er-03.png`, 3 animazioni del logo, 9 reel di consulenze.
-- `../materiali-nuovi/ritratto-erica-studio.jpg`: ritratto in studio inviato da Erica (camicia nera, cornice a spicchi), copia WhatsApp 996×1580.
+- `../materiali-nuovi/ritratto-erica-studio-2.webp`: ritratto in studio su fondo bianco, sorridente con la cornice a spicchi (1334×2000), quello usato nel sito. La prima foto (`ritratto-erica-studio.jpg`, copia WhatsApp 996×1580) resta come alternativa.
 - **Assenti (non inventare)**: testimonianze, recensioni, prezzi, numeri, certificazioni, anni di esperienza, contatti, citta', P.IVA.
 - Nei reel compaiono volti di clienti: servono liberatorie prima della pubblicazione.
 

@@ -12,7 +12,7 @@ confermare sono evidenziate in rosso.
 - [ ] Dati legali: manca la **P.IVA** (obbligatoria nel footer). Sede legale indicata solo come "Torino": da completare se serve per intero. Data dell'informativa da mettere dopo la revisione legale
 
 ## Contenuti
-- [x] **Ritratto**: foto in studio con la cornice a spicchi, inviata da Erica (ottobre 2026). Facoltativo: il file originale del fotografo, più nitido della copia passata da WhatsApp (996×1580). Va messo in `../materiali-nuovi/ritratto-erica-studio.jpg`, poi `npm run images`
+- [x] **Ritratto**: foto in studio su fondo bianco, sorridente con la cornice a spicchi, inviata da Erica (1334×2000). Il file è in `../materiali-nuovi/ritratto-erica-studio-2.webp`; per cambiarlo aggiorna il percorso nel passo 4 di `scripts/images.mjs` e lancia `npm run images`
 - [x] **Formazione** (in "Chi sono"): diploma all'Italian Image Institute di Milano, Master in Luxury and Fashion Management (Il Sole 24 Ore), corsi di Armocromia, Body Shape & Facial Shape, Stile
 - [x] **Racconto in Chi sono** e testo della **Facial Shape**: scritti da Erica (ottobre 2026)
 - [ ] Servizi: durata, prezzi (se vuoi mostrarli), cosa comprende ciascuna consulenza
